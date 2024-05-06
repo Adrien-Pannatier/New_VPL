@@ -141,19 +141,6 @@
 			]
 		},
 		{
-			"name": "acc side",
-			"type": "event",
-			"modes": ["basic"],
-			"draw": [
-				{
-					"uri": "Blocks.svg#Ground_accel"
-				},
-				{
-					"uri": "Blocks.svg#ThymioSideDown"
-				}
-			]
-		},
-		{
 			"name": "acc upside down",
 			"type": "event",
 			"modes": ["basic"],
@@ -382,32 +369,20 @@
 					"st": "visibility:`$[0]>0?'visible':'hidden'`"
 				},
 				{
-					"id": "Obst_prox1",
+					"id": "Obst_prox0",
 					"st": "visibility:`$[1]>0?'visible':'hidden'`"
 				},
 				{
-					"id": "Obst_prox3",
+					"id": "Obst_prox5",
 					"st": "visibility:`$[2]>0?'visible':'hidden'`"
 				},
 				{
-					"id": "Obst_prox0",
-					"st": "visibility:`$[3]>0?'visible':'hidden'`"
-				},
-				{
-					"id": "Obst_prox4",
-					"st": "visibility:`$[4]>0?'visible':'hidden'`"
-				},
-				{
-					"id": "Obst_prox5",
-					"st": "visibility:`$[5]>0?'visible':'hidden'`"
-				},
-				{
 					"id": "Obst_prox6",
-					"st": "visibility:`$[6]>0?'visible':'hidden'`"
+					"st": "visibility:`$[3]>0?'visible':'hidden'`"
 				}
 			],
-			"defaultParameters": [0, 0, 0, 0, 0, 0, 0],
-			"typicalParameters": [1, 1, 1, 0, 0, -1, -1],
+			"defaultParameters": [ 0, 0, 0, 0],
+			"typicalParameters": [ 0, 0, -1, -1],
 			"buttons": [
 				{
 					"id": "Btn3_Prox2",
@@ -415,22 +390,7 @@
 					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
 				},
 				{
-					"id": "Btn3_Prox1",
-					"val": [0, 1, -1],
-					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
-				},
-				{
-					"id": "Btn3_Prox3",
-					"val": [0, 1, -1],
-					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
-				},
-				{
 					"id": "Btn3_Prox0",
-					"val": [0, 1, -1],
-					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
-				},
-				{
-					"id": "Btn3_Prox4",
 					"val": [0, 1, -1],
 					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
 				},

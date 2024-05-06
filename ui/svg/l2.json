@@ -84,16 +84,6 @@
 			}
 		},
 		{
-			"name": "acc side",
-			"l2": {
-				"sectionBegin": "onevent acc {\n",
-				"sectionEnd": "}",
-				"clauseInit":
-					"fixed rollAngle = atan2(acc[0], acc[2]);\n",
-				"clause": "abs(abs(rollAngle) - 0.5) < 0.02"
-			}
-		},
-		{
 			"name": "acc upside down",
 			"l2": {
 				"sectionBegin": "onevent acc {\n",

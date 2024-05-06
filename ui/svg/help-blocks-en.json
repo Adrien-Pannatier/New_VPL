@@ -209,13 +209,6 @@
 					"**Parameters:** the programmer can choose one of the 7 available colors or the last parameter (bottom right) which represents the LEDs switched off.",
 					"**Example:** if the bottom LEDs on Thymio are blue, then …. (robot action, for instance switch them to red)."
 				],
-				"acc side": [
-					"# On the side",
-					"![acc side](vpl:block:acc-side)",
-					"**Sensor used:** 3-axis accelerometer.",
-					"**Triggering conditions:** This event is triggered by Thymio’s orientation in respect to the direction of gravity when the robot is turned to its left or right side, be it laying on the ground or hold in the air.",
-					"**Example:** When the robot is placed on its side, then … (robot action, for instance switching on the left light on the LED circle)."
-				],
 				"acc upside down": [
 					"# On the back",
 					"![acc upside down](vpl:block:acc-upside-down)",

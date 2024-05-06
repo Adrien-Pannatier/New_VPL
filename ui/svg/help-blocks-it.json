@@ -212,13 +212,6 @@
 					"**Parametri :** il programmatore può scegliere uno dei 7 colori disponibili o l'ultimo parametro (in basso a destra), che rappresenta il LED spento",
 					"**Esempio :** Se i LED inferiori di Thymio sono blu, allora... (azione del robot, per Esempio s'illumina di rosso)."
 				],
-				"acc side": [
-					"# Sul fianco",
-					"![Icona sul fianco](vpl:block:acc-side)",
-					"**Sensore(i) utilizzato(i):** accelerometro a 3 assi.",
-					"**Condizioni di attivazione :** Questo evento è avviato dall'orientamento di Thymio rispetto alla direzione della gravità: quando Thymio è girato (o tenuto in aria) sul fianco sinistro o destro).",
-					"**Esempio :** Quando il robot è appoggiato sul fianco, allora ... (azione del robot, per Esempio accende la luce sinistra sul cerchio dei LED)."
-				],
 				"acc upside down": [
 					"# Sdraiato sul dorso",
 					"![Icona sdraiato sul dorso](vpl:block:acc-upside-down)",

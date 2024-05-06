@@ -21,7 +21,7 @@ def process(filename, html):
     the content of specified files; and list of paths. The paths can be
     relative or absolute.
     """
-    print(f"Processing {filename}")
+    # print(f"Processing {filename}")
     directory = os.path.dirname(filename)
     if directory == "":
         directory = "."

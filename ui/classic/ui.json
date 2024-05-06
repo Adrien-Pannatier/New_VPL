@@ -9,8 +9,8 @@
 	],
 
 	"miscSettings": {
-		"advancedModeEnabled": false,
-		"basicMultiEvent": true
+		"advancedModeEnabled": true,
+		"basicMultiEvent": false
 	},
 
 	"fragments": {

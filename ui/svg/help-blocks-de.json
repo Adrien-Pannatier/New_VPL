@@ -41,13 +41,6 @@
 					"**Auslösebedingungen:** Dieses Ereignis wird beim Start des Programms auf dem Roboter ausgelöst, sobald Sie die START- oder NEUSTART-Schaltfläche in der VPL3-Programmierumgebung anklicken. Sie können es benutzen, um Aktionen festzulegen, die Thymio beim Start des Programms ausführen soll.",
 					"**Beispiel:** Am Anfang des Programms starte mit  (Aktion des Roboters, z.B., die Farbe des Roboters auf Rot setzen.)"
 				],
-				"acc side": [
-					"# Seitenlage ",
-					"![Symbol für die Seitenlage](vpl:block:acc-side)",
-					"**Verwendete Sensoren:** 3-Achsen-Beschleunigungssensor.",
-					"**Auslösebedingungen:** Dieses Ereignis wird durch die Lage des Thymios in Bezug auf die Richtung der Schwerkraft ausgelöst, wenn der Roboter nach links oder rechts gedreht wird. Es spielt dabei keine Rolle, ob Thymio auf einem Untergrund steht oder ob er in die Luft gehalten wird.",
-					"**Beispiel:** Wenn der Roboter auf die Seite gelegt wird, dann … (Aktion des Roboters, z.B. Einschalten der linken LED auf dem LED-Kreis)."
-				],
 				"acc upside down": [
 					"# Auf dem Kopf liegend",
 					"![Symbol für die Kopflage](vpl:block:acc-upside-down)",

@@ -114,21 +114,6 @@
 			}
 		},
 		{
-			"name": "acc side",
-			"aseba": {
-				"initVarDecl": [
-					[
-						"# roll angle from accelerometer\n",
-						"var rollAngle\n"
-					]
-				],
-				"sectionBegin": "onevent acc\n",
-				"clauseInit":
-					"call math.atan2(rollAngle, acc[0], acc[2])\n",
-				"clause": "abs(abs(rollAngle) - 16384) < 1365"
-			}
-		},
-		{
 			"name": "acc upside down",
 			"aseba": {
 				"sectionBegin": "onevent acc\n",

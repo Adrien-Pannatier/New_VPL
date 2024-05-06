@@ -1,4 +1,3 @@
-Processing index-svg-min-template.html
 <!DOCTYPE html>
 <html>
 
@@ -152,19 +151,6 @@ Processing index-svg-min-template.html
 					"centerId": "RotationCenter1",
 					"thumbId": "Btn2_HandleAcc1",
 					"numSteps": 24
-				}
-			]
-		},
-		{
-			"name": "acc side",
-			"type": "event",
-			"modes": ["basic"],
-			"draw": [
-				{
-					"uri": "Blocks.svg#Ground_accel"
-				},
-				{
-					"uri": "Blocks.svg#ThymioSideDown"
 				}
 			]
 		},
@@ -397,32 +383,20 @@ Processing index-svg-min-template.html
 					"st": "visibility:`$[0]>0?'visible':'hidden'`"
 				},
 				{
-					"id": "Obst_prox1",
+					"id": "Obst_prox0",
 					"st": "visibility:`$[1]>0?'visible':'hidden'`"
 				},
 				{
-					"id": "Obst_prox3",
+					"id": "Obst_prox5",
 					"st": "visibility:`$[2]>0?'visible':'hidden'`"
 				},
 				{
-					"id": "Obst_prox0",
-					"st": "visibility:`$[3]>0?'visible':'hidden'`"
-				},
-				{
-					"id": "Obst_prox4",
-					"st": "visibility:`$[4]>0?'visible':'hidden'`"
-				},
-				{
-					"id": "Obst_prox5",
-					"st": "visibility:`$[5]>0?'visible':'hidden'`"
-				},
-				{
 					"id": "Obst_prox6",
-					"st": "visibility:`$[6]>0?'visible':'hidden'`"
+					"st": "visibility:`$[3]>0?'visible':'hidden'`"
 				}
 			],
-			"defaultParameters": [0, 0, 0, 0, 0, 0, 0],
-			"typicalParameters": [1, 1, 1, 0, 0, -1, -1],
+			"defaultParameters": [ 0, 0, 0, 0],
+			"typicalParameters": [ 0, 0, -1, -1],
 			"buttons": [
 				{
 					"id": "Btn3_Prox2",
@@ -430,22 +404,7 @@ Processing index-svg-min-template.html
 					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
 				},
 				{
-					"id": "Btn3_Prox1",
-					"val": [0, 1, -1],
-					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
-				},
-				{
-					"id": "Btn3_Prox3",
-					"val": [0, 1, -1],
-					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
-				},
-				{
 					"id": "Btn3_Prox0",
-					"val": [0, 1, -1],
-					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
-				},
-				{
-					"id": "Btn3_Prox4",
 					"val": [0, 1, -1],
 					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
 				},
@@ -2459,7 +2418,6 @@ sim-playground {
 		"button",
 		"remote control arrows",
 		"remote control keypad",
-		"acc side",
 		"acc upside down",
 		"roll",
 		"yaw",
@@ -2754,21 +2712,6 @@ sim-playground {
 				"clauseInit":
 					"call math.atan2(rollAngle, -acc[0], acc[2])\n",
 				"clause": "`Math.abs($[0]) === 12 ? 'rollAngle >= 31403 or rollAngle < -31403' : 'rollAngle >= ' + Math.round(2730.67 * $[0] - 1365.33) + ' and rollAngle < ' + Math.round(2730.67 * $[0] + 1365.33)`"
-			}
-		},
-		{
-			"name": "acc side",
-			"aseba": {
-				"initVarDecl": [
-					[
-						"# roll angle from accelerometer\n",
-						"var rollAngle\n"
-					]
-				],
-				"sectionBegin": "onevent acc\n",
-				"clauseInit":
-					"call math.atan2(rollAngle, acc[0], acc[2])\n",
-				"clause": "abs(abs(rollAngle) - 16384) < 1365"
 			}
 		},
 		{
@@ -3421,16 +3364,6 @@ sim-playground {
 			}
 		},
 		{
-			"name": "acc side",
-			"l2": {
-				"sectionBegin": "onevent acc {\n",
-				"sectionEnd": "}",
-				"clauseInit":
-					"fixed rollAngle = atan2(acc[0], acc[2]);\n",
-				"clause": "abs(abs(rollAngle) - 0.5) < 0.02"
-			}
-		},
-		{
 			"name": "acc upside down",
 			"l2": {
 				"sectionBegin": "onevent acc {\n",
@@ -3982,9 +3915,6 @@ sim-playground {
 			"name": "roll"
 		},
 		{
-			"name": "acc side"
-		},
-		{
 			"name": "acc upside down"
 		},
 		{
@@ -4379,9 +4309,6 @@ sim-playground {
 		},
 		{
 			"name": "roll"
-		},
-		{
-			"name": "acc side"
 		},
 		{
 			"name": "acc upside down"
@@ -8221,38 +8148,23 @@ sim-playground {
           </g>
         </g>
       </g>
-      <g id="Ev_ProxH_med" data-name="Ev ProxH med">
-        <!-- <path id="ThymioTop_Bg" data-name="ThymioTop Bg" class="cls-13" d="M48.05,8.05a54.79,54.79,0,0,0-38.84,16,4,4,0,0,0-1.15,2.83L8,84.64A3.33,3.33,0,0,0,11.33,88L84.61,88a3.34,3.34,0,0,0,3.33-3.33h0L88,27a4,4,0,0,0-1.15-2.83A54.78,54.78,0,0,0,48.05,8.05Z"/> -->
-		<path class="cls-13" d="M47.8,8.4C26,8.4,8.3,26,8.3,47.9c0,6.7,1.7,13,4.7,18.6l3.3-3.3L31,77.8l-3.8,3.8c6,3.6,13,5.8,20.6,5.8
-		c21.9,0,39.5-17.7,39.5-39.5S69.7,8.4,47.8,8.4z"/>
-		<circle class="cls-13" cx="47.8" cy="47.9" r="30.6"/>
-        <g id="ProxSensors">
-          <rect id="Btn3_Prox4" data-name="Btn3 Prox4" class="cls-35" x="72.56" y="21.37" width="11.42" height="11.42" transform="translate(7.22 69.63) rotate(-50)"/>
-          <rect id="Btn3_Prox3" data-name="Btn3 Prox3" class="cls-36" x="58.41" y="13.25" width="11.59" height="11.59" transform="translate(26.25 74.22) rotate(-72)"/>
-          <!-- <rect id="Btn3_Prox2" data-name="Btn3 Prox2" class="cls-37" x="42" y="10.05" width="12" height="12"/> -->
-          <!-- <rect id="Btn3_Prox5" data-name="Btn3 Prox5" class="cls-37" x="24" y="74.04" width="12" height="12"/> -->
-          <!-- <rect id="Btn3_Prox6" data-name="Btn3 Prox6" class="cls-37" x="58" y="74.04" width="12" height="12"/> -->
-          <rect id="Btn3_Prox1" data-name="Btn3 Prox1" class="cls-36" x="25.74" y="13.25" width="11.59" height="11.58" transform="translate(-4.34 10.68) rotate(-18)"/>
-          <!-- <rect id="Btn3_Prox0" data-name="Btn3 Prox0" class="cls-35" x="11.76" y="21.38" width="11.42" height="11.42" transform="translate(-13.32 17.57) rotate(-40)"/> -->
-          <rect id="Btn3_Prox2" data-name="Btn3 Prox2" x="42" y="7.3" class="cls-36" width="12" height="12"/>
-		  <rect id="Btn3_Prox5" data-name="Btn3 Prox5" x="40.3" y="76.6" class="cls-36" width="12" height="12"/>
-		  <rect id="Btn3_Prox6" data-name="Btn3 Prox6" x="76.3" y="42" class="cls-36" width="12" height="12"/>
-		  <rect id="Btn3_Prox0" data-name="Btn3 Prox0" x="7.3" y="42.3" class="cls-36" width="12" height="12"/>
-		</g>
-        <g id="Obstacles">
-		  <line id="Obst_prox2" data-name="Obst prox2" class="cls-38" x1="41.9" y1="4.4" x2="53.9" y2="4.4"/>
-		  <line id="Obst_prox5" data-name="Obst prox5" class="cls-38" x1="40.8" y1="92" x2="53.2" y2="92"/>
-		  <line id="Obst_prox6" data-name="Obst prox6" class="cls-38" x1="92.4" y1="41.7" x2="92.4" y2="54.1"/>
-		  <line id="Obst_prox0" data-name="Obst prox0" class="cls-38" x1="3" y1="53.1" x2="3.2" y2="42.6"/>
-          <!-- <line id="Obst_prox4" data-name="Obst prox4" class="cls-38" x1="90.18" y1="21.4" x2="81.17" y2="14.31"/>
-          <line id="Obst_prox3" data-name="Obst prox3" class="cls-38" x1="74.13" y1="10.21" x2="62.91" y2="6.3"/>
-          <line id="Obst_prox2" data-name="Obst prox2" class="cls-38" x1="41.87" y1="4.37" x2="53.87" y2="4.37"/>
-          <line id="Obst_prox5" data-name="Obst prox5" class="cls-38" x1="24" y1="92.04" x2="36.42" y2="92.04"/>
-          <line id="Obst_prox6" data-name="Obst prox6" class="cls-38" x1="57.58" y1="92.04" x2="70" y2="92.04"/>
-          <line id="Obst_prox1" data-name="Obst prox1" class="cls-38" x1="21.6" y1="10.21" x2="32.83" y2="6.3"/>
-          <line id="Obst_prox0" data-name="Obst prox0" class="cls-38" x1="5.92" y1="21.11" x2="14.19" y2="14.61"/> -->
-        </g>
+    <g id="Ev_ProxH_med" data-name="Ev ProxH med">
+  		<path class="cls-13" d="M47.8,8.4C26,8.4,8.3,26,8.3,47.9c0,6.7,1.7,13,4.7,18.6l3.3-3.3L31,77.8l-3.8,3.8c6,3.6,13,5.8,20.6,5.8
+	  	c21.9,0,39.5-17.7,39.5-39.5S69.7,8.4,47.8,8.4z"/>
+		  <circle class="cls-13" cx="47.8" cy="47.9" r="30.6"/>
+      <g id="ProxSensors">
+        <rect id="Btn3_Prox2" data-name="Btn3 Prox2" x="42" y="7.3" class="cls-36" width="12" height="12"/>
+		    <rect id="Btn3_Prox5" data-name="Btn3 Prox5" x="40.3" y="76.6" class="cls-36" width="12" height="12"/>
+		    <rect id="Btn3_Prox6" data-name="Btn3 Prox6" x="76.3" y="42" class="cls-36" width="12" height="12"/>
+		    <rect id="Btn3_Prox0" data-name="Btn3 Prox0" x="7.3" y="42.3" class="cls-36" width="12" height="12"/>
+		  </g>
+      <g id="Obstacles">
+        <line id="Obst_prox2" data-name="Obst prox2" class="cls-38" x1="41.9" y1="4.4" x2="53.9" y2="4.4"/>
+        <line id="Obst_prox5" data-name="Obst prox5" class="cls-38" x1="40.8" y1="92" x2="53.2" y2="92"/>
+        <line id="Obst_prox6" data-name="Obst prox6" class="cls-38" x1="92.4" y1="41.7" x2="92.4" y2="54.1"/>
+  		  <line id="Obst_prox0" data-name="Obst prox0" class="cls-38" x1="3" y1="53.1" x2="3.2" y2="42.6"/>
       </g>
+    </g>
       <g id="Ev_ProxH_Front_adv" data-name="Ev ProxH Front adv">
         <g id="Thymio_shape" data-name="Thymio shape">
           <path class="cls-33" d="M.12,44.87l3.64-3.63A3.58,3.58,0,0,1,6.3,40.17,49.37,49.37,0,0,1,41.17,54.73,49.34,49.34,0,0,1,55.66,89.62a3.56,3.56,0,0,1-1.07,2.53L50.8,96H2.12a2,2,0,0,1-2-2Z"/>
@@ -9060,7 +8972,6 @@ sim-playground {
 			"button": "Multiple buttons",
 			"init": "Start of the program",
 			"roll": "Roll angle",
-			"acc side": "On the side",
 			"acc upside down": "Lying upside down",
 			"yaw": "Yaw angle",
 			"pitch": "Pitch angle",
@@ -9442,13 +9353,6 @@ BLOCKS
 					"**Parameters:** the programmer can choose one of the 7 available colors or the last parameter (bottom right) which represents the LEDs switched off.",
 					"**Example:** if the bottom LEDs on Thymio are blue, then …. (robot action, for instance switch them to red)."
 				],
-				"acc side": [
-					"# On the side",
-					"![acc side](vpl:block:acc-side)",
-					"**Sensor used:** 3-axis accelerometer.",
-					"**Triggering conditions:** This event is triggered by Thymio’s orientation in respect to the direction of gravity when the robot is turned to its left or right side, be it laying on the ground or hold in the air.",
-					"**Example:** When the robot is placed on its side, then … (robot action, for instance switching on the left light on the LED circle)."
-				],
 				"acc upside down": [
 					"# On the back",
 					"![acc upside down](vpl:block:acc-upside-down)",
@@ -9700,7 +9604,6 @@ BLOCKS
 			"remote control arrows": "Pfeiltasten der Fernbedienung",
 			"remote control keypad": "Eingabetasten der Fernbedienung",
 			"init": "Programm-Startereignis",
-			"acc side": "Seitenlage",
 			"acc upside down": "Auf dem Kopf liegend",
 			"roll": "Rollwinkel",
 			"pitch": "Steigungswinkel",
@@ -9870,13 +9773,6 @@ BLOCKS
 					"** Dieses Ereignis verwendet keinen spezifischen Sensor des Thymios.**",
 					"**Auslösebedingungen:** Dieses Ereignis wird beim Start des Programms auf dem Roboter ausgelöst, sobald Sie die START- oder NEUSTART-Schaltfläche in der VPL3-Programmierumgebung anklicken. Sie können es benutzen, um Aktionen festzulegen, die Thymio beim Start des Programms ausführen soll.",
 					"**Beispiel:** Am Anfang des Programms starte mit  (Aktion des Roboters, z.B., die Farbe des Roboters auf Rot setzen.)"
-				],
-				"acc side": [
-					"# Seitenlage ",
-					"![Symbol für die Seitenlage](vpl:block:acc-side)",
-					"**Verwendete Sensoren:** 3-Achsen-Beschleunigungssensor.",
-					"**Auslösebedingungen:** Dieses Ereignis wird durch die Lage des Thymios in Bezug auf die Richtung der Schwerkraft ausgelöst, wenn der Roboter nach links oder rechts gedreht wird. Es spielt dabei keine Rolle, ob Thymio auf einem Untergrund steht oder ob er in die Luft gehalten wird.",
-					"**Beispiel:** Wenn der Roboter auf die Seite gelegt wird, dann … (Aktion des Roboters, z.B. Einschalten der linken LED auf dem LED-Kreis)."
 				],
 				"acc upside down": [
 					"# Auf dem Kopf liegend",
@@ -10294,7 +10190,6 @@ BLOCKS
 			"button": "Boutons multiples",
 			"init": "Démarrage du programme",
 			"roll": "Angle de roulis",
-			"acc side": "Sur le côté",
 			"acc upside down": "Posé sur le dos",
 			"yaw": "Angle de lacet",
 			"pitch": "Angle de tangage",
@@ -10670,13 +10565,6 @@ BLOCKS
 					"**Paramètres :** l'utilisateur peut choisir parmi 7 couleurs ou le dernier paramètre, qui représente la LED éteinte",
 					"**Exemple :** Si les LED du basde Thymio sont bleues, alors... (action du robot, par exemple s'allumer en rouge)."
 				],
-				"acc side": [
-					"# Sur le côté",
-					"![Icône de sur le côté](vpl:block:acc-side)",
-					"**Capteur(s) utilisé(s):** accéléromètre 3 axes.",
-					"**Conditions de déclenchement :** Cet événement est déclenché par l'orientation de Thymio par rapport à la direction de la gravité: quand Thymio est posé (ou tenu en l'air) sur son flanc gauche ou droit).",
-					"**Exemple :** Quand le robot est posé sur le côté, alors ... (action du robot, par exemple allumer la lumière de gauche sur le cercle de LED)."
-				],
 				"acc upside down": [
 					"# Posé sur le dos",
 					"![Icône de posé sur le dos](vpl:block:acc-upside-down)",
@@ -10928,7 +10816,6 @@ BLOCKS
 			"button": "Pulsanti multipli",
 			"init": "Avvia il programma",
 			"roll": "Angolo di rollata (o rollio)",
-			"acc side": "Sul fianco",
 			"acc upside down": "Sdraiato sul dorso",
 			"yaw": "Angolo di imbardata",
 			"pitch": "Angolo di beccheggio",
@@ -11298,13 +11185,6 @@ BLOCKS
 					"**Condizioni di attivazione :** questa condizione è vera se il LED RGB inferiore di Thymio è impostato su un determinato colore. Il confronto di ogni componente del colore viene effettuato su una serie di valori, consentendo così di soddisfare la condizione anche per una corrispondenza cromatica approssimativa.",
 					"**Parametri :** il programmatore può scegliere uno dei 7 colori disponibili o l'ultimo parametro (in basso a destra), che rappresenta il LED spento",
 					"**Esempio :** Se i LED inferiori di Thymio sono blu, allora... (azione del robot, per Esempio s'illumina di rosso)."
-				],
-				"acc side": [
-					"# Sul fianco",
-					"![Icona sul fianco](vpl:block:acc-side)",
-					"**Sensore(i) utilizzato(i):** accelerometro a 3 assi.",
-					"**Condizioni di attivazione :** Questo evento è avviato dall'orientamento di Thymio rispetto alla direzione della gravità: quando Thymio è girato (o tenuto in aria) sul fianco sinistro o destro).",
-					"**Esempio :** Quando il robot è appoggiato sul fianco, allora ... (azione del robot, per Esempio accende la luce sinistra sul cerchio dei LED)."
 				],
 				"acc upside down": [
 					"# Sdraiato sul dorso",

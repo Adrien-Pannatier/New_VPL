@@ -14,7 +14,7 @@
 	],
 
 	"miscSettings": {
-		"advancedModeEnabled": false,
+		"advancedModeEnabled": true,
 		"basicMultiEvent": true,
 		"advancedMultiEvent": true,
 		"viewRelativeSizes": {

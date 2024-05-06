@@ -212,13 +212,6 @@
 					"**Paramètres :** l'utilisateur peut choisir parmi 7 couleurs ou le dernier paramètre, qui représente la LED éteinte",
 					"**Exemple :** Si les LED du basde Thymio sont bleues, alors... (action du robot, par exemple s'allumer en rouge)."
 				],
-				"acc side": [
-					"# Sur le côté",
-					"![Icône de sur le côté](vpl:block:acc-side)",
-					"**Capteur(s) utilisé(s):** accéléromètre 3 axes.",
-					"**Conditions de déclenchement :** Cet événement est déclenché par l'orientation de Thymio par rapport à la direction de la gravité: quand Thymio est posé (ou tenu en l'air) sur son flanc gauche ou droit).",
-					"**Exemple :** Quand le robot est posé sur le côté, alors ... (action du robot, par exemple allumer la lumière de gauche sur le cercle de LED)."
-				],
 				"acc upside down": [
 					"# Posé sur le dos",
 					"![Icône de posé sur le dos](vpl:block:acc-upside-down)",
