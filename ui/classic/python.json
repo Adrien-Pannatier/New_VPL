@@ -416,24 +416,6 @@
 			}
 		},
 		{
-			"name": "bottom color 8",
-			"python": {
-				"initCodeExec": [
-					[
-						"# reset outputs\n",
-						"thymio.leds.top = [0, 0, 0]\n",
-						"thymio.leds.bottom.left = [0, 0, 0]\n",
-						"thymio.leds.bottom.right = [0, 0, 0]\n",
-						"thymio.leds.circle = [0, 0, 0, 0, 0, 0, 0, 0]\n"
-					]
-				],
-				"statement": [
-					"thymio.leds.bottom.left = [`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`]\n",
-					"thymio.leds.bottom.right = [`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`]\n"
-				]
-			}
-		},
-		{
 			"name": "bottom-left color 8",
 			"python": {
 				"initCodeExec": [

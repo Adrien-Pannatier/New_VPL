@@ -151,21 +151,6 @@
 			}
 		},
 		{
-			"name": "bottom color 8",
-			"js": {
-				"initCodeExec": [
-					[
-						"this.set(\"leds.bottom.left\", [0, 0, 0]);\n",
-						"this.set(\"leds.bottom.right\", [0, 0, 0]);\n"
-					]
-				],
-				"statement": [
-					"this.set(\"leds.bottom.left\", [`['0,0,0','1,0,0','0,1,0','1,1,0','0,0,1','1,0,1','0,1,1','1,1,1'][$[0]]`]);\n",
-					"this.set(\"leds.bottom.right\", [`['0,0,0','1,0,0','0,1,0','1,1,0','0,0,1','1,0,1','0,1,1','1,1,1'][$[0]]`]);\n"
-				]
-			}
-		},
-		{
 			"name": "top color",
 			"js": {
 				"initCodeExec": [

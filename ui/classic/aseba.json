@@ -472,24 +472,6 @@
 			}
 		},
 		{
-			"name": "bottom color 8",
-			"aseba": {
-				"initCodeExec": [
-					[
-						"# reset outputs\n",
-						"call leds.top(0, 0, 0)\n",
-						"call leds.bottom.left(0, 0, 0)\n",
-						"call leds.bottom.right(0, 0, 0)\n",
-						"call leds.circle(0, 0, 0, 0, 0, 0, 0, 0)\n"
-					]
-				],
-				"statement": [
-					"call leds.bottom.left(`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`)\n",
-					"call leds.bottom.right(`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`)\n"
-				]
-			}
-		},
-		{
 			"name": "bottom-left color 8",
 			"aseba": {
 				"initCodeExec": [

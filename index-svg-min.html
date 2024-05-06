@@ -1218,74 +1218,6 @@
 			]
 		},
 		{
-			"name": "bottom color 8",
-			"type": "action",
-			"modes": ["basic"],
-			"draw": [
-				{
-					"uri": "Blocks.svg#ColorPalette-2"
-				},
-				{
-					"uri": "Blocks.svg#Bg_Thymio_front_color-2"
-				},
-				{
-					"uri": "Blocks.svg#Gradient_Bottom_basic"
-				},
-				{
-					"uri": "Blocks.svg#SelectedColors_bottom"
-				}
-			],
-			"defaultParameters": [0],
-			"radiobuttons": [
-				{
-					"id": "Btn2_SelectedNone-2",
-					"val": 0,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedRed-2",
-					"val": 1,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedGreen-2",
-					"val": 2,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedYel-2",
-					"val": 3,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedBlue-2",
-					"val": 4,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedMagenta-2",
-					"val": 5,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedCyan-2",
-					"val": 6,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedWhite-2",
-					"val": 7,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				}
-			],
-			"styles": [
-				{
-					"id": "Gradient_Bottom_basic",
-					"st": "fill:`['transparent','red','#3f0','yellow','blue','magenta','cyan','white'][$[0]]`"
-				}
-			]
-		},
-		{
 			"name": "top color",
 			"type": "action",
 			"modes": ["advanced"],
@@ -2362,7 +2294,6 @@ sim-playground {
 		"top color",
 		"top color 8",
 		"bottom color",
-		"bottom color 8",
 		"set state 256",
 		"set state 256 with mask",
 		"arithmetic",
@@ -2862,30 +2793,6 @@ sim-playground {
 						"call leds.top(`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`)\n",
 						"topColor = [`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`]\n"
 					]
-			}
-		},
-		{
-			"name": "bottom color 8",
-			"aseba": {
-				"initVarDecl": [
-					[
-						"var bottomColor[3]\n"
-					]
-				],
-				"initCodeExec": [
-					"bottomColor = [0, 0, 0]\n",
-					[
-						"call leds.top(0, 0, 0)\n",
-						"call leds.bottom.left(0, 0, 0)\n",
-						"call leds.bottom.right(0, 0, 0)\n",
-						"call leds.circle(0, 0, 0, 0, 0, 0, 0, 0)\n"
-					]
-				],
-				"statement": [
-					"call leds.bottom.left(`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`)\n",
-					"call leds.bottom.right(`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`)\n",
-					"bottomColor = [`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`]\n"
-				]
 			}
 		},
 		{
@@ -3497,29 +3404,6 @@ sim-playground {
 			}
 		},
 		{
-			"name": "bottom color 8",
-			"l2": {
-				"initVarDecl": [
-					"int bottomColor[3];\n"
-				],
-				"initCodeExec": [
-					"bottomColor = [0, 0, 0];\n",
-					[
-						"// reset outputs\n",
-						"leds.top(0, 0, 0);\n",
-						"leds.bottom.left(0, 0, 0);\n",
-						"leds.bottom.right(0, 0, 0);\n",
-						"leds.circle(0, 0, 0, 0, 0, 0, 0, 0);\n"
-					]
-				],
-				"statement": [
-					"leds.bottom.left(`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`);\n",
-					"leds.bottom.right(`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`);\n",
-					"bottomColor = [`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`];\n"
-				]
-			}
-		},
-		{
 			"name": "top color",
 			"l2": {
 				"initVarDecl": [
@@ -3922,21 +3806,6 @@ sim-playground {
 			}
 		},
 		{
-			"name": "bottom color 8",
-			"js": {
-				"initCodeExec": [
-					[
-						"this.set(\"leds.bottom.left\", [0, 0, 0]);\n",
-						"this.set(\"leds.bottom.right\", [0, 0, 0]);\n"
-					]
-				],
-				"statement": [
-					"this.set(\"leds.bottom.left\", [`['0,0,0','1,0,0','0,1,0','1,1,0','0,0,1','1,0,1','0,1,1','1,1,1'][$[0]]`]);\n",
-					"this.set(\"leds.bottom.right\", [`['0,0,0','1,0,0','0,1,0','1,1,0','0,0,1','1,0,1','0,1,1','1,1,1'][$[0]]`]);\n"
-				]
-			}
-		},
-		{
 			"name": "top color",
 			"js": {
 				"initCodeExec": [
@@ -4250,25 +4119,6 @@ sim-playground {
 				"statement": [
 					"topColor = [`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`]\n",
 					"leds_top = topColor\n"
-				]
-			}
-		},
-		{
-			"name": "bottom color 8",
-			"python": {
-				"initCodeExec": [
-					"bottomColor = [0, 0, 0]\n",
-					[
-						"leds_top = [0, 0, 0]\n",
-						"leds_bottom_left = [0, 0, 0]\n",
-						"leds_bottom_right = [0, 0, 0]\n",
-						"leds_circle = 8 * [0]\n"
-					]
-				],
-				"statement": [
-					"bottomColor = [`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`]\n",
-					"leds_bottom_left = bottomColor\n",
-					"leds_bottom_right = bottomColor\n"
 				]
 			}
 		},
@@ -8862,7 +8712,6 @@ sim-playground {
 			"motor": "Set wheel speeds",
 			"move": "Directions",
 			"top color 8": "Set top color",
-			"bottom color 8": "Set bottom color",
 			"top color": "Set top color (RGB components)",
 			"bottom color": "Set bottom color (RGB components)",
 			"set timer": "Start timer",
@@ -9306,14 +9155,6 @@ BLOCKS
 					"Type: action block",
 					"..."
 				],
-				"bottom color 8": [
-					"# Set bottom color",
-					"![bottom color 8](vpl:block:bottom-color-8)",
-					"**Actuator:** bottom color LED",
-					"**Action:** this action sets a specific color for the bottom Thymio RGB (Red,Green,Blue) LEDs.",
-					"**Parameters:** the programmer can choose one of the 7 available colors or the last parameter (bottom right) which represents the LEDs switched off.",
-					"**Example:** when (event, for instance detection of obstacle on the left), then set the bottom color to blue."
-				],
 				"bottom-left color 8": [
 					"# Set bottom-left color",
 					"![bottom-left color 8](vpl:block:bottom-left-color-8)",
@@ -9475,7 +9316,6 @@ BLOCKS
 			"set state 256": "8-LEDs-Zustand festlegen",
 			"set state 256 with mask": "Selektives Setzen des 8-LED-Zustands",
 			"top color 8": "Obere Farbe festlegen",
-			"bottom color 8": "Untere Farbe festlegen",
 			"top color": "Obere Farbe festlegen (RGB-Komponenten)",
 			"bottom color": "Untere Farbe festlegen (RGB-Komponenten)",
 			"motor": "Radgeschwindigkeiten festlegen",
@@ -9802,14 +9642,6 @@ BLOCKS
 					"**Parameter:** Der Programmierer kann eine der 7 verfügbaren Farben oder die letzte Option (unten rechts) wählen, welche die ausgeschaltete RGB-LED darstellt.",
 					"**Beispiel:** wenn (Ereignis, z.B. Hindernis auf der linken Seite erkannt), dann setze die obere Farbe auf gelb."
 				],
-				"bottom color 8": [
-					"# Untere Farbe festlegen",
-					"![Symbol für Untere Farbe festlegen](vpl:block:bottom-color-8)",
-					"**Aktor:** untere RGB-LEDs ",
-					"**Aktion:** Mit dieser Aktion kann eine bestimmte Farbe für die RGB-LEDs (Rot,Grün,Blau) auf der Unterseite des Thymios eingestellt werden.",
-					"**Parameter:** Der Programmierer kann eine der 7 verfügbaren Farben oder die letzte Option (unten rechts) wählen, welche die ausgeschaltete RGB-LED darstellt.",
-					"**Beispiel:** wenn (Ereignis, z.B. Hindernis auf der linken Seite erkannt), dann setze die untere Farbe auf blau."
-				],
 				"top color": [
 					"# Obere Farbe festlegen (RGB-Komponenten)",
 					"![Symbol für Obere Farbe festlegen (RGB-Komponenten)](vpl:block:top-color)",
@@ -10047,7 +9879,6 @@ BLOCKS
 			"motor": "Spécifier la vitesse des moteurs",
 			"move": "Directions",
 			"top color 8": "Spécifier la couleur du haut",
-			"bottom color 8": "Spécifier la couleur du bas",
 			"top color": "Spécifier la couleur du haut (composantes RGB)",
 			"bottom color": "Spécifier la couleur du bas (composantes RGB)",
 			"set timer": "Démarrer un minuteur",
@@ -10484,14 +10315,6 @@ BLOCKS
 					"Type: action block",
 					"..."
 				],
-				"bottom color 8": [
-					"# Spécifier la couleur du bas",
-					"![Icône pour spécifier la couleur du bas](vpl:block:bottom-color-8)",
-					"**Actuateur:** LED RGB du bas",
-					"**Action:** cette action règle la couleur des LED du dessous de Thymio, en choisissant parmi des couleurs prédéfinies.",
-					"**Paramètres :** l'utilisateur peut choisir parmi 7 couleurs ou le dernier paramètre, qui représente la LED éteinte.",
-					"**Exemple :** lorsque... (événement, par exemple détection d'un obstacle à gauche), alors définir la couleur du bas à bleu."
-				],
 				"bottom-left color 8": [
 					"# Set bottom-left color",
 					"![bottom-left color 8](vpl:block:bottom-left-color-8)",
@@ -10656,7 +10479,6 @@ BLOCKS
 			"motor": "Imposta la velocità dei motori",
 			"move": "Direzioni",
 			"top color 8": "Imposta il colore superiore",
-			"bottom color 8": "Imposta il colore inferiore",
 			"top color": "Imposta il colore superiore (componenti RGB)",
 			"bottom color": "Imposta il colore inferiore (componenti RGB)",
 			"set timer": "Avvia il timer",
@@ -11088,14 +10910,6 @@ BLOCKS
 					"![colore in basso a sinistra](vpl:block:bottom-right-color)",
 					"Tipo: blocco azione",
 					"..."
-				],
-				"bottom color 8": [
-					"# Imposta il colore inferiore",
-					"![Icona per impostare il colore inferiore](vpl:block:bottom-color-8)",
-					"**Attuatore:** LED RGB inferiore",
-					"**Azione:** questa azione imposta il colore dei LED inferiori di Thymio, scegliendo tra i colori predefiniti.",
-					"**Parametri :** il programmatore può scegliere tra 7 colori o l'ultimo parametro, che rappresenta il LED spento.",
-					"**Esempio :** quando... (evento, per Esempio rilevamento di un ostacolo a sinistra), allora imposta il colore inferiore sul blu."
 				],
 				"bottom-left color 8": [
 					"# Imposta il colore in basso a sinistra",

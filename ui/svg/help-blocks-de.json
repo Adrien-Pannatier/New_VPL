@@ -221,14 +221,6 @@
 					"**Parameter:** Der Programmierer kann eine der 7 verfügbaren Farben oder die letzte Option (unten rechts) wählen, welche die ausgeschaltete RGB-LED darstellt.",
 					"**Beispiel:** wenn (Ereignis, z.B. Hindernis auf der linken Seite erkannt), dann setze die obere Farbe auf gelb."
 				],
-				"bottom color 8": [
-					"# Untere Farbe festlegen",
-					"![Symbol für Untere Farbe festlegen](vpl:block:bottom-color-8)",
-					"**Aktor:** untere RGB-LEDs ",
-					"**Aktion:** Mit dieser Aktion kann eine bestimmte Farbe für die RGB-LEDs (Rot,Grün,Blau) auf der Unterseite des Thymios eingestellt werden.",
-					"**Parameter:** Der Programmierer kann eine der 7 verfügbaren Farben oder die letzte Option (unten rechts) wählen, welche die ausgeschaltete RGB-LED darstellt.",
-					"**Beispiel:** wenn (Ereignis, z.B. Hindernis auf der linken Seite erkannt), dann setze die untere Farbe auf blau."
-				],
 				"top color": [
 					"# Obere Farbe festlegen (RGB-Komponenten)",
 					"![Symbol für Obere Farbe festlegen (RGB-Komponenten)](vpl:block:top-color)",

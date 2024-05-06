@@ -301,14 +301,6 @@
 					"Tipo: blocco azione",
 					"..."
 				],
-				"bottom color 8": [
-					"# Imposta il colore inferiore",
-					"![Icona per impostare il colore inferiore](vpl:block:bottom-color-8)",
-					"**Attuatore:** LED RGB inferiore",
-					"**Azione:** questa azione imposta il colore dei LED inferiori di Thymio, scegliendo tra i colori predefiniti.",
-					"**Parametri :** il programmatore può scegliere tra 7 colori o l'ultimo parametro, che rappresenta il LED spento.",
-					"**Esempio :** quando... (evento, per Esempio rilevamento di un ostacolo a sinistra), allora imposta il colore inferiore sul blu."
-				],
 				"bottom-left color 8": [
 					"# Imposta il colore in basso a sinistra",
 					"![colore in basso a sinistra 8](vpl:block:bottom-left-color-8)",

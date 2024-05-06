@@ -29,7 +29,6 @@
 			"motor": "Spécifier la vitesse des moteurs",
 			"move": "Directions",
 			"top color 8": "Spécifier la couleur du haut",
-			"bottom color 8": "Spécifier la couleur du bas",
 			"top color": "Spécifier la couleur du haut (composantes RGB)",
 			"bottom color": "Spécifier la couleur du bas (composantes RGB)",
 			"set timer": "Démarrer un minuteur",

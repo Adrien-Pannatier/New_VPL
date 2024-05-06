@@ -206,12 +206,6 @@
 					"Type: action block",
 					"The _Set bottom-right color (RGB components)_ block sets the color of the bottom-right RGB LED to the color specified by the addition of red, green, and blue components."
 				],
-				"bottom color 8": [
-					"# Set bottom color",
-					"![bottom color 8](vpl:block:bottom-color-8)",
-					"Type: action block",
-					"The _Set bottom color_ block sets the color of the two bottom RGB LEDs to the specified color."
-				],
 				"bottom-left color 8": [
 					"# Set bottom-left color",
 					"![bottom-left color 8](vpl:block:bottom-left-color-8)",

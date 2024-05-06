@@ -27,7 +27,6 @@
 			"set state 256": "8-LEDs-Zustand festlegen",
 			"set state 256 with mask": "Selektives Setzen des 8-LED-Zustands",
 			"top color 8": "Obere Farbe festlegen",
-			"bottom color 8": "Untere Farbe festlegen",
 			"top color": "Obere Farbe festlegen (RGB-Komponenten)",
 			"bottom color": "Untere Farbe festlegen (RGB-Komponenten)",
 			"motor": "Radgeschwindigkeiten festlegen",

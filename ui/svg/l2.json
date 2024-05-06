@@ -321,29 +321,6 @@
 			}
 		},
 		{
-			"name": "bottom color 8",
-			"l2": {
-				"initVarDecl": [
-					"int bottomColor[3];\n"
-				],
-				"initCodeExec": [
-					"bottomColor = [0, 0, 0];\n",
-					[
-						"// reset outputs\n",
-						"leds.top(0, 0, 0);\n",
-						"leds.bottom.left(0, 0, 0);\n",
-						"leds.bottom.right(0, 0, 0);\n",
-						"leds.circle(0, 0, 0, 0, 0, 0, 0, 0);\n"
-					]
-				],
-				"statement": [
-					"leds.bottom.left(`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`);\n",
-					"leds.bottom.right(`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`);\n",
-					"bottomColor = [`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`];\n"
-				]
-			}
-		},
-		{
 			"name": "top color",
 			"l2": {
 				"initVarDecl": [

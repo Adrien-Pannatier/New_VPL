@@ -205,12 +205,6 @@
 					"Type: bloc d'action",
 					"Le bloc _change la couleur du dessous (composantes RVB)_ change les composantes rouge, verte et bleue de la LED RVB droite du dessous du robot."
 				],
-				"bottom color 8": [
-					"# Change la couleur du dessous",
-					"![bottom color 8](vpl:block:bottom-color-8)",
-					"Type: bloc d'action",
-					"Le bloc _change la couleur du dessous_ change la couleur des LEDs RVB gauche et droite du dessous du robot."
-				],
 				"bottom-left color 8": [
 					"# Change la couleur du dessous à gauche",
 					"![bottom-left color 8](vpl:block:bottom-left-color-8)",

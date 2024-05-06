@@ -297,14 +297,6 @@
 					"Type: action block",
 					"..."
 				],
-				"bottom color 8": [
-					"# Set bottom color",
-					"![bottom color 8](vpl:block:bottom-color-8)",
-					"**Actuator:** bottom color LED",
-					"**Action:** this action sets a specific color for the bottom Thymio RGB (Red,Green,Blue) LEDs.",
-					"**Parameters:** the programmer can choose one of the 7 available colors or the last parameter (bottom right) which represents the LEDs switched off.",
-					"**Example:** when (event, for instance detection of obstacle on the left), then set the bottom color to blue."
-				],
 				"bottom-left color 8": [
 					"# Set bottom-left color",
 					"![bottom-left color 8](vpl:block:bottom-left-color-8)",

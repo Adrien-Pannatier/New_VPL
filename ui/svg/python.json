@@ -165,25 +165,6 @@
 			}
 		},
 		{
-			"name": "bottom color 8",
-			"python": {
-				"initCodeExec": [
-					"bottomColor = [0, 0, 0]\n",
-					[
-						"leds_top = [0, 0, 0]\n",
-						"leds_bottom_left = [0, 0, 0]\n",
-						"leds_bottom_right = [0, 0, 0]\n",
-						"leds_circle = 8 * [0]\n"
-					]
-				],
-				"statement": [
-					"bottomColor = [`['0,0,0','32,0,0','0,32,0','32,32,0','0,0,32','32,0,32','0,32,32','32,32,32'][$[0]]`]\n",
-					"leds_bottom_left = bottomColor\n",
-					"leds_bottom_right = bottomColor\n"
-				]
-			}
-		},
-		{
 			"name": "top color",
 			"python": {
 				"initCodeExec": [

@@ -28,7 +28,6 @@
 			"motor": "Set wheel speeds",
 			"move": "Directions",
 			"top color 8": "Set top color",
-			"bottom color 8": "Set bottom color",
 			"top color": "Set top color (RGB components)",
 			"bottom color": "Set bottom color (RGB components)",
 			"set timer": "Start timer",

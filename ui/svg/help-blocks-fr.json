@@ -300,14 +300,6 @@
 					"Type: action block",
 					"..."
 				],
-				"bottom color 8": [
-					"# Spécifier la couleur du bas",
-					"![Icône pour spécifier la couleur du bas](vpl:block:bottom-color-8)",
-					"**Actuateur:** LED RGB du bas",
-					"**Action:** cette action règle la couleur des LED du dessous de Thymio, en choisissant parmi des couleurs prédéfinies.",
-					"**Paramètres :** l'utilisateur peut choisir parmi 7 couleurs ou le dernier paramètre, qui représente la LED éteinte.",
-					"**Exemple :** lorsque... (événement, par exemple détection d'un obstacle à gauche), alors définir la couleur du bas à bleu."
-				],
 				"bottom-left color 8": [
 					"# Set bottom-left color",
 					"![bottom-left color 8](vpl:block:bottom-left-color-8)",
