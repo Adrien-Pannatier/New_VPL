@@ -201,21 +201,6 @@
 					"**Parameters:** the programmer can choose one of the 7 available colors or the last parameter (bottom right) which represents the LED switched off.",
 					"**Example:** If the top LED on Thymio is yellow, then …. (robot action, for instance switch to red)."
 				],
-				"bottom color 8 state": [
-					"# Bottom color state",
-					"![bottom color 8 state](vpl:block:bottom-color-8-state)",
-					"**This condition block does not use a specific sensor of the Thymio.** It reads the status of the RGB (Red,Green,Blue) LEDs displayed on the bottom of Thymio. It can be used only as a condition, not as a main event.",
-					"**Triggering conditions:** this condition is true when the bottom Thymio RGB LEDs are set to a specific color. The comparison on each color component is made by sectors, allowing the condition to be true also for an approximate color match.",
-					"**Parameters:** the programmer can choose one of the 7 available colors or the last parameter (bottom right) which represents the LEDs switched off.",
-					"**Example:** if the bottom LEDs on Thymio are blue, then …. (robot action, for instance switch them to red)."
-				],
-				"acc upside down": [
-					"# On the back",
-					"![acc upside down](vpl:block:acc-upside-down)",
-					"**Sensor used:** 3-axis accelerometer.",
-					"**Triggering conditions:** This event is triggered by Thymio’s orientation in respect to the direction of gravity when the robot is turned upside-down, be it laying on the ground or hold in the air.",
-					"**Example:** When the robot is placed upside down, then … (robot action, for instance making an unhappy sound)."
-				],
 				"fall": [
 					"# Falling detection",
 					"![fall](vpl:block:fall)",

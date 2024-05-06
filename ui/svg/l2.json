@@ -84,14 +84,6 @@
 			}
 		},
 		{
-			"name": "acc upside down",
-			"l2": {
-				"sectionBegin": "onevent acc {\n",
-				"sectionEnd": "}\n",
-				"clause": "-acc[2] / 2 > abs(acc[0]) + abs(acc[1])"
-			}
-		},
-		{
 			"name": "yaw",
 			"l2": {
 				"sectionBegin": "onevent acc {\n",
@@ -162,20 +154,6 @@
 					"topColor = [0, 0, 0];\n"
 				],
 				"clause": "topColor[0] `$[0] % 2 ? '>=' : '<'` 16 && topColor[1] `$[0] % 4 >= 2 ? '>=' : '<'` 16 && topColor[2] `$[0] >= 4 ? '>=' : '<'` 16"
-			}
-		},
-		{
-			"name": "bottom color 8 state",
-			"l2": {
-				"initVarDecl": [
-					[
-						"int bottomColor[3];\n"
-					]
-				],
-				"initCodeExec": [
-					"bottomColor = [0, 0, 0];\n"
-				],
-				"clause": "bottomColor[0] `$[0] % 2 ? '>=' : '<'` 16 && bottomColor[1] `$[0] % 4 >= 2 ? '>=' : '<'` 16 && bottomColor[2] `$[0] >= 4 ? '>=' : '<'` 16"
 			}
 		},
 		{

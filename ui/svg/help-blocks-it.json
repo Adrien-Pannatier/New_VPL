@@ -204,21 +204,6 @@
 					"**Parametri :** il programmatore può scegliere uno dei 7 colori disponibili o l'ultimo parametro (in basso a destra), che rappresenta il LED spento",
 					"**Esempio :** Se il LED superiore di Thymio è giallo, allora... (azione del robot, per Esempio s'illumina di rosso)."
 				],
-				"bottom color 8 state": [
-					"# Stato del colore inferiore",
-					"![Icona dello stato del colore inferiore](vpl:block:bottom-color-8-state)",
-					"**Questo evento non utilizza alcun sensore di Thymio.** Legge lo stato del LED RGB (valori rosso, verde e blu) situato nella parte inferiore di Thymio. Questo blocco può essere utilizzato solo come condizione, non come evento principale.",
-					"**Condizioni di attivazione :** questa condizione è vera se il LED RGB inferiore di Thymio è impostato su un determinato colore. Il confronto di ogni componente del colore viene effettuato su una serie di valori, consentendo così di soddisfare la condizione anche per una corrispondenza cromatica approssimativa.",
-					"**Parametri :** il programmatore può scegliere uno dei 7 colori disponibili o l'ultimo parametro (in basso a destra), che rappresenta il LED spento",
-					"**Esempio :** Se i LED inferiori di Thymio sono blu, allora... (azione del robot, per Esempio s'illumina di rosso)."
-				],
-				"acc upside down": [
-					"# Sdraiato sul dorso",
-					"![Icona sdraiato sul dorso](vpl:block:acc-upside-down)",
-					"**Sensore(i) utilizzato(i):** accelerometro a 3 assi.",
-					"**Condizioni di attivazione :** Questo evento è avviato dall'orientamento di Thymio rispetto alla direzione della gravità: quando Thymio è capovolto, appoggiato a terra (o in aria).",
-					"**Esempio :** Quando il robot è capovolto, allora ... (azione del robot, per Esempio emette un suono arrabbiato)."
-				],
 				"fall": [
 					"# Rileva la caduta libera",
 					"![Icona del rilevamento di caduta libera](vpl:block:fall)",

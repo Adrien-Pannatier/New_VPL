@@ -729,11 +729,16 @@
       </g>
       <g id="Ev_ProxGr_bas" data-name="Ev ProxGr bas">
         <g id="Bg_Th_Profile-8" data-name="Bg Th Profile-8">
-          <path class="cls-12" d="M68.51,57.55H63.85c1.53,1,1.8,3,2.32,3.8a2.42,2.42,0,0,0,1.87,1h1a2.42,2.42,0,0,0,1.87-1c.52-.79.79-2.8,2.31-3.8Z"/>
-          <rect class="cls-13" x="16" y="33.55" width="64" height="24" rx="2"/>
-          <circle class="cls-13" cx="33.96" cy="50.05" r="12.5"/>
-          <path class="cls-46" d="M73,43.26H67.9a.75.75,0,0,1,0-1.5H73a.75.75,0,0,1,0,1.5Z"/>
-          <path class="cls-46" d="M79.25,43.26h-1.9a.75.75,0,0,1,0-1.5h1.9Z"/>
+          <path class="cls-13" d="M24.4,41h49.1c7.1,0,12.6,4.3,12.6,9.7v2c0,5.3-5.7,9.7-12.6,9.7H24.4c-7.1,0-12.7-4.3-12.7-9.7v-2
+          C11.7,45.3,17.4,41,24.4,41z"/>
+          <rect x="40.2" y="43" class="cls-13" width="17.5" height="17.5"/>
+          <g>
+            <circle class="cls-13" cx="48.9" cy="57.6" r="2.1"/>
+            <circle class="cls-13" cx="48.9" cy="46.1" r="2.1"/>
+            <circle class="cls-13" cx="43.2" cy="51.8" r="2.1"/>
+            <circle class="cls-13" cx="54.7" cy="51.8" r="2.1"/>
+            <circle class="cls-13" cx="48.9" cy="51.8" r="2.1"/>
+          </g>
         </g>
         <rect id="btn2_ProxGd_detection" data-name="btn2 ProxGd detection" class="cls-47" x="8" y="64.04" width="80" height="12" rx="4"/>
       </g>

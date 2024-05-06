@@ -155,19 +155,6 @@
 			]
 		},
 		{
-			"name": "acc upside down",
-			"type": "event",
-			"modes": ["basic"],
-			"draw": [
-				{
-					"uri": "Blocks.svg#Ground_accel"
-				},
-				{
-					"uri": "Blocks.svg#ThymioUpsideDown"
-				}
-			]
-		},
-		{
 			"name": "yaw",
 			"type": "event",
 			"modes": ["advanced"],
@@ -1047,74 +1034,6 @@
 			"styles": [
 				{
 					"id": "Gradient_Top_basic",
-					"st": "fill:`['transparent','red','#3f0','yellow','blue','magenta','cyan','white'][$[0]]`"
-				}
-			]
-		},
-		{
-			"name": "bottom color 8 state",
-			"type": "state",
-			"modes": ["basic", "advanced"],
-			"draw": [
-				{
-					"uri": "Blocks.svg#ColorPalette-2"
-				},
-				{
-					"uri": "Blocks.svg#Bg_Thymio_front_color-2"
-				},
-				{
-					"uri": "Blocks.svg#Gradient_Bottom_basic"
-				},
-				{
-					"uri": "Blocks.svg#SelectedColors_bottom"
-				}
-			],
-			"defaultParameters": [0],
-			"radiobuttons": [
-				{
-					"id": "Btn2_SelectedNone-2",
-					"val": 0,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedRed-2",
-					"val": 1,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedGreen-2",
-					"val": 2,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedYel-2",
-					"val": 3,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedBlue-2",
-					"val": 4,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedMagenta-2",
-					"val": 5,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedCyan-2",
-					"val": 6,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedWhite-2",
-					"val": 7,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				}
-			],
-			"styles": [
-				{
-					"id": "Gradient_Bottom_basic",
 					"st": "fill:`['transparent','red','#3f0','yellow','blue','magenta','cyan','white'][$[0]]`"
 				}
 			]
@@ -2418,7 +2337,6 @@ sim-playground {
 		"button",
 		"remote control arrows",
 		"remote control keypad",
-		"acc upside down",
 		"roll",
 		"yaw",
 		"pitch",
@@ -2434,7 +2352,6 @@ sim-playground {
 		"horiz prox back adv",
 		"horiz prox adv",
 		"color 8 state",
-		"bottom color 8 state",
 		"state 256",
 		"state 256 with mask",
 		"counter comparison",
@@ -2715,13 +2632,6 @@ sim-playground {
 			}
 		},
 		{
-			"name": "acc upside down",
-			"aseba": {
-				"sectionBegin": "onevent acc\n",
-				"clause": "-acc[2] / 2 > abs(acc[0]) + abs(acc[1])"
-			}
-		},
-		{
 			"name": "yaw",
 			"aseba": {
 				"initVarDecl": [
@@ -2794,20 +2704,6 @@ sim-playground {
 					"topColor = [0, 0, 0]\n"
 				],
 				"clause": "topColor[0] `$[0] % 2 ? '>=' : '<'` 16 and topColor[1] `$[0] % 4 >= 2 ? '>=' : '<'` 16 and topColor[2] `$[0] >= 4 ? '>=' : '<'` 16"
-			}
-		},
-		{
-			"name": "bottom color 8 state",
-			"aseba": {
-				"initVarDecl": [
-					[
-						"var bottomColor[3]\n"
-					]
-				],
-				"initCodeExec": [
-					"bottomColor = [0, 0, 0]\n"
-				],
-				"clause": "bottomColor[0] `$[0] % 2 ? '>=' : '<'` 16 and bottomColor[1] `$[0] % 4 >= 2 ? '>=' : '<'` 16 and bottomColor[2] `$[0] >= 4 ? '>=' : '<'` 16"
 			}
 		},
 		{
@@ -3364,14 +3260,6 @@ sim-playground {
 			}
 		},
 		{
-			"name": "acc upside down",
-			"l2": {
-				"sectionBegin": "onevent acc {\n",
-				"sectionEnd": "}\n",
-				"clause": "-acc[2] / 2 > abs(acc[0]) + abs(acc[1])"
-			}
-		},
-		{
 			"name": "yaw",
 			"l2": {
 				"sectionBegin": "onevent acc {\n",
@@ -3442,20 +3330,6 @@ sim-playground {
 					"topColor = [0, 0, 0];\n"
 				],
 				"clause": "topColor[0] `$[0] % 2 ? '>=' : '<'` 16 && topColor[1] `$[0] % 4 >= 2 ? '>=' : '<'` 16 && topColor[2] `$[0] >= 4 ? '>=' : '<'` 16"
-			}
-		},
-		{
-			"name": "bottom color 8 state",
-			"l2": {
-				"initVarDecl": [
-					[
-						"int bottomColor[3];\n"
-					]
-				],
-				"initCodeExec": [
-					"bottomColor = [0, 0, 0];\n"
-				],
-				"clause": "bottomColor[0] `$[0] % 2 ? '>=' : '<'` 16 && bottomColor[1] `$[0] % 4 >= 2 ? '>=' : '<'` 16 && bottomColor[2] `$[0] >= 4 ? '>=' : '<'` 16"
 			}
 		},
 		{
@@ -3915,9 +3789,6 @@ sim-playground {
 			"name": "roll"
 		},
 		{
-			"name": "acc upside down"
-		},
-		{
 			"name": "yaw"
 		},
 		{
@@ -4015,9 +3886,6 @@ sim-playground {
 		},
 		{
 			"name": "color 8 state"
-		},
-		{
-			"name": "bottom color 8 state"
 		},
 		{
 			"name": "motor",
@@ -4311,9 +4179,6 @@ sim-playground {
 			"name": "roll"
 		},
 		{
-			"name": "acc upside down"
-		},
-		{
 			"name": "yaw"
 		},
 		{
@@ -4363,9 +4228,6 @@ sim-playground {
 		},
 		{
 			"name": "color 8 state"
-		},
-		{
-			"name": "bottom color 8 state"
 		},
 		{
 			"name": "motor"
@@ -8213,11 +8075,16 @@ sim-playground {
       </g>
       <g id="Ev_ProxGr_bas" data-name="Ev ProxGr bas">
         <g id="Bg_Th_Profile-8" data-name="Bg Th Profile-8">
-          <path class="cls-12" d="M68.51,57.55H63.85c1.53,1,1.8,3,2.32,3.8a2.42,2.42,0,0,0,1.87,1h1a2.42,2.42,0,0,0,1.87-1c.52-.79.79-2.8,2.31-3.8Z"/>
-          <rect class="cls-13" x="16" y="33.55" width="64" height="24" rx="2"/>
-          <circle class="cls-13" cx="33.96" cy="50.05" r="12.5"/>
-          <path class="cls-46" d="M73,43.26H67.9a.75.75,0,0,1,0-1.5H73a.75.75,0,0,1,0,1.5Z"/>
-          <path class="cls-46" d="M79.25,43.26h-1.9a.75.75,0,0,1,0-1.5h1.9Z"/>
+          <path class="cls-13" d="M24.4,41h49.1c7.1,0,12.6,4.3,12.6,9.7v2c0,5.3-5.7,9.7-12.6,9.7H24.4c-7.1,0-12.7-4.3-12.7-9.7v-2
+          C11.7,45.3,17.4,41,24.4,41z"/>
+          <rect x="40.2" y="43" class="cls-13" width="17.5" height="17.5"/>
+          <g>
+            <circle class="cls-13" cx="48.9" cy="57.6" r="2.1"/>
+            <circle class="cls-13" cx="48.9" cy="46.1" r="2.1"/>
+            <circle class="cls-13" cx="43.2" cy="51.8" r="2.1"/>
+            <circle class="cls-13" cx="54.7" cy="51.8" r="2.1"/>
+            <circle class="cls-13" cx="48.9" cy="51.8" r="2.1"/>
+          </g>
         </g>
         <rect id="btn2_ProxGd_detection" data-name="btn2 ProxGd detection" class="cls-47" x="8" y="64.04" width="80" height="12" rx="4"/>
       </g>
@@ -8972,7 +8839,6 @@ sim-playground {
 			"button": "Multiple buttons",
 			"init": "Start of the program",
 			"roll": "Roll angle",
-			"acc upside down": "Lying upside down",
 			"yaw": "Yaw angle",
 			"pitch": "Pitch angle",
 			"clap": "Clap (sound) detection",
@@ -8991,7 +8857,6 @@ sim-playground {
 			"state 256": "8-LED state check",
 			"state 256 with mask": "State bit partial comparison",
 			"color 8 state": "Top color state",
-			"bottom color 8 state": "Bottom color state",
 			"horiz prox adv": "Proximity sensors with 2 thresholds",
 			"ground adv": "Ground reflection sensors with 2 thresholds",
 			"motor": "Set wheel speeds",
@@ -9345,21 +9210,6 @@ BLOCKS
 					"**Parameters:** the programmer can choose one of the 7 available colors or the last parameter (bottom right) which represents the LED switched off.",
 					"**Example:** If the top LED on Thymio is yellow, then …. (robot action, for instance switch to red)."
 				],
-				"bottom color 8 state": [
-					"# Bottom color state",
-					"![bottom color 8 state](vpl:block:bottom-color-8-state)",
-					"**This condition block does not use a specific sensor of the Thymio.** It reads the status of the RGB (Red,Green,Blue) LEDs displayed on the bottom of Thymio. It can be used only as a condition, not as a main event.",
-					"**Triggering conditions:** this condition is true when the bottom Thymio RGB LEDs are set to a specific color. The comparison on each color component is made by sectors, allowing the condition to be true also for an approximate color match.",
-					"**Parameters:** the programmer can choose one of the 7 available colors or the last parameter (bottom right) which represents the LEDs switched off.",
-					"**Example:** if the bottom LEDs on Thymio are blue, then …. (robot action, for instance switch them to red)."
-				],
-				"acc upside down": [
-					"# On the back",
-					"![acc upside down](vpl:block:acc-upside-down)",
-					"**Sensor used:** 3-axis accelerometer.",
-					"**Triggering conditions:** This event is triggered by Thymio’s orientation in respect to the direction of gravity when the robot is turned upside-down, be it laying on the ground or hold in the air.",
-					"**Example:** When the robot is placed upside down, then … (robot action, for instance making an unhappy sound)."
-				],
 				"fall": [
 					"# Falling detection",
 					"![fall](vpl:block:fall)",
@@ -9604,7 +9454,6 @@ BLOCKS
 			"remote control arrows": "Pfeiltasten der Fernbedienung",
 			"remote control keypad": "Eingabetasten der Fernbedienung",
 			"init": "Programm-Startereignis",
-			"acc upside down": "Auf dem Kopf liegend",
 			"roll": "Rollwinkel",
 			"pitch": "Steigungswinkel",
 			"yaw": "Gierwinkel",
@@ -9623,7 +9472,6 @@ BLOCKS
 			"state 256 with mask": "Selektive 8-LED-Zustandsprüfung",
 			"counter comparison": "8-LED-Zählervergleich",
 			"color 8 state": "Oberer Farbzustand",
-			"bottom color 8 state": "Unterer Farbzustand",
 			"set state 256": "8-LEDs-Zustand festlegen",
 			"set state 256 with mask": "Selektives Setzen des 8-LED-Zustands",
 			"top color 8": "Obere Farbe festlegen",
@@ -9773,13 +9621,6 @@ BLOCKS
 					"** Dieses Ereignis verwendet keinen spezifischen Sensor des Thymios.**",
 					"**Auslösebedingungen:** Dieses Ereignis wird beim Start des Programms auf dem Roboter ausgelöst, sobald Sie die START- oder NEUSTART-Schaltfläche in der VPL3-Programmierumgebung anklicken. Sie können es benutzen, um Aktionen festzulegen, die Thymio beim Start des Programms ausführen soll.",
 					"**Beispiel:** Am Anfang des Programms starte mit  (Aktion des Roboters, z.B., die Farbe des Roboters auf Rot setzen.)"
-				],
-				"acc upside down": [
-					"# Auf dem Kopf liegend",
-					"![Symbol für die Kopflage](vpl:block:acc-upside-down)",
-					"**Verwendete Sensoren:** 3-Achsen-Beschleunigungssensor.",
-					"**Auslösebedingungen:** Dieses Ereignis wird durch die Lage des Thymios in Bezug auf die Richtung der Schwerkraft ausgelöst, wenn der Roboter auf den Kopf gedreht wird. Es spielt dabei keine Rolle, ob Thymio auf einem Untergrund steht oder ob er in die Luft gehalten wird.",
-					"**Beispiel:** Wenn der Roboter mit seiner Oberseite nach unten gedreht wird, dann … (Aktion des Roboters, z.B. ein ‘unglückliches’ Ton-Signal von sich geben)."
 				],
 				"roll": [
 					"# Rollwinkel",
@@ -9936,14 +9777,6 @@ BLOCKS
 					"**Auslösebedingungen:** Diese Bedingung ist wahr, wenn die RGB-LED auf der Oberseite des Thymio auf eine bestimmte Farbe eingestellt ist. Der Vergleich für jede Farbkomponente basiert auf Sektoren, so dass die Bedingung auch bei einer ungefähren Farbübereinstimmung erfüllt ist.",
 					"**Parameter:** Der Programmierer kann eine der 7 verfügbaren Farben oder die letzte Option (unten rechts) wählen, welche die ausgeschaltete RGB-LED darstellt.",
 					"**Beispiel:** Falls die RGB-LED auf der Oberseite des Thymios gelb leuchtet, dann .... (Aktion des Roboters, z.B. seine Farbe auf Rot wechseln)."
-				],
-				"bottom color 8 state": [
-					"# Unterer Farbzustand",
-					"![Symbol für unteren Farbzustand](vpl:block:bottom-color-8-state)",
-					"**Dieser Bedingungsblock verwendet keinen spezifischen Sensor des Thymios.** Er liest den Zustand der RGB-LEDs (Rot, Grün, Blau), die auf der Unterseite des Thymios angeordnet sind. Dieser Block kann nur als Bedingung und nicht als Hauptereignis verwendet werden.",
-					"**Auslösebedingungen:** Diese Bedingung ist wahr, wenn die RGB-LEDs auf der Unterseite des Thymio auf eine bestimmte Farbe eingestellt sind. Der Vergleich für jede Farbkomponente basiert auf Sektoren, so dass die Bedingung auch bei einer ungefähren Farbübereinstimmung erfüllt ist.",
-					"**Parameter:** Der Programmierer kann eine der 7 verfügbaren Farben oder die letzte Option (unten rechts) wählen, welche die ausgeschaltete RGB-LED darstellt.",
-					"**Beispiel:** Falls die RGB-LEDs auf der Unterseite des Thymios blau leuchten, dann .... (Aktion des Roboters, z.B. seine Farbe auf Rot wechseln)."
 				],
 				"set state 256": [
 					"# 8-LED-Zustand festlegen",
@@ -10190,7 +10023,6 @@ BLOCKS
 			"button": "Boutons multiples",
 			"init": "Démarrage du programme",
 			"roll": "Angle de roulis",
-			"acc upside down": "Posé sur le dos",
 			"yaw": "Angle de lacet",
 			"pitch": "Angle de tangage",
 			"clap": "Détection de clap (bruit)",
@@ -10210,7 +10042,6 @@ BLOCKS
 			"state 256": "Etat des 8 LED",
 			"state 256 with mask": "Etat partiel des 8 LED",
 			"color 8 state": "Etat de la couleur du haut",
-			"bottom color 8 state": "Etat de la couleur du bas",
 			"horiz prox adv": "Capteurs de proximité avec seuils haut et bas",
 			"ground adv": " Capteurs au sol avec double seuil",
 			"motor": "Spécifier la vitesse des moteurs",
@@ -10557,21 +10388,6 @@ BLOCKS
 					"**Paramètres :** l'utilisateur peut choisir parmi 7 couleurs ou le dernier paramètre, qui représente la LED éteinte",
 					"**Exemple :** Si la LED du haut de Thymio est jaune, alors... (action du robot, par exemple s'allumer en rouge)."
 				],
-				"bottom color 8 state": [
-					"# Etat de la couleur du bas",
-					"![Icône de l'état de la couleur du bas](vpl:block:bottom-color-8-state)",
-					"**Cette condition n'utilise pas de capteur de Thymio.** Elle lit l'état de la LED RGB (valeurs de rouge, vert et bleu) en bas de Thymio. Ce bloc ne peut être utilisé que comme condition, pas comme événement principal.",
-					"**Conditions de déclenchement :** cette condition est vraie si la LED RGB du bas de Thymio est réglée sur une certaine couleur. La comparaison de chaque composante est fait sur une tranche de valeurs, permettant ainsi à la condition d'être remplie même pour une correspondance de couleur approximative.",
-					"**Paramètres :** l'utilisateur peut choisir parmi 7 couleurs ou le dernier paramètre, qui représente la LED éteinte",
-					"**Exemple :** Si les LED du basde Thymio sont bleues, alors... (action du robot, par exemple s'allumer en rouge)."
-				],
-				"acc upside down": [
-					"# Posé sur le dos",
-					"![Icône de posé sur le dos](vpl:block:acc-upside-down)",
-					"**Capteur(s) utilisé(s):** accéléromètre 3 axes.",
-					"**Conditions de déclenchement :** Cet événement est déclenché par l'orientation de Thymio par rapport à la direction de la gravité: quand Thymio est posé (ou tenu en l'air) sur son dos).",
-					"**Exemple :** Quand le robot est posé à l'envers, alors ... (action du robot, par exemple émettre un bruit énervé)."
-				],
 				"fall": [
 					"# Détection de chute libre",
 					"![Icône de détection de chute libre](vpl:block:fall)",
@@ -10816,7 +10632,6 @@ BLOCKS
 			"button": "Pulsanti multipli",
 			"init": "Avvia il programma",
 			"roll": "Angolo di rollata (o rollio)",
-			"acc upside down": "Sdraiato sul dorso",
 			"yaw": "Angolo di imbardata",
 			"pitch": "Angolo di beccheggio",
 			"clap": "Rileva un suono forte (battito delle mani)",
@@ -10836,7 +10651,6 @@ BLOCKS
 			"state 256": "Stato degli 8 LED",
 			"state 256 with mask": "Stato parziale degli 8 LED",
 			"color 8 state": "Stato del colore superiore",
-			"bottom color 8 state": "Stato del colore inferiore",
 			"horiz prox adv": "Sensori di prossimità con 2 soglie, alta e bassa",
 			"ground adv": "Sensori di suolo con doppia soglia",
 			"motor": "Imposta la velocità dei motori",
@@ -11177,21 +10991,6 @@ BLOCKS
 					"**Condizioni di attivazione :** questa condizione è vera se il LED RGB superiore di Thymio è impostato su un determinato colore. Il confronto di ogni componente del colore viene effettuato su una serie di valori, consentendo così di soddisfare la condizione anche per una corrispondenza cromatica approssimativa.",
 					"**Parametri :** il programmatore può scegliere uno dei 7 colori disponibili o l'ultimo parametro (in basso a destra), che rappresenta il LED spento",
 					"**Esempio :** Se il LED superiore di Thymio è giallo, allora... (azione del robot, per Esempio s'illumina di rosso)."
-				],
-				"bottom color 8 state": [
-					"# Stato del colore inferiore",
-					"![Icona dello stato del colore inferiore](vpl:block:bottom-color-8-state)",
-					"**Questo evento non utilizza alcun sensore di Thymio.** Legge lo stato del LED RGB (valori rosso, verde e blu) situato nella parte inferiore di Thymio. Questo blocco può essere utilizzato solo come condizione, non come evento principale.",
-					"**Condizioni di attivazione :** questa condizione è vera se il LED RGB inferiore di Thymio è impostato su un determinato colore. Il confronto di ogni componente del colore viene effettuato su una serie di valori, consentendo così di soddisfare la condizione anche per una corrispondenza cromatica approssimativa.",
-					"**Parametri :** il programmatore può scegliere uno dei 7 colori disponibili o l'ultimo parametro (in basso a destra), che rappresenta il LED spento",
-					"**Esempio :** Se i LED inferiori di Thymio sono blu, allora... (azione del robot, per Esempio s'illumina di rosso)."
-				],
-				"acc upside down": [
-					"# Sdraiato sul dorso",
-					"![Icona sdraiato sul dorso](vpl:block:acc-upside-down)",
-					"**Sensore(i) utilizzato(i):** accelerometro a 3 assi.",
-					"**Condizioni di attivazione :** Questo evento è avviato dall'orientamento di Thymio rispetto alla direzione della gravità: quando Thymio è capovolto, appoggiato a terra (o in aria).",
-					"**Esempio :** Quando il robot è capovolto, allora ... (azione del robot, per Esempio emette un suono arrabbiato)."
 				],
 				"fall": [
 					"# Rileva la caduta libera",

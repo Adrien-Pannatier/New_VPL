@@ -90,9 +90,6 @@
 			"name": "roll"
 		},
 		{
-			"name": "acc upside down"
-		},
-		{
 			"name": "yaw"
 		},
 		{
@@ -142,9 +139,6 @@
 		},
 		{
 			"name": "color 8 state"
-		},
-		{
-			"name": "bottom color 8 state"
 		},
 		{
 			"name": "motor"

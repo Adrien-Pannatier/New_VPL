@@ -154,19 +154,6 @@
 			]
 		},
 		{
-			"name": "acc upside down",
-			"type": "event",
-			"modes": ["basic"],
-			"draw": [
-				{
-					"uri": "Blocks.svg#Ground_accel"
-				},
-				{
-					"uri": "Blocks.svg#ThymioUpsideDown"
-				}
-			]
-		},
-		{
 			"name": "yaw",
 			"type": "event",
 			"modes": ["advanced"],
@@ -1073,74 +1060,6 @@
 			"styles": [
 				{
 					"id": "Gradient_Top_basic",
-					"st": "fill:`['transparent','red','#3f0','yellow','blue','magenta','cyan','white'][$[0]]`"
-				}
-			]
-		},
-		{
-			"name": "bottom color 8 state",
-			"type": "state",
-			"modes": ["basic", "advanced"],
-			"draw": [
-				{
-					"uri": "Blocks.svg#ColorPalette-2"
-				},
-				{
-					"uri": "Blocks.svg#Bg_Thymio_front_color-2"
-				},
-				{
-					"uri": "Blocks.svg#Gradient_Bottom_basic"
-				},
-				{
-					"uri": "Blocks.svg#SelectedColors_bottom"
-				}
-			],
-			"defaultParameters": [0],
-			"radiobuttons": [
-				{
-					"id": "Btn2_SelectedNone-2",
-					"val": 0,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedRed-2",
-					"val": 1,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedGreen-2",
-					"val": 2,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedYel-2",
-					"val": 3,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedBlue-2",
-					"val": 4,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedMagenta-2",
-					"val": 5,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedCyan-2",
-					"val": 6,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				},
-				{
-					"id": "Btn2_SelectedWhite-2",
-					"val": 7,
-					"st": ["fill:transparent", "fill:rgba(255,255,255,.3);stroke:#263238;stroke-width:2px;stroke-linejoin:round"]
-				}
-			],
-			"styles": [
-				{
-					"id": "Gradient_Bottom_basic",
 					"st": "fill:`['transparent','red','#3f0','yellow','blue','magenta','cyan','white'][$[0]]`"
 				}
 			]

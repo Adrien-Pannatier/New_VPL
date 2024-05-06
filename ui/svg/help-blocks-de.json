@@ -41,13 +41,6 @@
 					"**Auslösebedingungen:** Dieses Ereignis wird beim Start des Programms auf dem Roboter ausgelöst, sobald Sie die START- oder NEUSTART-Schaltfläche in der VPL3-Programmierumgebung anklicken. Sie können es benutzen, um Aktionen festzulegen, die Thymio beim Start des Programms ausführen soll.",
 					"**Beispiel:** Am Anfang des Programms starte mit  (Aktion des Roboters, z.B., die Farbe des Roboters auf Rot setzen.)"
 				],
-				"acc upside down": [
-					"# Auf dem Kopf liegend",
-					"![Symbol für die Kopflage](vpl:block:acc-upside-down)",
-					"**Verwendete Sensoren:** 3-Achsen-Beschleunigungssensor.",
-					"**Auslösebedingungen:** Dieses Ereignis wird durch die Lage des Thymios in Bezug auf die Richtung der Schwerkraft ausgelöst, wenn der Roboter auf den Kopf gedreht wird. Es spielt dabei keine Rolle, ob Thymio auf einem Untergrund steht oder ob er in die Luft gehalten wird.",
-					"**Beispiel:** Wenn der Roboter mit seiner Oberseite nach unten gedreht wird, dann … (Aktion des Roboters, z.B. ein ‘unglückliches’ Ton-Signal von sich geben)."
-				],
 				"roll": [
 					"# Rollwinkel",
 					"![Symbol für Rollwinkel](vpl:block:roll)",
@@ -203,14 +196,6 @@
 					"**Auslösebedingungen:** Diese Bedingung ist wahr, wenn die RGB-LED auf der Oberseite des Thymio auf eine bestimmte Farbe eingestellt ist. Der Vergleich für jede Farbkomponente basiert auf Sektoren, so dass die Bedingung auch bei einer ungefähren Farbübereinstimmung erfüllt ist.",
 					"**Parameter:** Der Programmierer kann eine der 7 verfügbaren Farben oder die letzte Option (unten rechts) wählen, welche die ausgeschaltete RGB-LED darstellt.",
 					"**Beispiel:** Falls die RGB-LED auf der Oberseite des Thymios gelb leuchtet, dann .... (Aktion des Roboters, z.B. seine Farbe auf Rot wechseln)."
-				],
-				"bottom color 8 state": [
-					"# Unterer Farbzustand",
-					"![Symbol für unteren Farbzustand](vpl:block:bottom-color-8-state)",
-					"**Dieser Bedingungsblock verwendet keinen spezifischen Sensor des Thymios.** Er liest den Zustand der RGB-LEDs (Rot, Grün, Blau), die auf der Unterseite des Thymios angeordnet sind. Dieser Block kann nur als Bedingung und nicht als Hauptereignis verwendet werden.",
-					"**Auslösebedingungen:** Diese Bedingung ist wahr, wenn die RGB-LEDs auf der Unterseite des Thymio auf eine bestimmte Farbe eingestellt sind. Der Vergleich für jede Farbkomponente basiert auf Sektoren, so dass die Bedingung auch bei einer ungefähren Farbübereinstimmung erfüllt ist.",
-					"**Parameter:** Der Programmierer kann eine der 7 verfügbaren Farben oder die letzte Option (unten rechts) wählen, welche die ausgeschaltete RGB-LED darstellt.",
-					"**Beispiel:** Falls die RGB-LEDs auf der Unterseite des Thymios blau leuchten, dann .... (Aktion des Roboters, z.B. seine Farbe auf Rot wechseln)."
 				],
 				"set state 256": [
 					"# 8-LED-Zustand festlegen",

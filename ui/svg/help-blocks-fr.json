@@ -204,21 +204,6 @@
 					"**Paramètres :** l'utilisateur peut choisir parmi 7 couleurs ou le dernier paramètre, qui représente la LED éteinte",
 					"**Exemple :** Si la LED du haut de Thymio est jaune, alors... (action du robot, par exemple s'allumer en rouge)."
 				],
-				"bottom color 8 state": [
-					"# Etat de la couleur du bas",
-					"![Icône de l'état de la couleur du bas](vpl:block:bottom-color-8-state)",
-					"**Cette condition n'utilise pas de capteur de Thymio.** Elle lit l'état de la LED RGB (valeurs de rouge, vert et bleu) en bas de Thymio. Ce bloc ne peut être utilisé que comme condition, pas comme événement principal.",
-					"**Conditions de déclenchement :** cette condition est vraie si la LED RGB du bas de Thymio est réglée sur une certaine couleur. La comparaison de chaque composante est fait sur une tranche de valeurs, permettant ainsi à la condition d'être remplie même pour une correspondance de couleur approximative.",
-					"**Paramètres :** l'utilisateur peut choisir parmi 7 couleurs ou le dernier paramètre, qui représente la LED éteinte",
-					"**Exemple :** Si les LED du basde Thymio sont bleues, alors... (action du robot, par exemple s'allumer en rouge)."
-				],
-				"acc upside down": [
-					"# Posé sur le dos",
-					"![Icône de posé sur le dos](vpl:block:acc-upside-down)",
-					"**Capteur(s) utilisé(s):** accéléromètre 3 axes.",
-					"**Conditions de déclenchement :** Cet événement est déclenché par l'orientation de Thymio par rapport à la direction de la gravité: quand Thymio est posé (ou tenu en l'air) sur son dos).",
-					"**Exemple :** Quand le robot est posé à l'envers, alors ... (action du robot, par exemple émettre un bruit énervé)."
-				],
 				"fall": [
 					"# Détection de chute libre",
 					"![Icône de détection de chute libre](vpl:block:fall)",
