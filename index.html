@@ -51,23 +51,35 @@
         }
     </script>
 </head>
+    <style>
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .text-left {
+            text-align: left;
+        }
+    </style>
 <body>
-    <body style="background-color: rgb(159, 159, 159);">
-        <h1 style="font-family: Arial, sans-serif;">Thymio module selecter</h1>
-        <p style="font-family: Arial, sans-serif;">Select which module you want to use</p>
-        
-        <button onclick="goToWebsite()" style="font-family: Arial, sans-serif;">Go</button> <!-- Moved the button here -->
-        
-        <form>
-            <input type="radio" name="image" value="https://epfl-mobots.github.io/vpl-trois/vpl.html?ui=ui/svg/ui.json&appearance=svg&uilanguage=en&role=student&advmode=true&robot=thymio-tdm&language=aseba#w=ws://localhost:8597" onclick="updateImage('images/thymio.jpg')" style="font-family: Arial, sans-serif;"> Thymio<br>
-            <input type="radio" name="image" value="https://adrien-pannatier.github.io/New_VPL/vpl/index-svg.html?ui=ui/svg/ui.json&robot=thymio-tdm&language=aseba#w=ws://localhost:8597" onclick="updateImage('images/plate.jpg')" style="font-family: Arial, sans-serif;"> Module 1<br>
-            <input type="hidden" id="selectedImage" value="">
-        </form>
-        
-        <div class="image-box" id="imageBox">
-            <img id="image" src="" alt="Image">
+    <div class="center">
+        <body style="background-color: rgb(159, 159, 159);">
+        <div class="text-left">
+            <h1 style="font-family: Arial, sans-serif;">Thymio module selecter</h1>
+            <p style="font-family: Arial, sans-serif;">Select which module you want to use</p>
+            <button onclick="goToWebsite()" style="font-family: Arial, sans-serif;">Go</button> <!-- Moved the button here -->
+            
+            <form>
+                <input type="radio" name="image" value="https://epfl-mobots.github.io/vpl-trois/vpl.html?ui=ui/svg/ui.json&appearance=svg&uilanguage=en&role=student&advmode=true&robot=thymio-tdm&language=aseba#w=ws://localhost:8597" onclick="updateImage('images/thymio.jpg')" style="font-family: Arial, sans-serif;"> Thymio<br>
+                <input type="radio" name="image" value="https://adrien-pannatier.github.io/New_VPL/vpl/index-svg.html?ui=ui/svg/ui.json&robot=thymio-tdm&language=aseba#w=ws://localhost:8597" onclick="updateImage('images/plate.jpg')" style="font-family: Arial, sans-serif;"> Module 1<br>
+                <input type="hidden" id="selectedImage" value="">
+            </form>
         </div>
-        
-    </body>
+            <div class="image-box" id="imageBox">
+                <img id="image" src="" alt="Image">
+            </div>
+        </body>
+    </div>
 </body>
 </html>
