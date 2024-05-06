@@ -1884,6 +1884,86 @@
 					"warning": "No ground sensor specified"
 				}
 			]
+		},
+		{
+			"name": "bottom color left",
+			"type": "action",
+			"modes": ["basic"],
+			"draw": [
+				{
+					"uri": "Blocks.svg#Ev_bottom_led_left"
+				}
+			],
+			"defaultParameters": [ 0, 0, 0],
+			"sliders": [
+				{
+					"id": "Slid_red_botL",
+					"thumbId": "Cursor_red_botL",
+					"lowerPartId": "Slid_red_value_botL",
+					"min": 0,
+					"max": 1
+				},
+				{
+					"id": "Slid_green_botL",
+					"thumbId": "Cursor_green_botL",
+					"lowerPartId": "Slid_green_value_botL",
+					"min": 0,
+					"max": 1
+				},
+				{
+					"id": "Slid_blue_botL",
+					"thumbId": "Cursor_blue_botL",
+					"lowerPartId": "Slid_blue_value_botL",
+					"min": 0,
+					"max": 1
+				}
+			],
+			"styles": [
+				{
+					"id": "Gradient_bottomL",
+					"st": "fill:#`rgb($).map(function (c) { return Math.floor(c * 15.999).toString(16); }).join('')`"
+				}
+			]
+		},
+		{
+			"name": "bottom color right",
+			"type": "action",
+			"modes": ["basic"],
+			"draw": [
+				{
+					"uri": "Blocks.svg#Ev_bottom_led_right"
+				}
+			],
+			"defaultParameters": [ 0, 0, 0],
+			"sliders": [
+				{
+					"id": "Slid_red_botR",
+					"thumbId": "Cursor_red_botR",
+					"lowerPartId": "Slid_red_value_botR",
+					"min": 0,
+					"max": 1
+				},
+				{
+					"id": "Slid_green_botR",
+					"thumbId": "Cursor_green_botR",
+					"lowerPartId": "Slid_green_value_botR",
+					"min": 0,
+					"max": 1
+				},
+				{
+					"id": "Slid_blue_botR",
+					"thumbId": "Cursor_blue_botR",
+					"lowerPartId": "Slid_blue_value_botR",
+					"min": 0,
+					"max": 1
+				}
+			],
+			"styles": [
+				{
+					"id": "Gradient_bottomR",
+					"st": "fill:#`rgb($).map(function (c) { return Math.floor(c * 15.999).toString(16); }).join('')`"
+				}
+			]
 		}
 	],
 	"widgets": [

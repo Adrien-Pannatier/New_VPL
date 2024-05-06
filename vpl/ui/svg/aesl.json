@@ -130,6 +130,11 @@
 			"aeslName": "timer",
 			"blockName": "set timer",
 			"parameters": "`[$[0] / 1000]`"
+		},		
+		{
+			"aeslName": "colorbottomsep",
+			"blockName": "bottom color sep",
+			"parameters": "`$.map(function (v) { return v / 32; })`"
 		}
 	]
 }

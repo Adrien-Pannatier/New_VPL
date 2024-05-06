@@ -38,6 +38,7 @@
 		"play",
 		"play stop",
 		"set timer",
-		"bottom color separated"
+		"bottom color left",
+		"bottom color right"
 	]
 }
