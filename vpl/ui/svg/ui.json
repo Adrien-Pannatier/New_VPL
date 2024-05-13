@@ -1036,27 +1036,19 @@
 			"styles": [
 				{
 					"id": "SameSpeed_R",
-					"st": "fill:`Math.abs($[0])===Math.abs($[1])?'black':'transparent'`"
+					"st": "fill:`Math.abs($[1])===Math.abs($[2])?'black':'transparent'`"
 				},
 				{
 					"id": "SameSpeed_L",
-					"st": "fill:`Math.abs($[0])===Math.abs($[1])?'black':'transparent'`"
+					"st": "fill:`Math.abs($[1])===Math.abs($[2])?'black':'transparent'`"
 				},
 				{
 					"id": "sl1",
-					"st": "fill:`$[0]>=0.5?'orange':'black'`"
-				},
-				{
-					"id": "sl2",
-					"st": "fill:`$[0]==1?'orange':'black'`"
+					"st": "fill:`$[0]==2 || $[0]==1?'#338bff':'#90a4ae'`"
 				},
 				{
 					"id": "sl-1",
-					"st": "fill:`$[0]<=-0.5?'orange':'black'`"
-				},
-				{
-					"id": "sl-2",
-					"st": "fill:`$[0]==-1?'orange':'black'`"
+					"st": "fill:`$[0]==-2 || $[0]==-1?'#338bff':'#90a4ae'`"
 				}
 			],
 			"diffwheelmotion": {
@@ -1067,7 +1059,7 @@
 				"color": "#aaf",
 				"linewidth": 0.8
 			},
-			"defaultParameters": [0, 0],
+			"defaultParameters": [0, 0, 0],
 			"sliders": [
 				{
 					"id": "SliderL_range",
@@ -1092,6 +1084,33 @@
 						"`$[0]`",
 						"`-$[0]`"
 					]
+				}
+			],
+			"radiobuttons": [
+				{
+					"id": "sl0",
+					"val": 0,
+					"st": ["fill:#90a4ae", "fill:#338bff"]
+				},
+				{
+					"id": "sl1",
+					"val": 1,
+					"st": ["fill:#90a4ae", "fill:#338bff"]
+				},
+				{
+					"id": "sl2",
+					"val": 2,
+					"st": ["fill:#90a4ae", "fill:#338bff"]
+				},
+				{
+					"id": "sl-1",
+					"val": -1,
+					"st": ["fill:#90a4ae", "fill:#338bff"]
+				},
+				{
+					"id": "sl-2",
+					"val": -2,
+					"st": ["fill:#90a4ae", "fill:#338bff"]
 				}
 			]
 		},

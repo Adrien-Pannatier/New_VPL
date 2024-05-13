@@ -1037,11 +1037,11 @@
               <circle id="SameSpeed_L" class="cls-55" cx="16.3" cy="57.6" r="1.5"/>
             </g>
             <rect id="StopIndicator_L" x="14.7" y="55.9" class="cls-69" width="3.3" height="3.3"/>
-            <rect id="sl0" x="71.9" y="55.5" class="cls-43" width="18.7" height="4.2"/>
-            <rect id="sl1" x="71.9" y="48.8" class="cls-55" width="18.7" height="4.2"/>
-            <rect id="sl-1" x="71.9" y="62.1" class="cls-55" width="18.7" height="4.2"/>
-            <rect id="sl-2" x="71.9" y="68.8" class="cls-55" width="18.7" height="4.2"/>
-            <rect id="sl2" x="71.9" y="42.2" class="cls-55" width="18.7" height="4.2"/>
+            <rect id="sl0" x="62" y="52.3" class="cls-43" width="31.9" height="7.2"/>
+            <rect id="sl1" x="62" y="40.9" class="cls-55" width="31.9" height="7.2"/>
+            <rect id="sl-1" x="62" y="63.6" class="cls-55" width="31.9" height="7.2"/>
+            <rect id="sl-2" x="62" y="75" class="cls-55" width="31.9" height="7.2"/>
+            <rect id="sl2" x="62" y="29.7" class="cls-55" width="31.9" height="7.2"/>
           </g>
         </g>
         <g id="ThymioTop_wheels_mini" data-name="ThymioTop wheels mini">
