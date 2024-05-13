@@ -1041,6 +1041,22 @@
 				{
 					"id": "SameSpeed_L",
 					"st": "fill:`Math.abs($[0])===Math.abs($[1])?'black':'transparent'`"
+				},
+				{
+					"id": "sl1",
+					"st": "fill:`$[0]>=0.5?'orange':'black'`"
+				},
+				{
+					"id": "sl2",
+					"st": "fill:`$[0]==1?'orange':'black'`"
+				},
+				{
+					"id": "sl-1",
+					"st": "fill:`$[0]<=-0.5?'orange':'black'`"
+				},
+				{
+					"id": "sl-2",
+					"st": "fill:`$[0]==-1?'orange':'black'`"
 				}
 			],
 			"diffwheelmotion": {
@@ -1060,7 +1076,9 @@
 					"max": 1,
 					"discrete": [
 						-1,
+						-0.5,
 						0,
+						0.5,
 						1
 					]
 				},

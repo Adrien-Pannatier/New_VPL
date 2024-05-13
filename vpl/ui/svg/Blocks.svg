@@ -1037,32 +1037,12 @@
               <circle id="SameSpeed_L" class="cls-55" cx="16.3" cy="57.6" r="1.5"/>
             </g>
             <rect id="StopIndicator_L" x="14.7" y="55.9" class="cls-69" width="3.3" height="3.3"/>
+            <rect id="sl0" x="71.9" y="55.5" class="cls-43" width="18.7" height="4.2"/>
+            <rect id="sl1" x="71.9" y="48.8" class="cls-55" width="18.7" height="4.2"/>
+            <rect id="sl-1" x="71.9" y="62.1" class="cls-55" width="18.7" height="4.2"/>
+            <rect id="sl-2" x="71.9" y="68.8" class="cls-55" width="18.7" height="4.2"/>
+            <rect id="sl2" x="71.9" y="42.2" class="cls-55" width="18.7" height="4.2"/>
           </g>
-            <!-- <g id="sliderBg_R" data-name="sliderBg R">
-              <line id="SliderR_range" data-name="SliderR range" class="cls-29" x1="80.05" y1="19.05" x2="80.05" y2="77.04"/>
-              <line class="cls-82" x1="80.05" y1="12.08" x2="80.05" y2="84.03"/>
-              <polygon class="cls-55" points="76.56 12.07 80.05 6.03 83.54 12.07 76.56 12.07"/>
-              <polygon class="cls-55" points="76.56 84.03 80.05 90.08 83.54 84.03 76.56 84.03"/>
-            </g>
-            <g id="Cursor_right" data-name="Cursor right">
-              <circle id="CursorRight" class="cls-30" cx="80.05" cy="48.05" r="6"/>
-              <circle id="SameSpeed_R" data-name="SameSpeed R" class="cls-55" cx="80.05" cy="48.05" r="2"/>
-            </g>
-            <rect id="StopIndicator_R" data-name="StopIndicator R" class="cls-69" x="77.97" y="45.92" width="4.27" height="4.27"/> -->
-          <!-- </g>
-          <g id="Slid_left" data-name="Slid left">
-            <g id="sliderBg_L" data-name="sliderBg L">
-              <line id="SliderL_range" data-name="SliderL range" class="cls-29" x1="16.2" y1="19.05" x2="16.2" y2="77.04"/>
-              <line class="cls-82" x1="16.2" y1="12.08" x2="16.2" y2="84.03"/>
-              <polygon class="cls-55" points="12.73 12.07 16.22 6.03 19.71 12.07 12.73 12.07"/>
-              <polygon class="cls-55" points="12.71 84.03 16.2 90.08 19.69 84.03 12.71 84.03"/>
-            </g>
-            <g id="Cursor_left" data-name="Cursor left">
-              <circle id="CursorLeft" class="cls-30" cx="16.2" cy="48.05" r="6"/>
-              <circle id="SameSpeed_L" data-name="SameSpeed L" class="cls-55" cx="16.2" cy="48.05" r="2"/>
-            </g>
-            <rect id="StopIndicator_L" data-name="StopIndicator L" class="cls-69" x="14.12" y="45.92" width="4.27" height="4.27"/>
-          </g> -->
         </g>
         <g id="ThymioTop_wheels_mini" data-name="ThymioTop wheels mini">
           <path class="cls-13" d="M48,34.8a13,13,0,0,0-9.18,3.76,1,1,0,0,0-.29.72V52.73a1,1,0,0,0,1,1H56.46a1,1,0,0,0,1-1V39.3a1,1,0,0,0-.29-.72A12.93,12.93,0,0,0,48,34.8Z"/>
