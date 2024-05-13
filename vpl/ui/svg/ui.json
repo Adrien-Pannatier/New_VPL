@@ -1035,20 +1035,16 @@
 			],
 			"styles": [
 				{
-					"id": "SameSpeed_R",
-					"st": "fill:`Math.abs($[1])===Math.abs($[2])?'black':'transparent'`"
-				},
-				{
 					"id": "SameSpeed_L",
-					"st": "fill:`Math.abs($[1])===Math.abs($[2])?'black':'transparent'`"
+					"st": "fill:`Math.abs($[0])===Math.abs($[1])?'black':'transparent'`"
 				},
 				{
 					"id": "sl1",
-					"st": "fill:`$[0]==2 || $[0]==1?'#338bff':'#90a4ae'`"
+					"st": "fill:`$[0]==1 || $[0]==0.5?'#338bff':'#90a4ae'`"
 				},
 				{
 					"id": "sl-1",
-					"st": "fill:`$[0]==-2 || $[0]==-1?'#338bff':'#90a4ae'`"
+					"st": "fill:`$[0]==-1 || $[0]==-0.5?'#338bff':'#90a4ae'`"
 				}
 			],
 			"diffwheelmotion": {
@@ -1059,7 +1055,7 @@
 				"color": "#aaf",
 				"linewidth": 0.8
 			},
-			"defaultParameters": [0, 0, 0],
+			"defaultParameters": [0, 0],
 			"sliders": [
 				{
 					"id": "SliderL_range",
@@ -1073,17 +1069,6 @@
 						0.5,
 						1
 					]
-				},
-				{
-					"id": "SliderR_range",
-					"thumbId": "Cursor_right",
-					"min": -1,
-					"max": 1,
-					"snap": [
-						0,
-						"`$[0]`",
-						"`-$[0]`"
-					]
 				}
 			],
 			"radiobuttons": [
@@ -1094,22 +1079,22 @@
 				},
 				{
 					"id": "sl1",
-					"val": 1,
+					"val": 0.5,
 					"st": ["fill:#90a4ae", "fill:#338bff"]
 				},
 				{
 					"id": "sl2",
-					"val": 2,
+					"val": 1,
 					"st": ["fill:#90a4ae", "fill:#338bff"]
 				},
 				{
 					"id": "sl-1",
-					"val": -1,
+					"val": -0.5,
 					"st": ["fill:#90a4ae", "fill:#338bff"]
 				},
 				{
 					"id": "sl-2",
-					"val": -2,
+					"val": -1,
 					"st": ["fill:#90a4ae", "fill:#338bff"]
 				}
 			]

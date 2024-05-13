@@ -1013,7 +1013,7 @@
       <g id="Ac_Wheels" data-name="Ac Wheels">
         <g id="Sliders">
           <g id="Slid_right">
-            <g id="sliderBg_R">
+            <!-- <g id="sliderBg_R">
               <line id="SliderR_range" class="cls-29" x1="29.7" y1="10.1" x2="69" y2="10.1"/>
               <line class="cls-82" x1="25.1" y1="10.1" x2="73.8" y2="10.1"/>
               <polygon class="cls-55" points="25.1 12.4 20.9 10.1 25.1 7.7"/>
@@ -1022,8 +1022,13 @@
             <g id="Cursor_right">
               <circle id="CursorRight" class="cls-30" cx="49.4" cy="10.1" r="4.1"/>
               <circle id="SameSpeed_R" class="cls-55" cx="49.4" cy="10.1" r="1.4"/>
-            </g>
-            <rect id="StopIndicator_R" x="48" y="8.6" class="cls-69" width="2.9" height="2.9"/>
+            </g> -->
+            <!-- <rect id="StopIndicator_R" x="48" y="8.6" class="cls-69" width="2.9" height="2.9"/> -->
+            <rect id="sl0" x="62" y="52.3" class="cls-43" width="31.9" height="7.2"/>
+            <rect id="sl1" x="62" y="40.9" class="cls-55" width="31.9" height="7.2"/>
+            <rect id="sl-1" x="62" y="63.6" class="cls-55" width="31.9" height="7.2"/>
+            <rect id="sl-2" x="62" y="75" class="cls-55" width="31.9" height="7.2"/>
+            <rect id="sl2" x="62" y="29.7" class="cls-55" width="31.9" height="7.2"/>
           </g>
           <g id="Slid_left">
             <g id="sliderBg_L">
@@ -1037,11 +1042,6 @@
               <circle id="SameSpeed_L" class="cls-55" cx="16.3" cy="57.6" r="1.5"/>
             </g>
             <rect id="StopIndicator_L" x="14.7" y="55.9" class="cls-69" width="3.3" height="3.3"/>
-            <rect id="sl0" x="62" y="52.3" class="cls-43" width="31.9" height="7.2"/>
-            <rect id="sl1" x="62" y="40.9" class="cls-55" width="31.9" height="7.2"/>
-            <rect id="sl-1" x="62" y="63.6" class="cls-55" width="31.9" height="7.2"/>
-            <rect id="sl-2" x="62" y="75" class="cls-55" width="31.9" height="7.2"/>
-            <rect id="sl2" x="62" y="29.7" class="cls-55" width="31.9" height="7.2"/>
           </g>
         </g>
         <g id="ThymioTop_wheels_mini" data-name="ThymioTop wheels mini">
