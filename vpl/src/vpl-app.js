@@ -225,7 +225,7 @@ A3a.vpl.Application = function (canvasEl) {
 	this.currentRobotIndex = -1;
 
 	this.multipleViews = false;
-	this.useLocalStorage = false;
+	this.useLocalStorage = true;
 
 	/** @type {?string} */
 	this.vplHint = null;	// before translation
