@@ -1219,6 +1219,84 @@
           </g>
         </g>
       </g>
+      <g id="Ev_bottom_led_left" data-name="Ev Bottom Led Sep left">
+        <g id="Bg_Thymio_front_color-4" data-name="Bg Thymio front color-4">
+          <rect class="cls-70" x="12" y="4.13" width="72" height="27" rx="2"/>
+          <path class="cls-70" d="M82.09,31.13v4.48A1.1,1.1,0,0,1,81,36.74H74.19a1.12,1.12,0,0,1-1.08-1.13V31.17Z"/>
+          <path class="cls-70" d="M23.07,31.13v4.46A1.14,1.14,0,0,1,22,36.75H15.16a1.1,1.1,0,0,1-1.07-1.11h0V31.17Z"/>
+          <path class="cls-70" d="M42.79,31.13c1.71,1.12,2,3.25,2.61,4.15a2.72,2.72,0,0,0,2.1,1.08h1.06a2.76,2.76,0,0,0,2.1-1.09c.59-.89.89-3,2.6-4.14Z"/>
+          <g>
+            <line class="cls-71" x1="60.56" y1="16.56" x2="67.25" y2="16.56"/>
+            <line class="cls-71" x1="75.06" y1="16.56" x2="80.39" y2="16.56"/>
+            <line class="cls-71" x1="35.43" y1="16.56" x2="28.74" y2="16.56"/>
+            <line class="cls-71" x1="20.92" y1="16.56" x2="15.59" y2="16.56"/>
+            <line class="cls-71" x1="43.94" y1="16.56" x2="51.9" y2="16.56"/>
+          </g>
+        </g>
+        <!-- <path id="Gradient_bottomR" data-name="Gradient bottomR" class="cls-81" d="M12.8,17.3H48v11.9c0,0.7-0.2,1.2-0.6,1.2h-34c-0.3,0-0.6-0.5-0.6-1.2l0,0l0,0
+				  L12.8,17.3L12.8,17.3z"/> -->
+        <path id="Gradient_bottomL" data-name="Gradient bottomL" class="cls-81" d="M48,17.3h35.2v11.9c0,0.7-0.2,1.2-0.6,1.2h-34c-0.3,0-0.6-0.5-0.6-1.2l0,0l0,0
+				  L48,17.3L48,17.3z"/>
+        <g id="Sliders_rgb_botL" data-name="Sliders rgb botL">
+          <g id="Slid_blue_botL" data-name="Slid blue botL">
+            <path id="Stroke_slid_blue_botL" data-name="Stroke slid blue botL" class="cls-28" d="M17.85,83h56a2,2,0,0,1,2,2h0a2,2,0,0,1-2,2h-56a2,2,0,0,1-2-2h0A2,2,0,0,1,17.85,83Z"/>
+            <line id="Bg_slid_blue_botL" data-name="Bg slid blue botL" class="cls-74" x1="17.85" y1="85.04" x2="73.85" y2="85.04"/>
+            <line id="Slid_blue_value_botL" data-name="Slid blue value botL" class="cls-75" x1="17.85" y1="85.04" x2="73.85" y2="85.04"/>
+            <circle id="Cursor_blue_botL" data-name="Cursor blue botL" class="cls-76" cx="75.15" cy="85.01" r="5"/>
+          </g>
+          <g id="Slid_green_botL" data-name="Slid green botL">
+            <path id="Stroke_slid_green_botL" data-name="Stroke slid green botL" class="cls-28" d="M17.85,65h56a2,2,0,0,1,2,2h0a2,2,0,0,1-2,2h-56a2,2,0,0,1-2-2h0A2,2,0,0,1,17.85,65Z"/>
+            <line id="Bg_slid_green_botL" data-name="Bg slid green botL" class="cls-74" x1="17.85" y1="67.01" x2="73.85" y2="67.01"/>
+            <line id="Slid_green_value_botL" data-name="Slid green value botL" class="cls-77" x1="17.85" y1="67.04" x2="73.85" y2="67.04"/>
+            <circle id="Cursor_green_botL" data-name="Cursor green botL" class="cls-78" cx="75.15" cy="67.04" r="5"/>
+          </g>
+          <g id="Slid_red_botL" data-name="Slid red botL">
+            <path id="Stroke_slid_red_botL" data-name="Stroke slid red botL" class="cls-28" d="M17.85,47h56a2,2,0,0,1,2,2h0a2,2,0,0,1-2,2h-56a2,2,0,0,1-2-2h0A2,2,0,0,1,17.85,47Z"/>
+            <line id="Bg_slid_red_botL" data-name="Bg slid red botL" class="cls-74" x1="17.85" y1="49.05" x2="73.85" y2="49.05"/>
+            <line id="Slid_red_value_botL" data-name="Slid red value botL" class="cls-79" x1="17.85" y1="49.05" x2="73.85" y2="49.05"/>
+            <circle id="Cursor_red_botL" data-name="Cursor red botL" class="cls-80" cx="75.15" cy="49.05" r="5"/>
+          </g>
+        </g>
+      </g>
+      <g id="Ev_bottom_led_right" data-name="Ev Bottom Led Sep right">
+        <g id="Bg_Thymio_front_color-4" data-name="Bg Thymio front color-4">
+          <rect class="cls-70" x="12" y="4.13" width="72" height="27" rx="2"/>
+          <path class="cls-70" d="M82.09,31.13v4.48A1.1,1.1,0,0,1,81,36.74H74.19a1.12,1.12,0,0,1-1.08-1.13V31.17Z"/>
+          <path class="cls-70" d="M23.07,31.13v4.46A1.14,1.14,0,0,1,22,36.75H15.16a1.1,1.1,0,0,1-1.07-1.11h0V31.17Z"/>
+          <path class="cls-70" d="M42.79,31.13c1.71,1.12,2,3.25,2.61,4.15a2.72,2.72,0,0,0,2.1,1.08h1.06a2.76,2.76,0,0,0,2.1-1.09c.59-.89.89-3,2.6-4.14Z"/>
+          <g>
+            <line class="cls-71" x1="60.56" y1="16.56" x2="67.25" y2="16.56"/>
+            <line class="cls-71" x1="75.06" y1="16.56" x2="80.39" y2="16.56"/>
+            <line class="cls-71" x1="35.43" y1="16.56" x2="28.74" y2="16.56"/>
+            <line class="cls-71" x1="20.92" y1="16.56" x2="15.59" y2="16.56"/>
+            <line class="cls-71" x1="43.94" y1="16.56" x2="51.9" y2="16.56"/>
+          </g>
+        </g>
+        <path id="Gradient_bottomR" data-name="Gradient bottomR" class="cls-81" d="M12.8,17.3H48v11.9c0,0.7-0.2,1.2-0.6,1.2h-34c-0.3,0-0.6-0.5-0.6-1.2l0,0l0,0
+				  L12.8,17.3L12.8,17.3z"/>
+        <!-- <path id="Gradient_bottomL" data-name="Gradient bottomL" class="cls-81" d="M48,17.3h35.2v11.9c0,0.7-0.2,1.2-0.6,1.2h-34c-0.3,0-0.6-0.5-0.6-1.2l0,0l0,0
+				  L48,17.3L48,17.3z"/> -->
+        <g id="Sliders_rgb_botR" data-name="Sliders rgb botR">
+          <g id="Slid_blue_botR" data-name="Slid blue botR">
+            <path id="Stroke_slid_blue_botR" data-name="Stroke slid blue botR" class="cls-28" d="M17.85,83h56a2,2,0,0,1,2,2h0a2,2,0,0,1-2,2h-56a2,2,0,0,1-2-2h0A2,2,0,0,1,17.85,83Z"/>
+            <line id="Bg_slid_blue_botR" data-name="Bg slid blue botR" class="cls-74" x1="17.85" y1="85.04" x2="73.85" y2="85.04"/>
+            <line id="Slid_blue_value_botR" data-name="Slid blue value botR" class="cls-75" x1="17.85" y1="85.04" x2="73.85" y2="85.04"/>
+            <circle id="Cursor_blue_botR" data-name="Cursor blue botR" class="cls-76" cx="75.15" cy="85.01" r="5"/>
+          </g>
+          <g id="Slid_green_botR" data-name="Slid green botR">
+            <path id="Stroke_slid_green_botR" data-name="Stroke slid green botR" class="cls-28" d="M17.85,65h56a2,2,0,0,1,2,2h0a2,2,0,0,1-2,2h-56a2,2,0,0,1-2-2h0A2,2,0,0,1,17.85,65Z"/>
+            <line id="Bg_slid_green_botR" data-name="Bg slid green botR" class="cls-74" x1="17.85" y1="67.01" x2="73.85" y2="67.01"/>
+            <line id="Slid_green_value_botR" data-name="Slid green value botR" class="cls-77" x1="17.85" y1="67.04" x2="73.85" y2="67.04"/>
+            <circle id="Cursor_green_botR" data-name="Cursor green botR" class="cls-78" cx="75.15" cy="67.04" r="5"/>
+          </g>
+          <g id="Slid_red_botR" data-name="Slid red botR">
+            <path id="Stroke_slid_red_botR" data-name="Stroke slid red botR" class="cls-28" d="M17.85,47h56a2,2,0,0,1,2,2h0a2,2,0,0,1-2,2h-56a2,2,0,0,1-2-2h0A2,2,0,0,1,17.85,47Z"/>
+            <line id="Bg_slid_red_botR" data-name="Bg slid red botR" class="cls-74" x1="17.85" y1="49.05" x2="73.85" y2="49.05"/>
+            <line id="Slid_red_value_botR" data-name="Slid red value botR" class="cls-79" x1="17.85" y1="49.05" x2="73.85" y2="49.05"/>
+            <circle id="Cursor_red_botR" data-name="Cursor red botR" class="cls-80" cx="75.15" cy="49.05" r="5"/>
+          </g>
+        </g>
+      </g>
     </g>
   </g>
 </svg>

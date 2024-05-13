@@ -625,6 +625,62 @@
 				"sectionBegin": "onevent prox\n",
 				"clause": "`[0, 1].map(function (ix, i) { var p = 'prox.ground.delta[' + ix + '] ', l = Math.round(25 + 40 * $[2]) + '0', g = Math.round(25 + 40 * $[3]) + '0'; return $[i] === 1 ? p + '>= ' + g : $[i] === 2 ? p + '< ' + l : $[i] === 3 ? p + '>= ' + l + ' and ' + p + '< ' + g : ''; }).filter(function (s) { return s; }).join(' and ') || [0, 1].map(function (ix) { return 'prox.ground.delta[' + ix + '] >= 450'; }).join(' or ')`"
 			}
+		},
+		{
+			"name": "bottom color left",
+			"aseba": {
+				"initVarDecl": [
+					[
+						[
+							"var bottomColorL[3]\n"
+						]
+					]
+				],
+				"initCodeExec": [
+					"bottomColorL= [0, 0, 0]\n",
+					[
+						"call leds.top(0, 0, 0)\n",
+						"call leds.bottom.left(0, 0, 0)\n",
+						"call leds.bottom.right(0, 0, 0)\n",
+						"call leds.circle(0, 0, 0, 0, 0, 0, 0, 0)\n"
+					]
+				],
+				"statement": [
+					"call leds.bottom.left(`$.map(function (x) { return Math.round(32 * x); }).join(', ')`)\n",
+					"bottomColorL = [`$.map(function (x) { return Math.round(32 * x); }).join(', ')`]\n"
+				],
+				"statementWithoutInit": [
+					"call leds.bottom.left(`$.map(function (x) { return Math.round(32 * x); }).join(', ')`)\n"
+				]
+			}
+		},
+		{
+			"name": "bottom color right",
+			"aseba": {
+				"initVarDecl": [
+					[
+						[
+							"var bottomColorR[3]\n"
+						]
+					]
+				],
+				"initCodeExec": [
+					"bottomColorR= [0, 0, 0]\n",
+					[
+						"call leds.top(0, 0, 0)\n",
+						"call leds.bottom.left(0, 0, 0)\n",
+						"call leds.bottom.right(0, 0, 0)\n",
+						"call leds.circle(0, 0, 0, 0, 0, 0, 0, 0)\n"
+					]
+				],
+				"statement": [
+					"call leds.bottom.right(`$.map(function (x) { return Math.round(32 * x); }).join(', ')`)\n",
+					"bottomColorR = [`$.map(function (x) { return Math.round(32 * x); }).join(', ')`]\n"
+				],
+				"statementWithoutInit": [
+					"call leds.bottom.right(`$.map(function (x) { return Math.round(32 * x); }).join(', ')`)\n"
+				]
+			}
 		}
 	]
 }
