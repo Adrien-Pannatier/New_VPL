@@ -23,9 +23,10 @@ def delete_from_block_list(name):
 
     print(f"⚠️ Block {name} not found in block list")
 
-def delete_from_languages(name):
+def delete_from_help_languages(name):
     languages = ["de", "en", "fr", "it"]
     for lang in languages:
+        delete = False
         path = f'svg/help-blocks-{lang}.json'
         with open(path, 'r', encoding="utf-8") as file:
             data = json.load(file)
@@ -34,21 +35,51 @@ def delete_from_languages(name):
             if element == name:
                 del data['help'][lang]['blocks'][element]
                 print(f"Deleted block {name} from {lang} help file")
+                delete = True
                 with open(path, 'w') as file:
                     json.dump(data, file, indent=4)
                 break
+        
+        if not delete:
+            print(f"⚠️ Block {name} not found in {lang} help file")
+
+def delete_from_block_description_language(name):
+    languages = ["de", "en", "fr", "it"]
+    for lang in languages:
+        delete = False
+        path = f'svg/block-{lang}.json'
+        with open(path, 'r', encoding="utf-8") as file:
+            data = json.load(file)
+
+        for element in data['i18n'][lang]:
+            if element == name:
+                del data['i18n'][lang][element]
+                print(f"Deleted block {name} from {lang} description file")
+                delete = True
+                with open(path, 'w') as file:
+                    json.dump(data, file, indent=4)
+                break
+                
+        if not delete:
+            print(f"⚠️ Block {name} not found in {lang} description file")
+
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("name", help="The name of the block to delete")
     args = parser.parse_args()
 
-    delete_from_languages(args.name)
+    # ask for confirmation
+    confirmation = input(f"Are you sure you want to delete block {args.name} from block list? (y/n) ")
 
-    # # ask for confirmation
-    # confirmation = input(f"Are you sure you want to delete block {args.name} from block list? (y/n) ")
-
-    # if confirmation == 'y':
-    #     delete_from_block_list(args.name)
-    # else:
-    #     print("Block deletion cancelled")
+    if confirmation == 'y':
+        print("\n")
+        delete_from_block_list(args.name)
+        print("\n")
+        delete_from_help_languages(args.name)
+        print("\n")
+        delete_from_block_description_language(args.name)
+        print("\n")
+    else:
+        print("Block deletion cancelled")   
