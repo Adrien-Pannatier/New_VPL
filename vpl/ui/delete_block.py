@@ -63,6 +63,31 @@ def delete_from_block_description_language(name):
         if not delete:
             print(f"⚠️ Block {name} not found in {lang} description file")
 
+def delete_from_code_files(name):
+    code_languages = ["aseba", "js", "python", "l2"]
+    # code_languages = ["aseba"]
+
+    for lang in code_languages:
+        delete = False
+        path = f'svg/{lang}.json'
+        with open(path, 'r') as file:
+            data = json.load(file)
+
+        for i,element in enumerate(data['blocks']):
+            if element['name'] == name:
+                try: 
+                    # print(element[lang])
+                    del data['blocks'][i]
+                    print(f"Deleted block {name} from {lang} code file")
+                    delete = True
+                    with open(path, 'w') as file:
+                        json.dump(data, file, indent=4)
+                    break
+                except:
+                    print(f"ERROR: No translation found in {lang} code file")
+
+        if not delete:
+            print(f"⚠️ Block {name} not found in {lang} code file")
 
 
 if __name__ == "__main__":
@@ -81,5 +106,6 @@ if __name__ == "__main__":
         print("\n")
         delete_from_block_description_language(args.name)
         print("\n")
+        delete_from_code_files(args.name)
     else:
         print("Block deletion cancelled")   
