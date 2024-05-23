@@ -1986,6 +1986,40 @@
 					"st": "fill:#`rgb($).map(function (c) { return Math.floor(c * 15.999).toString(16); }).join('')`"
 				}
 			]
+		},
+		{
+			"name": "color all",
+			"type": "action",
+			"modes": ["basic"],
+			"draw": [
+				{
+					"uri": "Blocks.svg#Color_All"
+				}
+			],
+			"typicalParameters": [5,1,2,3],
+			"defaultParameters": [0,0,0,0],
+			"buttons": [
+				{
+					"id": "G1",
+					"val": [0, 1, 2, 3, 4, 5, 6, 7],
+					"st": ["stroke:black;fill:#90a4ae", "stroke:black;fill:#00ff50", "stroke:black;fill:#1919ff", "stroke:black;fill:#ff0000", "stroke:black;fill:#ffffff", "stroke:black;fill:#00e5ff", "stroke:black;fill:#ff00fb", "stroke:black;fill:#ffea00"]
+				},
+				{
+					"id": "G2",
+					"val": [0, 1, 2, 3, 4, 5, 6, 7],
+					"st": ["stroke:black;fill:#90a4ae", "stroke:black;fill:#00ff50", "stroke:black;fill:#1919ff", "stroke:black;fill:#ff0000", "stroke:black;fill:#ffffff", "stroke:black;fill:#00e5ff", "stroke:black;fill:#ff00fb", "stroke:black;fill:#ffea00"]
+				},
+				{
+					"id": "G3",
+					"val": [0, 1, 2, 3, 4, 5, 6, 7],
+					"st": ["stroke:black;fill:#90a4ae", "stroke:black;fill:#00ff50", "stroke:black;fill:#1919ff", "stroke:black;fill:#ff0000", "stroke:black;fill:#ffffff", "stroke:black;fill:#00e5ff", "stroke:black;fill:#ff00fb", "stroke:black;fill:#ffea00"]
+				},
+				{
+					"id": "G4",
+					"val": [0, 1, 2, 3, 4, 5, 6, 7],
+					"st": ["stroke:black;fill:#90a4ae", "stroke:black;fill:#00ff50", "stroke:black;fill:#1919ff", "stroke:black;fill:#ff0000", "stroke:black;fill:#ffffff", "stroke:black;fill:#00e5ff", "stroke:black;fill:#ff00fb", "stroke:black;fill:#ffea00"]
+				}
+			]
 		}
 	],
 	"widgets": [
