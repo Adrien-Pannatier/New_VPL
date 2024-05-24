@@ -83,9 +83,6 @@
 			"modes": ["basic", "advanced"],
 			"draw": [
 				{
-					"uri": "Blocks.svg#Bg_Thymio"
-				},
-				{
 					"uri": "Blocks.svg#Ev_Buttons"
 				}
 			],
@@ -209,7 +206,7 @@
 		{
 			"name": "clap",
 			"type": "event",
-			"modes": ["advanced"],
+			"modes": ["basic"],
 			"draw": [
 				{
 					"uri": "Blocks.svg#Ev_Clap"
@@ -369,7 +366,7 @@
 				}
 			],
 			"defaultParameters": [ 0, 0, 0, 0],
-			"typicalParameters": [ 0, 0, -1, -1],
+			"typicalParameters": [ 0, 1, 0, -1],
 			"buttons": [
 				{
 					"id": "Btn3_Prox2",
