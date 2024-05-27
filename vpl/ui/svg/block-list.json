@@ -19,25 +19,19 @@
 		"horiz prox front adv",
 		"horiz prox back adv",
 		"horiz prox adv",
-		"state 256 with mask",
 		"counter comparison",
 		"timer",
 		"clock",
-		"move",
-		"motor",
 		"bottom color",
-		"set state 256",
-		"set state 256 with mask",
 		"arithmetic",
 		"notes",
 		"notes with speed",
 		"play",
 		"play stop",
 		"set timer",
-		"bottom color left",
-		"bottom color right",
 		"horiz prox 1 adv",
-		"horiz prox 2 adv"
+		"horiz prox 2 adv",
+		"color all"
 		
 	]
 }
