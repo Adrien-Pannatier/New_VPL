@@ -195,7 +195,7 @@
 		{
 			"name": "fall",
 			"type": "event",
-			"modes": [],
+			"modes": ["advanced"],
 			"draw": [
 				{
 					"uri": "Blocks.svg#Ev_Acc_Fall"
@@ -894,7 +894,7 @@
 		{
 			"name": "clock",
 			"type": "event",
-			"modes": [],
+			"modes": ["advanced"],
 			"draw": [
 				{
 					"uri": "Blocks.svg#Ev_Freq"
@@ -2052,7 +2052,7 @@
 		{
 			"name": "button",
 			"type": "event",
-			"modes": [],
+			"modes": ["advanced"],
 			"draw": [
 				{
 					"uri": "Blocks16.svg#Event_bg_1_6"
@@ -2100,7 +2100,7 @@
 		{
 			"name": "horiz prox adv",
 			"type": "event",
-			"modes": [],
+			"modes": ["advanced"],
 			"draw": [
 				{
 					"uri": "Blocks16.svg#Event_bg_1_6"
@@ -2213,7 +2213,7 @@
 		{
 			"name": "ground adv",
 			"type": "event",
-			"modes": [],
+			"modes": ["advanced"],
 			"draw": [
 				{
 					"uri": "Blocks16.svg#Event_bg_1_6"
