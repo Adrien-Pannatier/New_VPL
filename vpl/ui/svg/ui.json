@@ -416,8 +416,8 @@
 			],
 			"sliders": [
 				{
-					"id": "value_threshold_back-2_2_",
-					"thumbId": "Cursor_proxGd_adv_1_1_",
+					"id": "value_threshold_back_1",
+					"thumbId": "Cursor_proxGd_adv_1",
 					"min": 0,
 					"max": 2,
 					"discrete": [
@@ -431,6 +431,18 @@
 				{
 					"id": "Slid_threshold_proxGd_adv_1",
 					"st": "visibility:`$[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_1_p0",
+					"st": "visibility:`$[1]==0 && $[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_1_p1",
+					"st": "visibility:`$[1]==-1 && $[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_1_p2",
+					"st": "visibility:`$[1]==-2 && $[0]>0?'visible':'hidden'`"
 				}
 			]
 		},
@@ -454,7 +466,7 @@
 			],
 			"sliders": [
 				{
-					"id": "value_threshold_back_off_2",
+					"id": "value_threshold_back_2",
 					"thumbId": "Cursor_proxGd_adv_2",
 					"min": -2,
 					"max": 0,
@@ -469,6 +481,18 @@
 				{
 					"id": "Slid_threshold_proxGd_adv_2",
 					"st": "visibility:`$[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_2_p0",
+					"st": "visibility:`$[1]==0 && $[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_2_p1",
+					"st": "visibility:`$[1]==-1 && $[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_2_p2",
+					"st": "visibility:`$[1]==-2 && $[0]>0?'visible':'hidden'`"
 				}
 			]
 		},
@@ -492,7 +516,7 @@
 			],
 			"sliders": [
 				{
-					"id": "value_threshold_back_off_3",
+					"id": "value_threshold_back_3",
 					"thumbId": "Cursor_proxGd_adv_3",
 					"min": -2,
 					"max": 0,
@@ -507,6 +531,18 @@
 				{
 					"id": "Slid_threshold_proxGd_adv_3",
 					"st": "visibility:`$[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_3_p0",
+					"st": "visibility:`$[1]==0 && $[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_3_p1",
+					"st": "visibility:`$[1]==-1 && $[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_3_p2",
+					"st": "visibility:`$[1]==-2 && $[0]>0?'visible':'hidden'`"
 				}
 			]
 		},
@@ -530,7 +566,7 @@
 			],
 			"sliders": [
 				{
-					"id": "value_threshold_back_off_4",
+					"id": "value_threshold_back_4",
 					"thumbId": "Cursor_proxGd_adv_4",
 					"min": -2,
 					"max": 0,
@@ -545,6 +581,18 @@
 				{
 					"id": "Slid_threshold_proxGd_adv_4",
 					"st": "visibility:`$[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_4_p0",
+					"st": "visibility:`$[1]==0 && $[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_4_p1",
+					"st": "visibility:`$[1]==-1 && $[0]>0?'visible':'hidden'`"
+				},
+				{
+					"id": "Cursor_proxGd_adv_4_p2",
+					"st": "visibility:`$[1]==-2 && $[0]>0?'visible':'hidden'`"
 				}
 			]
 		},
