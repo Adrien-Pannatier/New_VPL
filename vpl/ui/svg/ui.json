@@ -69,7 +69,7 @@
 		{
 			"name": "init",
 			"type": "event",
-			"modes": ["basic", "advanced"],
+			"modes": ["basic"],
 			"draw": [
 				{
 					"uri": "Blocks.svg#Ev_Start"
@@ -80,7 +80,7 @@
 		{
 			"name": "button 1",
 			"type": "event",
-			"modes": ["basic", "advanced"],
+			"modes": ["basic"],
 			"draw": [
 				{
 					"uri": "Blocks.svg#Ev_Buttons"

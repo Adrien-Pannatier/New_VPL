@@ -89,6 +89,23 @@ def delete_from_code_files(name):
         if not delete:
             print(f"⚠️ Block {name} not found in {lang} code file")
 
+def delete_from_ui(name):
+    path = 'svg/ui.json'
+    with open(path, 'r') as file:
+        data = json.load(file)
+
+    for i,element in enumerate(data['blocks']):
+        if element['name'] == name:
+            print(element)
+            del data['blocks'][i]
+            # del data['blocks'][i]
+            print(f"Deleted block {name} from UI file")
+            with open(path, 'w') as file:
+                json.dump(data, file, indent=4)
+            return
+
+    print(f"⚠️ Block {name} not found in UI file")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -99,13 +116,15 @@ if __name__ == "__main__":
     confirmation = input(f"Are you sure you want to delete block {args.name} from block list? (y/n) ")
 
     if confirmation == 'y':
+        # print("\n")
+        # delete_from_block_list(args.name)
+        # print("\n")
+        # delete_from_help_languages(args.name)
+        # print("\n")
+        # delete_from_block_description_language(args.name)
+        # print("\n")
+        # delete_from_code_files(args.name)
         print("\n")
-        delete_from_block_list(args.name)
-        print("\n")
-        delete_from_help_languages(args.name)
-        print("\n")
-        delete_from_block_description_language(args.name)
-        print("\n")
-        delete_from_code_files(args.name)
+        delete_from_ui(args.name)
     else:
         print("Block deletion cancelled")   
