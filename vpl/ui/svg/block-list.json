@@ -31,7 +31,8 @@
 		"set timer",
 		"horiz prox 1 adv",
 		"horiz prox 2 adv",
-		"color all"
+		"color all",
+		"motor directions"
 		
 	]
 }
