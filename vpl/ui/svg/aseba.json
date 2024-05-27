@@ -681,6 +681,34 @@
 					"call leds.bottom.right(`$.map(function (x) { return Math.round(32 * x); }).join(', ')`)\n"
 				]
 			}
+		},
+		{
+			"name": "horiz prox 1 adv",
+			"aseba": {
+				"sectionBegin": "onevent prox\n",
+				"clause": "`$[0] ? 'prox.horizontal['+5+'] ' + ($[0] > 0 ? '>= ' : '<= ') + Math.round(7 + 33 * (1-$[1])) + '00' : ''`"
+			}
+		},
+		{
+			"name": "horiz prox 2 adv",
+			"aseba": {
+				"sectionBegin": "onevent prox\n",
+				"clause": "`$[0] ? 'prox.horizontal['+2+'] ' + ($[0] > 0 ? '>= ' : '<= ') + Math.round(7 + 33 * (1+$[1])) + '00' : ''`"
+			}
+		},
+		{
+			"name": "horiz prox 3 adv",
+			"aseba": {
+				"sectionBegin": "onevent prox\n",
+				"clause": "`$[0] ? 'prox.horizontal['+3+'] ' + ($[0] > 0 ? '>= ' : '<= ') + Math.round(7 + 33 * (1+$[1])) + '00' : ''`"
+			}
+		},
+		{
+			"name": "horiz prox 4 adv",
+			"aseba": {
+				"sectionBegin": "onevent prox\n",
+				"clause": "`$[0] ? 'prox.horizontal['+4+'] ' + ($[0] > 0 ? '>= ' : '<= ') + Math.round(7 + 33 * (1+$[1])) + '00' : ''`"
+			}
 		}
 	]
 }

@@ -400,8 +400,8 @@
 			"name": "horiz prox 1 adv",
 			"type": "event",
 			"modes": ["basic"],
-			"defaultParameters": [0,0],
-			"typicalParameters": [1,0],
+			"defaultParameters": [0,0.2],
+			"typicalParameters": [1,0.2],
 			"draw": [
 				{
 					"uri": "Blocks.svg#Ev_ProxH_comp_1"
@@ -418,12 +418,12 @@
 				{
 					"id": "value_threshold_back_1",
 					"thumbId": "Cursor_proxGd_adv_1",
-					"min": 0,
-					"max": 2,
+					"min": 0.2,
+					"max": 0.8,
 					"discrete": [
-						0,
-						1,
-						2
+						0.2,
+						0.5,
+						0.8
 					]
 				}
 			],
@@ -434,15 +434,21 @@
 				},
 				{
 					"id": "Cursor_proxGd_adv_1_p0",
-					"st": "visibility:`$[1]==0 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==0.2 && $[0]>0?'visible':'hidden'`"
 				},
 				{
 					"id": "Cursor_proxGd_adv_1_p1",
-					"st": "visibility:`$[1]==1 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==0.5 && $[0]>0?'visible':'hidden'`"
 				},
 				{
 					"id": "Cursor_proxGd_adv_1_p2",
-					"st": "visibility:`$[1]==2 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==0.8 && $[0]>0?'visible':'hidden'`"
+				}
+			],
+			"validation": [
+				{
+					"assert": "`$[0] != 0`",
+					"warning": "No proximity sensor specified"
 				}
 			]
 		},
@@ -450,8 +456,8 @@
 			"name": "horiz prox 2 adv",
 			"type": "event",
 			"modes": ["basic"],
-			"defaultParameters": [0,0],
-			"typicalParameters": [1,0],
+			"defaultParameters": [0,-0.2],
+			"typicalParameters": [1,-0.2],
 			"draw": [
 				{
 					"uri": "Blocks.svg#Ev_ProxH_comp_2"
@@ -468,12 +474,12 @@
 				{
 					"id": "value_threshold_back_2",
 					"thumbId": "Cursor_proxGd_adv_2",
-					"min": -2,
-					"max": 0,
+					"min": -0.8,
+					"max": -0.2,
 					"discrete": [
-						-2,
-						-1,
-						0
+						-0.8,
+						-0.5,
+						-0.2
 					]
 				}
 			],
@@ -484,15 +490,21 @@
 				},
 				{
 					"id": "Cursor_proxGd_adv_2_p0",
-					"st": "visibility:`$[1]==0 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==-0.2 && $[0]>0?'visible':'hidden'`"
 				},
 				{
 					"id": "Cursor_proxGd_adv_2_p1",
-					"st": "visibility:`$[1]==-1 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==-0.5 && $[0]>0?'visible':'hidden'`"
 				},
 				{
 					"id": "Cursor_proxGd_adv_2_p2",
-					"st": "visibility:`$[1]==-2 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==-0.8 && $[0]>0?'visible':'hidden'`"
+				}
+			],
+			"validation": [
+				{
+					"assert": "`$[0] != 0`",
+					"warning": "No proximity sensor specified"
 				}
 			]
 		},
@@ -500,8 +512,8 @@
 			"name": "horiz prox 3 adv",
 			"type": "event",
 			"modes": ["basic"],
-			"defaultParameters": [0,0],
-			"typicalParameters": [1,0],
+			"defaultParameters": [0,-0.2],
+			"typicalParameters": [1,-0.2],
 			"draw": [
 				{
 					"uri": "Blocks.svg#Ev_ProxH_comp_3"
@@ -518,12 +530,12 @@
 				{
 					"id": "value_threshold_back_3",
 					"thumbId": "Cursor_proxGd_adv_3",
-					"min": -2,
-					"max": 0,
+					"min": -0.8,
+					"max": -0.2,
 					"discrete": [
-						-2,
-						-1,
-						0
+						-0.8,
+						-0.5,
+						-0.2
 					]
 				}
 			],
@@ -534,15 +546,21 @@
 				},
 				{
 					"id": "Cursor_proxGd_adv_3_p0",
-					"st": "visibility:`$[1]==0 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==-0.2 && $[0]>0?'visible':'hidden'`"
 				},
 				{
 					"id": "Cursor_proxGd_adv_3_p1",
-					"st": "visibility:`$[1]==-1 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==-0.5 && $[0]>0?'visible':'hidden'`"
 				},
 				{
 					"id": "Cursor_proxGd_adv_3_p2",
-					"st": "visibility:`$[1]==-2 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==-0.8 && $[0]>0?'visible':'hidden'`"
+				}
+			],
+			"validation": [
+				{
+					"assert": "`$[0] != 0`",
+					"warning": "No proximity sensor specified"
 				}
 			]
 		},
@@ -550,8 +568,8 @@
 			"name": "horiz prox 4 adv",
 			"type": "event",
 			"modes": ["basic"],
-			"defaultParameters": [0,0],
-			"typicalParameters": [1,0],
+			"defaultParameters": [0,-0.2],
+			"typicalParameters": [1,-0.2],
 			"draw": [
 				{
 					"uri": "Blocks.svg#Ev_ProxH_comp_4"
@@ -568,12 +586,12 @@
 				{
 					"id": "value_threshold_back_4",
 					"thumbId": "Cursor_proxGd_adv_4",
-					"min": -2,
-					"max": 0,
+					"min": -0.8,
+					"max": -0.2,
 					"discrete": [
-						-2,
-						-1,
-						0
+						-0.8,
+						-0.5,
+						-0.2
 					]
 				}
 			],
@@ -584,15 +602,21 @@
 				},
 				{
 					"id": "Cursor_proxGd_adv_4_p0",
-					"st": "visibility:`$[1]==0 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==-0.2 && $[0]>0?'visible':'hidden'`"
 				},
 				{
 					"id": "Cursor_proxGd_adv_4_p1",
-					"st": "visibility:`$[1]==-1 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==-0.5 && $[0]>0?'visible':'hidden'`"
 				},
 				{
 					"id": "Cursor_proxGd_adv_4_p2",
-					"st": "visibility:`$[1]==-2 && $[0]>0?'visible':'hidden'`"
+					"st": "visibility:`$[1]==-0.8 && $[0]>0?'visible':'hidden'`"
+				}
+			],
+			"validation": [
+				{
+					"assert": "`$[0] != 0`",
+					"warning": "No proximity sensor specified"
 				}
 			]
 		},
