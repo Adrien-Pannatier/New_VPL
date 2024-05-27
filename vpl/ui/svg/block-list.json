@@ -10,9 +10,10 @@
 		"pitch",
 		"tap",
 		"fall",
+		"horiz prox 4 adv",
+		"horiz prox 3 adv",
 		"clap",
 		"ground",
-		"ground 1",
 		"ground adv",
 		"horiz prox",
 		"horiz prox front adv",
@@ -34,6 +35,9 @@
 		"play stop",
 		"set timer",
 		"bottom color left",
-		"bottom color right"
+		"bottom color right",
+		"horiz prox 1 adv",
+		"horiz prox 2 adv"
+		
 	]
 }

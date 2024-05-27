@@ -311,11 +311,11 @@
 					"min": 0,
 					"max": 1,
 					"discrete": [
-						0.1,
-						0.3,
-						0.5,
-						0.7,
-						0.9
+						0.2,
+						0.4,
+						0.6,
+						0.8,
+						1
 					]
 				}
 			],
@@ -393,6 +393,158 @@
 				{
 					"assert": "`$.reduce(function (acc, p) { return acc || p != 0; }, false)`",
 					"warning": "No proximity sensor specified"
+				}
+			]
+		},
+		{
+			"name": "horiz prox 1 adv",
+			"type": "event",
+			"modes": ["basic"],
+			"defaultParameters": [0,0],
+			"typicalParameters": [1,0],
+			"draw": [
+				{
+					"uri": "Blocks.svg#Ev_ProxH_comp_1"
+				}
+			],
+			"buttons": [
+				{	
+					"id": "Btn3_Prox1",
+					"val": [0, 1, -1],
+					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
+				}
+			],
+			"sliders": [
+				{
+					"id": "value_threshold_back-2_2_",
+					"thumbId": "Cursor_proxGd_adv_1_1_",
+					"min": 0,
+					"max": 2,
+					"discrete": [
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"styles": [
+				{
+					"id": "Slid_threshold_proxGd_adv_1",
+					"st": "visibility:`$[0]>0?'visible':'hidden'`"
+				}
+			]
+		},
+		{
+			"name": "horiz prox 2 adv",
+			"type": "event",
+			"modes": ["basic"],
+			"defaultParameters": [0,0],
+			"typicalParameters": [1,0],
+			"draw": [
+				{
+					"uri": "Blocks.svg#Ev_ProxH_comp_2"
+				}
+			],
+			"buttons": [
+				{	
+					"id": "Btn3_Prox_adv_2",
+					"val": [0, 1, -1],
+					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
+				}
+			],
+			"sliders": [
+				{
+					"id": "value_threshold_back_off_2",
+					"thumbId": "Cursor_proxGd_adv_2",
+					"min": -2,
+					"max": 0,
+					"discrete": [
+						-2,
+						-1,
+						0
+					]
+				}
+			],
+			"styles": [
+				{
+					"id": "Slid_threshold_proxGd_adv_2",
+					"st": "visibility:`$[0]>0?'visible':'hidden'`"
+				}
+			]
+		},
+		{
+			"name": "horiz prox 3 adv",
+			"type": "event",
+			"modes": ["basic"],
+			"defaultParameters": [0,0],
+			"typicalParameters": [1,0],
+			"draw": [
+				{
+					"uri": "Blocks.svg#Ev_ProxH_comp_3"
+				}
+			],
+			"buttons": [
+				{	
+					"id": "Btn3_Prox_adv_3",
+					"val": [0, 1, -1],
+					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
+				}
+			],
+			"sliders": [
+				{
+					"id": "value_threshold_back_off_3",
+					"thumbId": "Cursor_proxGd_adv_3",
+					"min": -2,
+					"max": 0,
+					"discrete": [
+						-2,
+						-1,
+						0
+					]
+				}
+			],
+			"styles": [
+				{
+					"id": "Slid_threshold_proxGd_adv_3",
+					"st": "visibility:`$[0]>0?'visible':'hidden'`"
+				}
+			]
+		},
+		{
+			"name": "horiz prox 4 adv",
+			"type": "event",
+			"modes": ["basic"],
+			"defaultParameters": [0,0],
+			"typicalParameters": [1,0],
+			"draw": [
+				{
+					"uri": "Blocks.svg#Ev_ProxH_comp_4"
+				}
+			],
+			"buttons": [
+				{	
+					"id": "Btn3_Prox_adv_4",
+					"val": [0, 1, -1],
+					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
+				}
+			],
+			"sliders": [
+				{
+					"id": "value_threshold_back_off_4",
+					"thumbId": "Cursor_proxGd_adv_4",
+					"min": -2,
+					"max": 0,
+					"discrete": [
+						-2,
+						-1,
+						0
+					]
+				}
+			],
+			"styles": [
+				{
+					"id": "Slid_threshold_proxGd_adv_4",
+					"st": "visibility:`$[0]>0?'visible':'hidden'`"
 				}
 			]
 		},
