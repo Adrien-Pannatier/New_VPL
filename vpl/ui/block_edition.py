@@ -1,12 +1,30 @@
 """
 Author: Adrien Pannatier
-Date of Creation: 16.05.2024
-Description: you can use this script to delete a block from the block list using the block name. 
-             command: python delete_block.py [block_name]
+Date of Creation: 30.05.2024
+Description: This script allows you to edit vpl blocks in a easier way
+             Commands:
+             - python edit_block.py -h
+             - python edit_block.py show_blocks
+             - python edit_block.py delete_block [block_name]
 """
 
 import json
 import argparse
+
+# DISPLAY BLOCKS ======================================================================================================================
+
+def display_block_list():
+    print("\nBlocks in block list:\n")
+    with open('svg/block-list.json', 'r') as file:
+        data = json.load(file)
+        
+    for key in data.keys():
+        for item in data[key]:
+            print(item)
+
+    print("\n")
+
+# DELETE BLOCKS =======================================================================================================================
 
 def delete_from_block_list(name):
     with open('svg/block-list.json', 'r') as file:
@@ -65,7 +83,6 @@ def delete_from_block_description_language(name):
 
 def delete_from_code_files(name):
     code_languages = ["aseba", "js", "python", "l2"]
-    # code_languages = ["aseba"]
 
     for lang in code_languages:
         delete = False
@@ -76,7 +93,6 @@ def delete_from_code_files(name):
         for i,element in enumerate(data['blocks']):
             if element['name'] == name:
                 try: 
-                    # print(element[lang])
                     del data['blocks'][i]
                     print(f"Deleted block {name} from {lang} code file")
                     delete = True
@@ -96,9 +112,7 @@ def delete_from_ui(name):
 
     for i,element in enumerate(data['blocks']):
         if element['name'] == name:
-            print(element)
             del data['blocks'][i]
-            # del data['blocks'][i]
             print(f"Deleted block {name} from UI file")
             with open(path, 'w') as file:
                 json.dump(data, file, indent=4)
@@ -107,24 +121,32 @@ def delete_from_ui(name):
     print(f"⚠️ Block {name} not found in UI file")
 
 
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("name", help="The name of the block to delete")
+    parser = argparse.ArgumentParser(description="Manage block list: display blocks or delete a block")
+    subparsers = parser.add_subparsers(dest="command")
+
+    # Sub-parser for the show_blocks command
+    show_parser = subparsers.add_parser("show_blocks", help="Display all blocks in the block list")
+
+    # Sub-parser for the delete_block command
+    delete_parser = subparsers.add_parser("delete_block", help="Delete a block from the block list")
+    delete_parser.add_argument("name", help="The name of the block to delete")
+
     args = parser.parse_args()
 
-    # ask for confirmation
-    confirmation = input(f"Are you sure you want to delete block {args.name} from block list? (y/n) ")
-
-    if confirmation == 'y':
-        # print("\n")
-        # delete_from_block_list(args.name)
-        # print("\n")
-        # delete_from_help_languages(args.name)
-        # print("\n")
-        # delete_from_block_description_language(args.name)
-        # print("\n")
-        # delete_from_code_files(args.name)
-        print("\n")
-        delete_from_ui(args.name)
+    if args.command == "show_blocks":
+        display_block_list()
+    elif args.command == "delete_block":
+        # Ask for confirmation
+        confirmation = input(f"Are you sure you want to delete block {args.name} from block list? (y/n) ")
+        if confirmation.lower() == 'y':
+            delete_from_block_list(args.name)
+            delete_from_help_languages(args.name)
+            delete_from_block_description_language(args.name)
+            delete_from_code_files(args.name)
+            delete_from_ui(args.name)
+        else:
+            print("Block deletion cancelled")
     else:
-        print("Block deletion cancelled")   
+        parser.print_help()
