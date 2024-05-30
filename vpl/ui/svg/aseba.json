@@ -298,6 +298,16 @@
 			}
 		},
 		{
+			"name": "motor directions",
+			"aseba": {
+				"statement":
+					[
+						"motor.left.target = `Math.round(500 * $[0] * slowdown)`\n",
+						"motor.right.target = `Math.round(500 * $[1] * slowdown)`\n"
+					]
+			}
+		},
+		{
 			"name": "move",
 			"aseba": {
 				"initCodeExec": [
@@ -390,6 +400,38 @@
 					"call leds.bottom.left(`$.map(function (x) { return Math.round(32 * x); }).join(', ')`)\n",
 					"call leds.bottom.right(`$.map(function (x) { return Math.round(32 * x); }).join(', ')`)\n"
 				]
+			}
+		},
+		{
+			"name": "color all",
+			"aseba":{
+				"initVarDecl": [
+					[
+						"var G2[3]\n",
+						"var G3[3]\n",
+						"var GB[3]\n"
+					]
+				],
+				"initCodeExec": [
+					"G2 = [0, 0, 0]\n",
+					"G3 = [0, 0, 0]\n",
+					"GB = [0, 0, 0]\n",
+					[
+						"call leds.top(0, 0, 0)\n",
+						"call leds.bottom.left(0, 0, 0)\n",
+						"call leds.bottom.right(0, 0, 0)\n",
+						"call leds.circle(0, 0, 0, 0, 0, 0, 0, 0)\n"
+					]
+				],
+				"statement":
+					[
+						"call leds.bottom.left(`['0,0,0','0,32,0','0,0,32','32,0,0','32,32,32','0,32,32','32,0,32','32,32,0'][$[2]]`)\n",
+						"call leds.bottom.right(`['0,0,0','0,32,0','0,0,32','32,0,0','32,32,32','0,32,32','32,0,32','32,32,0'][$[1]]`)\n",
+						"call leds.top(`['0,0,0','0,32,0','0,0,32','32,0,0','32,32,32','0,32,32','32,0,32','32,32,0'][$[0]]`)\n",
+						"G2 = [`['0,0,0','0,32,0','0,0,32','32,0,0','32,32,32','0,32,32','32,0,32','32,32,0'][$[2]]`]\n",
+						"G3 = [`['0,0,0','0,32,0','0,0,32','32,0,0','32,32,32','0,32,32','32,0,32','32,32,0'][$[1]]`]\n",
+						"GB = [`['0,0,0','0,32,0','0,0,32','32,0,0','32,32,32','0,32,32','32,0,32','32,32,0'][$[0]]`]\n"
+					]
 			}
 		},
 		{
