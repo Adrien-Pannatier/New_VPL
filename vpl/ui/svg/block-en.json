@@ -37,7 +37,13 @@
 			"play stop": "Stop playing a .wav file",
 			"set state 256": "Set 8-LEDs state",
 			"set state 256 with mask": "Set some of the 8 LEDs",
-			"arithmetic": "Compute"
+			"arithmetic": "Compute",
+			"horiz prox 1 adv": "Proximity sensor 1 with thresholds",
+			"horiz prox 2 adv": "Proximity sensor 2 with thresholds",
+			"horiz prox 3 adv": "Proximity sensor 3 with thresholds",
+			"horiz prox 4 adv": "Proximity sensor 4 with thresholds",
+			"color all": "Quarter color state",
+			"motor directions": "Set vibrator intensity"
 		}
 	}
 }
