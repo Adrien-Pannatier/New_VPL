@@ -349,19 +349,19 @@
 			],
 			"styles": [
 				{
-					"id": "Obst_prox2",
+					"id": "HandTap1",
 					"st": "visibility:`$[0]>0?'visible':'hidden'`"
 				},
 				{
-					"id": "Obst_prox0",
+					"id": "HandTap2",
 					"st": "visibility:`$[1]>0?'visible':'hidden'`"
 				},
 				{
-					"id": "Obst_prox5",
+					"id": "HandTap3",
 					"st": "visibility:`$[2]>0?'visible':'hidden'`"
 				},
 				{
-					"id": "Obst_prox6",
+					"id": "HandTap4",
 					"st": "visibility:`$[3]>0?'visible':'hidden'`"
 				}
 			],
@@ -369,22 +369,22 @@
 			"typicalParameters": [ 0, 1, 0, -1],
 			"buttons": [
 				{
-					"id": "Btn3_Prox2",
+					"id": "Btn3_Prox_all_1",
 					"val": [0, 1, -1],
 					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
 				},
 				{
-					"id": "Btn3_Prox0",
+					"id": "Btn3_Prox_all_2",
 					"val": [0, 1, -1],
 					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
 				},
 				{
-					"id": "Btn3_Prox5",
+					"id": "Btn3_Prox_all_3",
 					"val": [0, 1, -1],
 					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
 				},
 				{
-					"id": "Btn3_Prox6",
+					"id": "Btn3_Prox_all_4",
 					"val": [0, 1, -1],
 					"st": ["fill:#90a4ae", "fill:#ffffff;stroke:#ff3d00", "stroke:#263238;fill:#000000"]
 				}
@@ -1397,96 +1397,115 @@
 					"uri": "Blocks.svg#motor_directions"
 				}
 			],
-			"defaultParameters": [0,0],
-			"typicalParameters": [1,3],
-			"sliders": [
+			"defaultParameters": [0, 0],
+			"otherParameters": 2,
+			"pushbuttons":[
 				{
-					"id": "V_values",
-					"thumbId": "Cursor_V",
-					"min": -3,
-					"max": 3,
-					"discrete": [
-						-3,
-						-2,
-						-1,
-						0,
-						1,
-						2,
-						3
-					]
-				},
-				{
-					"id": "H_values",
-					"thumbId": "Cursor_H",
-					"min": -3,
-					"max": 3,
-					"discrete": [
-						-3,
-						-2,
-						-1,
-						0,
-						1,
-						2,
-						3
-					]
-				}
-			],
-			"styles":[
-				{
-					"id": "v0",
-					"st": "stroke:#90a4ae;fill:`$[0]==0?'#8A012A':'transparent'`"
-				},
-				{
-					"id": "v1",
-					"st": "stroke:#90a4ae;fill:`$[0]==1?'#91C14A':'transparent'`"
-				},
-				{
-					"id": "v2",
-					"st": "stroke:#90a4ae;fill:`$[0]==2?'#F48246':'transparent'`"
-				},
-				{
-					"id": "v-1",
-					"st": "stroke:#90a4ae;fill:`$[0]==-1?'#91C14A':'transparent'`"
-				},
-				{
-					"id": "v-2",
-					"st": "stroke:#90a4ae;fill:`$[0]==-2?'#F48246':'transparent'`"
-				},
-				{
-					"id": "v-3",
-					"st": "stroke:#90a4ae;fill:`$[0]==-3?'#8A012A':'transparent'`"
-				},
-				{
-					"id": "v3",
-					"st": "stroke:#90a4ae;fill:`$[0]==3?'#8A012A':'transparent'`"
-				},
-				{
-					"id": "h0",
-					"st": "stroke:#90a4ae;fill:`$[1]==0?'black':'transparent'`"
+					"id": "zero",
+					"newParameters":  "`[($[0]=0),$[0]=0]`"
 				},
 				{
 					"id": "h1",
-					"st": "stroke:#90a4ae;fill:`$[1]==1?'#91C14A':'transparent'`"
+					"newParameters":  "`[($[0]=1),$[1]]`"
 				},
 				{
 					"id": "h2",
-					"st": "stroke:#90a4ae;fill:`$[1]==2?'#F48246':'transparent'`"
-				},
-				{
-					"id": "h-1",
-					"st": "stroke:#90a4ae;fill:`$[1]==-1?'#91C14A':'transparent'`"
-				},
-				{
-					"id": "h-2",
-					"st": "stroke:#90a4ae;fill:`$[1]==-2?'#F48246':'transparent'`"
-				},
-				{
-					"id": "h-3",
-					"st": "stroke:#90a4ae;fill:`$[1]==-3?'#8A012A':'transparent'`"
+					"newParameters":  "`[($[0]=2),$[1]]`"
 				},
 				{
 					"id": "h3",
-					"st": "stroke:#90a4ae;fill:`$[1]==3?'#8A012A':'transparent'`"
+					"newParameters":  "`[($[0]=3),$[1]]`"
+				},
+				{
+					"id": "h-1",
+					"newParameters":  "`[($[0]=-1),$[1]]`"
+				},
+				{
+					"id": "h-2",
+					"newParameters":  "`[($[0]=-2),$[1]]`"
+				},
+				{
+					"id": "h-3",
+					"newParameters":  "`[($[0]=-3),$[1]]`"
+				},
+				{
+					"id": "v1",
+					"newParameters":  "`[$[0],($[1]=1)]`"
+				},
+				{
+					"id": "v2",
+					"newParameters":  "`[$[0],($[1]=2)]`"
+				},
+				{
+					"id": "v3",
+					"newParameters":  "`[$[0],($[1]=3)]`"
+				},
+				{
+					"id": "v-1",
+					"newParameters":  "`[$[0],($[1]=-1)]`"
+				},
+				{
+					"id": "v-2",
+					"newParameters":  "`[$[0],($[1]=-2)]`"
+				},
+				{
+					"id": "v-3",
+					"newParameters":  "`[$[0],($[1]=-3)]`"
+				}
+
+			],
+			"styles":[
+				{
+					"id": "zero",
+					"st": "fill:`$[0]==0?'#ffb538':'#90a4ae'`"
+				},
+				{
+					"id": "h1",
+					"st": "fill:`$[0]==1?'#ff9b38':'#90a4ae'`"
+				},
+				{
+					"id": "h2",
+					"st": "fill:`$[0]==2?'#ff8138':'#90a4ae'`"
+				},
+				{
+					"id": "h3",
+					"st": "fill:`$[0]==3?'#ff6738':'#90a4ae'`"
+				},
+				{
+					"id": "h-1",
+					"st": "fill:`$[0]==-1?'#ff9b38':'#90a4ae'`"
+				},
+				{
+					"id": "h-2",
+					"st": "fill:`$[0]==-2?'#ff8138':'#90a4ae'`"
+				},
+				{
+					"id": "h-3",
+					"st": "fill:`$[0]==-3?'#ff6738':'#90a4ae'`"
+				},
+				{
+					"id": "v1",
+					"st": "fill:`$[1]==1?'#ff9b38':'#90a4ae'`"
+				},
+				{
+					"id": "v2",
+					"st": "fill:`$[1]==2?'#ff8138':'#90a4ae'`"
+				},
+				{
+					"id": "v3",
+					"st": "fill:`$[1]==3?'#ff6738':'#90a4ae'`"
+				},
+				{
+					"id": "v-1",
+					"st": "fill:`$[1]==-1?'#ff9b38':'#90a4ae'`"
+				},
+				{
+					"id": "v-2",
+					"st": "fill:`$[1]==-2?'#ff8138':'#90a4ae'`"
+				},
+				{
+					"id": "v-3",
+					"st": "fill:`$[1]==-3?'#ff6738':'#90a4ae'`"
 				}
 			]
 		},

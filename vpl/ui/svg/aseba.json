@@ -189,13 +189,6 @@
 			}
 		},
 		{
-			"name": "horiz prox",
-			"aseba": {
-				"sectionBegin": "onevent prox\n",
-				"clause": "`[2, 1, 3, 0, 4, 5, 6].map(function (ix, i) { return $[i] ? 'prox.horizontal[' + ix + '] ' + ($[i] > 0 ? '>= 2000' : '<= 1000') : ''; }).filter(function (s) { return s; }).join(' and ') || [2, 1, 3, 0, 4, 5, 6].map(function (ix) { return 'prox.horizontal[' + ix + '] >= 2000'; }).join(' or ')`"
-			}
-		},
-		{
 			"name": "horiz prox front adv",
 			"aseba": {
 				"sectionBegin": "onevent prox\n",
@@ -680,6 +673,13 @@
 				"statementWithoutInit": [
 					"call leds.bottom.right(`$.map(function (x) { return Math.round(32 * x); }).join(', ')`)\n"
 				]
+			}
+		},
+		{
+			"name": "horiz prox",
+			"aseba": {
+				"sectionBegin": "onevent prox\n",
+				"clauseAnd": "`i < 4 && $[i] ? 'prox.horizontal[' + i*2 + '] ' + ($[i] > 0 ? '>= ' : '<= ') + Math.round(7 + 33 * 0.5) + '00' : ''`"
 			}
 		},
 		{
