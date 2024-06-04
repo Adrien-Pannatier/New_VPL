@@ -26,6 +26,13 @@ def display_block_list():
 
 # DELETE BLOCKS =======================================================================================================================
 
+def delete_block(name):
+    delete_from_block_list(name)
+    delete_from_help_languages(name)
+    delete_from_block_description_language(name)
+    delete_from_code_files(name)
+    delete_from_ui(name)
+
 def delete_from_block_list(name):
     with open('svg/block-list.json', 'r') as file:
         data = json.load(file)
@@ -124,9 +131,20 @@ def delete_from_ui(name):
 
 def add_block():
     name = input("Enter block name: ")
-    add_block_to_block_list(name)
-    add_block_to_help_languages(name)
-    add_block_to_block_description_language(name)
+    try:
+        type = input("Enter block type (event/action): ")
+        if type not in ["event", "action"]:
+            print("Invalid block type. Please enter 'event' or 'action'.")
+            raise 
+        add_block_to_block_list(name)
+        add_block_to_help_languages(name)
+        add_block_to_block_description_language(name)
+        add_block_to_ui(name, type)
+        add_block_to_code_files(name)
+    except:
+        print(f"something went wrong with block {name}, deleting")
+        delete_block(name)
+
 
 def add_block_to_block_list(name):
     with open('svg/block-list.json', 'r') as file:
@@ -138,7 +156,7 @@ def add_block_to_block_list(name):
                 print(f"⚠️ Block {name} already in block list")
                 return
 
-    data['blocks'].append(name)
+    data['blockList'].append(name)
     with open('svg/block-list.json', 'w') as file:
         json.dump(data, file, indent=4)
     print(f"Added block {name} to block list")
@@ -158,7 +176,7 @@ def add_block_to_help_languages(name):
         data['help'][lang]['blocks'][name] = [f"ADD DESCRIPTION HERE in {lang}"]
         with open(path, 'w') as file:
             json.dump(data, file, indent=4)
-        print(f"Added block {name} to {lang} help file")
+        print(f"Added block {name} to {lang} help file ✏️")
 
 def add_block_to_block_description_language(name):
     languages = ["de", "en", "fr", "it"]
@@ -175,7 +193,42 @@ def add_block_to_block_description_language(name):
         data['i18n'][lang][name] = f"ADD DESCRIPTION HERE in {lang}"
         with open(path, 'w') as file:
             json.dump(data, file, indent=4)
-        print(f"Added block {name} to {lang} description file")           
+        print(f"Added block {name} to {lang} description file ✏️")  
+
+def add_block_to_ui(name, type):
+    path = 'svg/ui.json'
+    with open(path, 'r') as file:
+        data = json.load(file)
+
+    for element in data['blocks']:
+        if element['name'] == name:
+            print(f"⚠️ Block {name} already in UI file")
+            return
+
+    data['blocks'].append({"name": name, "type": f"{type}", "modes": ["basic"], "draw":[{"uri": "Blocks.svg#To_Design"}], "defaultParameters": []})
+    with open(path, 'w') as file:
+        json.dump(data, file, indent=4)
+    print(f"Added block {name} to UI file ✏️")
+
+def add_block_to_code_files(name):
+    code_languages = ["aseba", "js", "python", "l2"]
+
+    for lang in code_languages:
+        path = f'svg/{lang}.json'
+        with open(path, 'r') as file:
+            data = json.load(file)
+
+        for element in data['blocks']:
+            if element['name'] == name:
+                print(f"⚠️ Block {name} already in {lang} code file")
+                continue
+
+        data['blocks'].append({"name": name, f"{lang}": {}})
+        with open(path, 'w') as file:
+            json.dump(data, file, indent=4)
+        print(f"Added block {name} to {lang} code file ✏️")
+
+# =====================================================================================================================================         
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Manage block list: display blocks or delete a block")
@@ -188,6 +241,9 @@ if __name__ == "__main__":
     delete_parser = subparsers.add_parser("delete_block", help="Delete a block from the block list")
     delete_parser.add_argument("name", help="The name of the block to delete")
 
+    # Sub-parser for the add_block command
+    add_parser = subparsers.add_parser("add_block", help="Add a block to the block list")
+
     args = parser.parse_args()
 
     if args.command == "show_blocks":
@@ -196,12 +252,10 @@ if __name__ == "__main__":
         # Ask for confirmation
         confirmation = input(f"Are you sure you want to delete block {args.name} from block list? (y/n) ")
         if confirmation.lower() == 'y':
-            delete_from_block_list(args.name)
-            delete_from_help_languages(args.name)
-            delete_from_block_description_language(args.name)
-            delete_from_code_files(args.name)
-            delete_from_ui(args.name)
+            delete_block(args.name)
         else:
             print("Block deletion cancelled")
+    elif args.command == "add_block":
+        add_block()
     else:
         parser.print_help()
