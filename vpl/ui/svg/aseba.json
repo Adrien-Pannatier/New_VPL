@@ -458,7 +458,7 @@
             "name": "horiz prox",
             "aseba": {
                 "sectionBegin": "onevent prox\n",
-                "clauseAnd": "`i < 4 && $[i] ? 'prox.horizontal[' + i+1 + '] ' + ($[i] > 0 ? '>= ' : '<= ') + Math.round(7 + 33 * 0.5) + '00' : ''`"
+                "clauseAnd": "`i < 4 && $[i] ? 'prox.horizontal[' + (i+1) + '] ' + ($[i] > 0 ? '>= ' : '<= ') + Math.round(7 + 33 * 0.5) + '00' : ''`"
             }
         },
         {
