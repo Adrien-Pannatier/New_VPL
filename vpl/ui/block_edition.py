@@ -120,7 +120,62 @@ def delete_from_ui(name):
 
     print(f"⚠️ Block {name} not found in UI file")
 
+# ADD BLOCKS ==========================================================================================================================
 
+def add_block():
+    name = input("Enter block name: ")
+    add_block_to_block_list(name)
+    add_block_to_help_languages(name)
+    add_block_to_block_description_language(name)
+
+def add_block_to_block_list(name):
+    with open('svg/block-list.json', 'r') as file:
+        data = json.load(file)
+        
+    for key in data.keys():
+        for item in data[key]:
+            if item == name:
+                print(f"⚠️ Block {name} already in block list")
+                return
+
+    data['blocks'].append(name)
+    with open('svg/block-list.json', 'w') as file:
+        json.dump(data, file, indent=4)
+    print(f"Added block {name} to block list")
+
+def add_block_to_help_languages(name):
+    languages = ["de", "en", "fr", "it"]
+    for lang in languages:
+        path = f'svg/help-blocks-{lang}.json'
+        with open(path, 'r', encoding="utf-8") as file:
+            data = json.load(file)
+        
+        for element in data['help'][lang]['blocks']:
+            if element == name:
+                print(f"⚠️ Block {name} already in {lang} help file")
+                continue
+
+        data['help'][lang]['blocks'][name] = [f"ADD DESCRIPTION HERE in {lang}"]
+        with open(path, 'w') as file:
+            json.dump(data, file, indent=4)
+        print(f"Added block {name} to {lang} help file")
+
+def add_block_to_block_description_language(name):
+    languages = ["de", "en", "fr", "it"]
+    for lang in languages:
+        path = f'svg/block-{lang}.json'
+        with open(path, 'r', encoding="utf-8") as file:
+            data = json.load(file)
+
+        for element in data['i18n'][lang]:
+            if element == name:
+                print(f"⚠️ Block {name} already in {lang} description file")
+                continue
+
+        data['i18n'][lang][name] = f"ADD DESCRIPTION HERE in {lang}"
+        with open(path, 'w') as file:
+            json.dump(data, file, indent=4)
+        print(f"Added block {name} to {lang} description file")           
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Manage block list: display blocks or delete a block")
