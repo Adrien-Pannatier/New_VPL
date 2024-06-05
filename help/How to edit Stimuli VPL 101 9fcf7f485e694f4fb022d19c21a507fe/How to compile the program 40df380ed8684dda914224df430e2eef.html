@@ -1,0 +1,716 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>How to compile the program</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="40df380e-d868-4dda-9142-24df430e2eef" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_winslow_homer_maine_coast.jpg" style="object-position:center 60%"/><h1 class="page-title">How to compile the program</h1><p class="page-description"></p></header><div class="page-body"><p id="cfc61115-08b5-4c32-8a05-376df30cfb1e" class="">The following document is adapted from <a href="https://github.com/Mobsya/aseba/blob/master/docs/en/development/building.rst">https://github.com/Mobsya/aseba/blob/master/docs/en/development/building.rst</a></p><p id="113507fe-2c89-425f-9b1b-4a8de9085c0a" class="">
+</p><nav id="adce58d8-0fa8-458b-9dae-7b6bd3932a43" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#32c1607f-3507-4e07-9dfb-5ae586139e35">Building Aseba</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b84ad77c-878f-49a9-8b9c-5273f537bc86">Requirements &amp; Dependencies</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#21bdeea0-7fc5-4e2a-a08d-f175c759ca17">Getting the Source Code</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#66e7c323-1da2-454f-9d7c-04ba38953ee7">Getting All Web Base Software</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#9ee54bc9-7afb-46a0-bf3c-a1fe8f6d4936">Getting Started on Windows with MSVC</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a3e88cbb-2e9d-46a8-9633-b2c8b7f08307">Getting Started on OSX</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#c47d7ef5-6d16-4c20-8bb5-2f5e4ee55893">Getting Started on Linux</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#96fdd111-7d43-4953-90f0-9988ed46361b">Dependencies On Ubuntu &amp; Debian</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#73acac01-8a8b-4069-a5fe-825a64de8ee5">Docker Image</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#4cc6ba21-4c1c-49a0-af3c-a08a3a2ff7d5">Building Aseba</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#7a29727a-bc4a-4f43-87a7-5ccf5e6ebdfc">A Note About Permissions</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#014950c1-8c5f-49ab-a54f-7107189fd9a3">Getting Started on Android</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#3939f6a0-0ab4-4046-8c54-2e937748cc3f">VPL 2 - Deprecated</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#1654f566-26ee-4156-9344-84c6023b9cd3">Building VPL 2</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b26ec0a9-0165-453b-be01-430bcd2aa792">Getting Started on iOS</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#07d02c27-f202-4c26-914d-7df6936e0383">Generic Commands</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#96f9be8c-3689-486c-b6ce-791b93781b38">Building Thymio Suite Launcher</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#50a4aaa0-52d1-472f-a70e-c0cf0478e8a4">Building and Archiving the Build</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#eb4e88b7-1211-46e3-b0c8-815211b8acc3">Generating the IPA</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#7056f2ea-8c29-468c-aef1-4e4c5ac43146">Provisioning Profile</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#c49243ef-dd99-45ef-ad92-9840906d48c1">Installing the Certificate</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#d26ee4eb-7bf2-4657-b57c-392f1c417b37">Running Tests</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e5fef7f8-5123-4af5-bd76-5e2e837ab552">Ninja</a></div></nav><hr id="e8da9728-be21-45e5-88b1-234131d92ab7"/><h1 id="32c1607f-3507-4e07-9dfb-5ae586139e35" class="">Building Aseba</h1><h2 id="b84ad77c-878f-49a9-8b9c-5273f537bc86" class="">Requirements &amp; Dependencies</h2><p id="d962df77-bf8f-4bee-96ee-8fbdc48b888e" class="">Aseba requires a C++17 compatible compiler. We recommend <code>GCC 8</code>, <code>Clang 8</code>, or <code>MSVC 19</code> (Visual Studio 2019).</p><p id="3fee90b1-c4ac-4343-877b-dcf4466b7613" class="">Aseba depends on Qt5.12 or greater. You will also need <code>cmake</code> 3.14 or greater; we recommend you use the latest version available.</p><h2 id="21bdeea0-7fc5-4e2a-a08d-f175c759ca17" class="">Getting the Source Code</h2><p id="8811cd3c-5b0c-4b17-a0ce-28a22af69597" class="">The <a href="https://github.com/mobsya/aseba">source code of Aseba</a> is hosted on GitHub. To fetch the source, you must first <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install Git</a>.</p><p id="85478cac-2148-481c-9caa-afb69d443921" class="">Then, to clone Aseba, execute:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="73f02a54-8a4c-4726-995d-5a9a407b6ac8" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">git clone --recursive &lt;https://github.com/mobsya/aseba.git&gt;
+cd aseba
+</code></pre><p id="d8735906-d159-486c-94f6-ede576333354" class="">When pulling, it might be necessary to update the submodules with <code>git submodule update --init</code>. Alternatively, git can do that for you if you configure it with <code>git config --global submodule.recurse true</code>.</p><p id="179daccc-921a-4c5b-a3f6-817f6613869a" class="">All the commands given in the rest of this document assume the current path is the root folder of the cloned repository.</p><h2 id="66e7c323-1da2-454f-9d7c-04ba38953ee7" class="">Getting All Web Base Software</h2><ul id="5e694d7c-5e69-462d-844c-ed0731ac6883" class="bulleted-list"><li style="list-style-type:disc">Download the <a href="https://github.com/Mobsya/scratch-gui/releases/">latest release</a> and extract it into the main directory with the name <code>scratch</code>.</li></ul><ul id="7b453d5c-c8e3-499e-82d2-1b444168e0e7" class="bulleted-list"><li style="list-style-type:disc">Download the <a href="https://github.com/Mobsya/thymio-blockly-standalone/releases">latest release</a> and extract it into the main directory with the name <code>thymio_blockly</code>.</li></ul><ul id="783b7c14-7b7d-4e79-800a-661f9ad75016" class="bulleted-list"><li style="list-style-type:disc">Download <a href="https://github.com/Mobsya/ci-data/releases/download/data/vpl3-thymio-suite.tar.gz">vpl3-thymio-suite</a> and extract it into the main directory with the name <code>tvpl3-thymio-suite</code>.</li></ul><h2 id="9ee54bc9-7afb-46a0-bf3c-a1fe8f6d4936" class="">Getting Started on Windows with MSVC</h2><p id="0ba8cdc1-79d4-4a2c-bd69-dc54e928270e" class="">Aseba builds on Windows Seven SP1 or greater.</p><p id="5de078c4-27c2-4614-a9ea-43936e54b20c" class="">Download and install the following components:</p><table id="d423e06a-7188-4fab-9d1d-096a8a58f354" class="simple-table"><tbody><tr id="e960efd0-9403-4c26-b6b4-8e7e54bf4fbf"><td id="CNYo" class="">Dep</td><td id="YO`B" class="">Download</td><td id="Xt;r" class="">Notes</td></tr><tr id="42ef6e7b-4a3c-4391-929a-ceb9d3f13409"><td id="CNYo" class="">Visual Studio 2019 (16.2+)</td><td id="YO`B" class=""><a href="https://visualstudio.microsoft.com/downloads/">Download</a></td><td id="Xt;r" class="">Install the &quot;Desktop development with C++&quot; workload and the MSVC v142 - VS 2019 C++ x64/x86 Build Tools (v14.25)</td></tr><tr id="b9333638-3a6c-4bbc-8ed7-0f660a9770fb"><td id="CNYo" class="">CMake 3.14+</td><td id="YO`B" class=""><a href="https://cmake.org/download/">Website</a></td><td id="Xt;r" class="">Make sure the version of boost you choose is compatible with the CMake version</td></tr><tr id="4efb94b0-375f-495c-b4b9-6fc396d5efed"><td id="CNYo" class="">Qt 5.12+</td><td id="YO`B" class=""><a href="https://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe">Installer</a></td><td id="Xt;r" class="">Install the MSVC 2017 binaries as well as the <code>Qt WebEngine</code> and <code>Qt Charts</code> components. For <code>x86</code> you can choose the <code>MSVC 2015 32 bits</code> binaries instead in the Qt installer components screen</td></tr><tr id="856ac4aa-333b-4103-a758-8c295b57cfb5"><td id="CNYo" class="">Node &amp; Npm</td><td id="YO`B" class=""><a href="https://nodejs.org/en/download/">Download</a></td><td id="Xt;r" class=""><code>npm.exe</code> must be in the path</td></tr><tr id="9ad9af7b-f5c0-490b-81ff-a3bd5e006580"><td id="CNYo" class="">7Zip</td><td id="YO`B" class=""><a href="https://www.7-zip.org/download.html">Download</a></td><td id="Xt;r" class=""></td></tr><tr id="5339e9be-8b54-4677-95b4-3626bd1aab0b"><td id="CNYo" class="">NSIS 2</td><td id="YO`B" class=""><a href="https://nsis.sourceforge.io/Download">Download</a></td><td id="Xt;r" class="">For building the installer; <code>nsis.exe</code> must be in the path</td></tr><tr id="9b279da7-c706-44a1-be50-89fe1e7071ab"><td id="CNYo" class="">Python</td><td id="YO`B" class=""><a href="https://www.python.org/downloads/windows/">Download</a></td><td id="Xt;r" class="">For signing the installer; <code>python.exe</code> must be in the path</td></tr></tbody></table><p id="dbc1df04-b834-43dd-9b6d-5c2025a67ca9" class="">To build Aseba, you first need to generate a Visual Studio Solution.</p><ol type="1" id="805e475a-70d8-48a3-96b5-808a20bf0dbd" class="numbered-list" start="1"><li>Launch <code>Developer Command Prompt for VS 2019</code><p id="9e1d5559-f4e4-470e-92aa-6d7af7e6a1c3" class="">Navigate to the directory in which you want to build Aseba. It is recommended not to build in the source directory.</p></li></ol><ol type="1" id="2a106e27-f5a2-4f14-93de-62b9b08e3cd3" class="numbered-list" start="2"><li><a href="https://github.com/Mobsya/vcpkg">Clone VCPKG</a> from the Mobsya repository and install it running <code>.\\bootstrap-vcpkg.bat</code> and navigate to VCPKG directory.</li></ol><ol type="1" id="76d7d3e4-1b90-498f-93d8-c784c9861d24" class="numbered-list" start="3"><li>Install the required packages <code>vcpkg install @&lt;ASEBA_SOURCE_DIRECTORY&gt;\\vcpkg-list.txt --triplet x64-windows-static</code>. Or run <code>vcpkg install openssl zlib boost-signals2 boost-program-options boost-filesystem boost-scope-exit boost-asio boost-uuid boost-asio boost-date-time boost-thread boost-beast boost-interprocess --triplet x64-windows-static</code> if previous is not working. This might take a while. Replace <code>x64</code> by <code>x86</code> if you target a 32-bit build.</li></ol><ol type="1" id="1417d510-8bc4-45c9-8f87-5f0c68b2a8bd" class="numbered-list" start="4"><li>To build for x64:</li></ol><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="85a3be32-3c22-4e6a-a3ac-9753c4e64eb8" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">cmake -G&quot;Visual Studio 16 2019&quot; -A x64 -T version=14.25 -DBUILD_SHARED_LIBS=OFF &quot;-DCMAKE_PREFIX_PATH=C:\\&lt;QT_INSTALLATION_PATH&gt;\\&lt;QT_VERTION&gt;\\msvc2017_64;&quot; -DCMAKE_TOOLCHAIN_FILE=&lt;VCPKG_INSTALLATION_PATH&gt;/scripts/buildsystems/vcpkg.cmake &quot;-DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=&lt;ASEBA_SOURCE_DIRECTORY&gt;\\windows\\cl-toolchain.cmake&quot; &quot;-DVCPKG_TARGET_TRIPLET=x64-windows-static&quot; &lt;ASEBA_SOURCE_DIRECTORY&gt;
+</code></pre><p id="59bd8039-9cf7-4452-ba71-af912ff99d2e" class="">where:</p><ul id="95991abf-17f7-4a1d-8887-41b76a3b5612" class="bulleted-list"><li style="list-style-type:disc"><code>&lt;QT_INSTALLATION_PATH&gt;</code> is the path where Qt is installed.</li></ul><ul id="220b8cce-0f2b-4ee0-8756-9dfb0f950e57" class="bulleted-list"><li style="list-style-type:disc"><code>&lt;QT_VERTION&gt;</code> is the version of Qt you installed. A folder of that name exists in the Qt installation directory.</li></ul><ul id="33fdf7b2-873c-41c5-9e22-7c34bc33f2c4" class="bulleted-list"><li style="list-style-type:disc"><code>&lt;ASEBA_SOURCE_DIRECTORY&gt;</code> is the directory containing the Aseba repository.</li></ul><ul id="62cf93d4-3d60-498b-9e11-f8ae3be56c2e" class="bulleted-list"><li style="list-style-type:disc"><code>&lt;VCPKG_INSTALLATION_PATH&gt;</code> is the path where Qt is cloned.</li></ul><p id="2db9a5d7-e05c-4e56-b7be-f5a4681375a7" class="">To build for x86:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="107840e9-59b5-482c-90a5-556df74f801a" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">cmake -G&quot;Visual Studio 16 2019&quot; -A Win32 -T version=14.25 -DBUILD_SHARED_LIBS=OFF &quot;-DCMAKE_PREFIX_PATH=C:\\&lt;QT_INSTALLATION_PATH&gt;\\&lt;QT_VERTION&gt;\\msvc2017;&quot; -DCMAKE_TOOLCHAIN_FILE=&lt;VCPKG_INSTALLATION_PATH&gt;/scripts/buildsystems/vcpkg.cmake &quot;-DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=&lt;ASEBA_SOURCE_DIRECTORY&gt;\\windows\\cl-toolchain.cmake&quot; &quot;-DVCPKG_TARGET_TRIPLET=x86-windows-static&quot; &lt;ASEBA_SOURCE_DIRECTORY&gt;
+</code></pre><p id="81714398-53a5-4644-8075-a66d2ab4d908" class="">Then, to build the project, you can either run <code>msbuild ThymioSuite.sln</code> or open <code>ThymioSuite.sln</code> with Visual Studio 2019. Refer to the documentation of msbuild and Visual Studio for more information.</p><h2 id="a3e88cbb-2e9d-46a8-9633-b2c8b7f08307" class="">Getting Started on OSX</h2><p id="a4d03746-1c2a-49ad-8237-169f6f3f1d35" class="">You will need OSX 10.11 or greater.</p><ul id="36e447ad-be38-4999-85ae-297b272912c4" class="bulleted-list"><li style="list-style-type:disc">Install <a href="https://brew.sh/">Homebrew</a>.</li></ul><ul id="1146a20d-799d-48d5-ab00-5779a85a8bc2" class="bulleted-list"><li style="list-style-type:disc">In the cloned repository run:</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="eca9c8da-09a4-4492-8e63-022ec4c99d3a" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">brew update
+brew tap homebrew/bundle
+brew bundle
+</code></pre><p id="d22609cf-0f0b-4290-ac79-c1e1f3c97b1f" class="">Then you can create a build directory and build Aseba:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fb37bd76-47c3-4b0d-9d40-1c86fdcf269d" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">mkdir build &amp;&amp; cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF ..
+make
+</code></pre><h2 id="c47d7ef5-6d16-4c20-8bb5-2f5e4ee55893" class="">Getting Started on Linux</h2><h3 id="96fdd111-7d43-4953-90f0-9988ed46361b" class="">Dependencies On Ubuntu &amp; Debian</h3><p id="f5fcdc47-771b-4a52-af66-bf6e90acaf82" class="">You will need a C++17 able compiler. GCC 8 is known to work. The required dependency may vary across distributions. The following instructions are given for Ubuntu 18.10 cosmic.</p><p id="a5926a30-7974-4e9d-a0ca-d6e49fc40e7a" class="">Install the following packages:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7a531a4b-7f2d-4613-91c7-453f509acc99" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">sudo apt-get install mesa-common-dev libgl1-mesa-dev clang clang-format g++-multilib gdb git cmake ninja-build libavahi-compat-libdnssd-dev libudev-dev libssl-dev libfreetype6 libfontconfig libnss3 libasound2 libxtst6 libxrender1 libxi6 libxcursor1 libxcomposite1
+</code></pre><p id="856db8d7-dc31-4547-8698-b5d06f3cb484" class=""><a href="https://www.qt.io/download-qt-installer">Download Qt 5.12</a>. You will need to select the QtWebEngine, QtCharts components.</p><p id="6d0d7874-423a-4b90-9854-b1efef869328" class="">You then need to define an environment variable <code>CMAKE_PREFIX_PATH</code> pointing to the Qt installation folder:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f568de16-da34-4a67-8dd2-44d3d348db4f" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">export CMAKE_PREFIX_PATH=&lt;Qt_Install_Directory/&lt;version&gt;/gcc_64&gt;
+</code></pre><h3 id="73acac01-8a8b-4069-a5fe-825a64de8ee5" class="">Docker Image</h3><p id="e76d7f23-870e-4d04-8088-fd3e22c988e4" class="">We also provide a <a href="https://hub.docker.com/r/mobsya/linux-dev-env">docker image</a> with the dependencies already installed.</p><h3 id="4cc6ba21-4c1c-49a0-af3c-a08a3a2ff7d5" class="">Building Aseba</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="19391250-aa09-443e-9eee-8d4c8aeaec71" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">mkdir build &amp;&amp; cd build
+cmake -DMOBSYA_WEBAPPS_ROOT_DIR=share/ -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF ..
+make
+</code></pre><h3 id="7a29727a-bc4a-4f43-87a7-5ccf5e6ebdfc" class="">A Note About Permissions</h3><p id="78e200df-d6aa-4599-b4fa-42d5389c3e43" class="">If you will be connecting to your robot through a serial port, you might need to add yourself to the group that has permission for that port. In many distributions, this is the &quot;dialout&quot; group and you can add yourself to that group and use the associated permissions by running the following commands:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="29d10aba-6979-453d-9bb7-1df2bf0d3801" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">sudo usermod -a -G dialout $USER
+newgrp dialout
+</code></pre><h2 id="014950c1-8c5f-49ab-a54f-7107189fd9a3" class="">Getting Started on Android</h2><p id="710d4533-a97b-4868-a1b3-1872fb77d6f5" class="">Please refer to the dedicated documentation in <a href="https://github.com/Mobsya/aseba/blob/master/docs/en/development/android-build.md">android-build.md</a>.</p><h3 id="3939f6a0-0ab4-4046-8c54-2e937748cc3f" class="">VPL 2 - Deprecated</h3><p id="8d80d5c3-a49f-466e-b1c5-50c0e431f375" class="">VPL 2 can be built for Android. Other tools such as studio, playground, and the old VPL are not compatible with Android.</p><p id="fa0b1405-de3b-4ce2-8af6-22838403195a" class="">To build the Android version you will need:</p><ul id="951728b9-1bd1-44f9-9d93-ceaf3ab07219" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developer.android.com/studio/index.html#downloads">The Android tools for your system</a></li></ul><ul id="1f4256a7-ae51-443f-8df5-81217ab6c595" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developer.android.com/ndk/downloads/index.html">The Android NDK</a> - tested with version 10 - currently not compatible with newer NDK</li></ul><ul id="2072626e-6c01-48a8-99a5-1f7f5a4567ae" class="bulleted-list"><li style="list-style-type:disc">Qt 5.10 for Android - which you can install through the Qt installer</li></ul><ul id="a311eaa9-9336-4878-bc40-820f74d321ca" class="bulleted-list"><li style="list-style-type:disc">CMake 3.7 or greater</li></ul><h3 id="1654f566-26ee-4156-9344-84c6023b9cd3" class="">Building VPL 2</h3><p id="9e27edf0-14a5-4a39-a551-f3f97d08047e" class="">First, you need to prepare some environment variables:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="22f03c6a-b3aa-403f-8778-210cb0655ba0" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">export ANDROID_SDK=&lt;path_of_the_android_sdk&gt;
+export ANDROID_NDK=&lt;path_of
+
+_the_android_ndk&gt;
+export CMAKE_PREFIX_PATH=&quot;${CMAKE_PREFIX_PATH}:$HOME/&lt;path_of_qt5_for_android&gt;&quot;
+</code></pre><p id="82006afc-1054-414e-88c3-a26871089923" class="">Then you can build VPL2 with CMake. An APK will be generated in <code>build/bin</code>.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a5fc54a3-827f-4ae2-b54f-c2428fb2e020" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">mkdir build &amp;&amp; cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DANDROID_NATIVE_API_LEVEL=14 -DANDROID_STL=gnustl_shared -DCMAKE_TOOLCHAIN_FILE=`pwd`/../android/qt-android-cmake/toolchain/android.toolchain.cmake
+make
+</code></pre><h2 id="b26ec0a9-0165-453b-be01-430bcd2aa792" class="">Getting Started on iOS</h2><p id="9b92c387-dc78-4827-a585-da98047b0a83" class="">Requires a recent version of Xcode and QT. Building the output requires Xcode to sign the binary. You&#x27;ll also need to be able to build part of the project for macOS. Installing the brew bundle is also advised.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c672d0c7-d1a5-456a-8ca5-ddd10c5a8f47" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">brew update
+brew tap homebrew/bundle
+brew bundle
+</code></pre><h3 id="07d02c27-f202-4c26-914d-7df6936e0383" class="">Generic Commands</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="cb7c23b4-76ad-4cde-9946-61a01f23f220" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">mkdir build
+cd build
+export QTDIR=&lt;YOUR_BASE_QT_DIR&gt;
+</code></pre><h3 id="96f9be8c-3689-486c-b6ce-791b93781b38" class="">Building Thymio Suite Launcher</h3><p id="a2e4094a-e8ec-4f1e-8674-810a79308aac" class="">This requires generating the Xcode project, and using it via the xcodebuild command line.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0e411c36-f3cc-4c50-96e4-3b375f01efdb" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">cmake -DIOS_ARCH=&quot;arm64&quot; -DENABLE_BITCODE=NO -DIOS_DEPLOYMENT_TARGET=11.0 -DCMAKE_TOOLCHAIN_FILE=./ios/ios-cmake/ios.toolchain.cmake -DCMAKE_PREFIX_PATH=&quot;${QTDIR}/ios&quot; -G Xcode -DIOS_ARCHIVE_BUILD=1 ..
+</code></pre><h3 id="50a4aaa0-52d1-472f-a70e-c0cf0478e8a4" class="">Building and Archiving the Build</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1e7cd525-001c-401a-89b3-894caba72b91" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">xcodebuild -scheme thymio-launcher -configuration Release -derivedDataPath ./bin/datas/libraries -sdk iphoneos clean archive -archivePath ./bin/launcher.xcarchive -IPHONEOS_DEPLOYMENT_TARGET=11.0
+</code></pre><h3 id="eb4e88b7-1211-46e3-b0c8-815211b8acc3" class="">Generating the IPA</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="92ceb573-3cef-4eb1-8388-ce34dc4dc9b2" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">xcodebuild -exportArchive -archivePath ./bin/launcher.xcarchive -exportOptionsPlist ../ios/exportOptions.plist -exportPath ./bin/storebuild -allowProvisioningUpdates
+</code></pre><p id="9200601c-69e2-45c3-92ac-2fa8a2061692" class="">Note that to generate the IPA without error you&#x27;ll need to have the Provisioning profile and the related certificate installed.</p><h3 id="7056f2ea-8c29-468c-aef1-4e4c5ac43146" class="">Provisioning Profile</h3><p id="b27acf3a-d9c7-4f87-bf30-cb5ca4c504ee" class="">You must have at least one valid provisioning profile installed in <code>~/Library/MobileDevice/Provisioning Profiles</code>. The codesign process will look in this folder for a valid one.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3329edba-f39c-4157-85bb-b3377d97fd6b" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">mv &lt;valid_provisioning_profile&gt; ~/Library/MobileDevice/Provisioning\\ Profiles
+</code></pre><h3 id="c49243ef-dd99-45ef-ad92-9840906d48c1" class="">Installing the Certificate</h3><p id="c1eacc50-2c06-4a9b-8481-36e11e0d26cd" class="">If you encounter <code>error: exportArchive: No valid Apple Distribution certificate found.</code>, allows the code sign process to access a certificate and import the new certificate:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e22bdf68-b1c5-4330-b31d-527e9c459f89" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">security unlock-keychain -p &lt;user_keychain_access_password&gt;
+security import &lt;Certificate_p12_path&gt; -k ~/Library/Keychains/login.keychain -P &lt;certificate_p12_password&gt; -T /usr/bin/codesign
+</code></pre><h2 id="d26ee4eb-7bf2-4657-b57c-392f1c417b37" class="">Running Tests</h2><p id="03a44278-ba54-41f2-bf48-99e02be56b3d" class="">Once the build is complete, you can run <code>ctest</code> in the build directory to run the tests.</p><h2 id="e5fef7f8-5123-4af5-bd76-5e2e837ab552" class="">Ninja</h2><p id="1d53f7d4-8a5f-484a-ba38-0ecbf9c8768b" class="">The compilation of Aseba can be significantly speeded up using <code>ninja</code> instead of make. Refer to the documentation of <code>cmake</code> and <code>ninja</code>.</p><p id="49be0c31-f28a-4f2e-b648-97802e7edff3" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
