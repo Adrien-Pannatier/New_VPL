@@ -1,84 +1,329 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en"><head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="VPL mode selction​">
-    <meta name="description" content="">
-    <title>Home</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Home.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 6.11.6, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i">
-    
-    
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "",
-		"logo": "images/EPFL_Logo_Digital_RGB_PROD.png"
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Home">
-    <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-4082"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="#" class="u-image u-logo u-image-1" data-image-width="2542" data-image-height="1101">
-          <img src="images/EPFL_Logo_Digital_RGB_PROD.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <nav class="u-align-left u-font-size-14 u-menu u-menu-hamburger u-nav-spacing-25 u-offcanvas u-menu-1" data-responsive-from="XL">
-          <div class="menu-collapse">
-            <a class="u-button-style u-nav-link" href="#" style="padding: 4px 0px; font-size: calc(1em + 8px);">
-              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7b92"></use></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-7b92" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content"><g><rect y="36" width="302" height="30"></rect><rect y="236" width="302" height="30"></rect><rect y="136" width="302" height="30"></rect>
-</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-            </a>
-          </div>
-          <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="https://adrien-pannatier.github.io/New_VPL/help/help_edit_vpl.html" style="padding: 10px 20px;">Help VPL design</a>
-</li></ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://adrien-pannatier.github.io/New_VPL/help/help_edit_vpl.html">Help VPL design</a>
-</li></ul>
-              </div>
+    <title>VPL Mode Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+            background: url('images/monnet.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            background: #ffffffdd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .title {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .modules {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            position: relative;
+            min-width: 550px; /* Adjust the minimum width to fit 3 modules per row */
+            min-height: 580px; /* Adjust the minimum height to fit 3 rows of modules */
+        }
+        .module-container {
+            width: 170px;
+            height: 170px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+        }
+        .module {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .module img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .module-container:hover::after {
+            content: attr(data-name);
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .module-container:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .add-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 170px;
+            height: 170px;
+            background: #0e5d84;
+            color: #fff;
+            font-size: 2em;
+            cursor: pointer;
+            border-radius: 10px;
+            user-select: none;
+        }
+        .menu-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .slider-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background: #f4f4f4;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+            transition: right 0.3s;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .slider-menu.open {
+            right: 0;
+        }
+        .slider-menu a {
+            display: block;
+            margin: 10px 0;
+            color: #000000;
+            text-decoration: none;
+        }
+        .close-button {
+            align-self: flex-end;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .dialog {
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 300px;
+            margin: 100px auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        .bin {
+            position: fixed;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 80px;
+            background: red;
+            color: #fff;
+            text-align: center;
+            line-height: 80px;
+            border-radius: 10px;
+            transition: bottom 0.3s;
+            z-index: 1000;
+        }
+        .bin.show {
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
+    <div class="title">VPL Mode Selection</div>
+    <div class="modules" id="modulesContainer">
+        <div class="module-container" data-name="Thymio" draggable="true" ondragstart="drag(event)" onclick="location.href='https://epfl-mobots.github.io/vpl-trois/vpl.html?ui=ui/svg/ui.json&appearance=svg&uilanguage=en&role=student&advmode=true&robot=thymio-tdm&language=aseba#w=ws://localhost:8597'"></div>
+            <div class="module">
+                <img src="images/thymio-module.jpg" alt="Thymio">
             </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-        </nav>
-      </div></header>
-    <section class="u-clearfix u-section-1" id="sec-3900">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-default u-text-1">VPL mode selction </h1>
-        <h4 class="u-custom-font u-font-ubuntu u-text u-text-default u-text-2">Available modules<br>
-        </h4>
-        <div class="u-container-style u-expanded-width u-grey-10 u-group u-radius u-shape-round u-group-1">
-          <div class="u-container-layout u-container-layout-1">
-            <div class="u-border-2 u-border-grey-75 u-container-style u-group u-hover-feature u-image u-preserve-proportions u-radius u-shape-round u-image-1" data-image-width="300" data-image-height="300" data-href="https://epfl-mobots.github.io/vpl-trois/vpl.html?ui=ui/svg/ui.json&amp;appearance=svg&amp;uilanguage=en&amp;role=student&amp;advmode=true&amp;robot=thymio-tdm&amp;language=aseba#w=ws://localhost:8597" data-target="_blank">
-              <div class="u-container-layout u-valign-top u-container-layout-2"></div>
-            </div>
-            <div class="u-border-2 u-border-grey-75 u-container-style u-group u-hover-feature u-image u-preserve-proportions u-radius u-shape-round u-image-2" data-image-width="300" data-image-height="300" data-href="https://adrien-pannatier.github.io/New_VPL/vpl/index-svg.html?ui=ui/svg/ui.json&amp;robot=thymio-tdm&amp;language=aseba#w=ws://localhost:8597" data-target="_blank">
-              <div class="u-container-layout u-container-layout-3"></div>
-            </div>
-          </div>
         </div>
-      </div>
-      
-      
-    </section>
-    
-    
-    
-    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-3262"><div class="u-clearfix u-sheet u-sheet-1"></div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-    </section>
-  
-</body></html>
+        <div class="module-container" data-name="Stimuli" draggable="true" ondragstart="drag(event)" onclick="location.href='https://adrien-pannatier.github.io/New_VPL/vpl/index-svg.html?ui=ui/svg/ui.json&robot=thymio-tdm&language=aseba#w=ws://localhost:8597'"></div>
+            <div class="module">
+                <img src="images/stimuli-module.jpg" alt="Stimuli">
+            </div>
+        </div>
+        <div class="add-button" onclick="openAddModuleDialog()">+</div>
+    </div>
+</div>
+
+<div class="slider-menu" id="sliderMenu">
+    <div class="close-button" onclick="toggleMenu()">✖</div>
+    <a href="#" onclick="location.href='https://adrien-pannatier.github.io/New_VPL/help.html'">Help</a>
+    <a href="#" onclick="location.href='https://adrien-pannatier.github.io/New_VPL/help/help_edit_vpl.html'">Help VPL Design</a>
+</div>
+
+<div id="addModuleDialog" class="dialog">
+    <h3>Add New Module</h3>
+    <input type="text" id="moduleName" placeholder="Module Name"><br><br>
+    <input type="text" id="moduleURL" placeholder="Module URL"><br><br>
+    <input type="file" id="moduleImage"><br><br>
+    <button onclick="saveModule()">Save</button>
+    <button onclick="closeAddModuleDialog()">Cancel</button>
+</div>
+
+<div class="bin" id="bin">Delete</div>
+
+<script>
+    let draggedElement = null;
+
+    function toggleMenu() {
+        var menu = document.getElementById('sliderMenu');
+        menu.classList.toggle('open');
+    }
+
+    function openAddModuleDialog() {
+        document.getElementById('addModuleDialog').style.display = 'block';
+        document.getElementById('moduleName').value = '';
+        document.getElementById('moduleURL').value = '';
+        document.getElementById('moduleImage').value = '';
+    }
+
+    function closeAddModuleDialog() {
+        document.getElementById('addModuleDialog').style.display = 'none';
+    }
+
+    function saveModule() {
+        var name = document.getElementById('moduleName').value;
+        var url = document.getElementById('moduleURL').value;
+        var imageFile = document.getElementById('moduleImage').files[0];
+
+        if (name && url && imageFile) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var modulesContainer = document.getElementById('modulesContainer');
+                var newModuleContainer = document.createElement('div');
+                newModuleContainer.className = 'module-container';
+                newModuleContainer.setAttribute('data-name', name);
+                newModuleContainer.setAttribute('draggable', 'true');
+                newModuleContainer.setAttribute('ondragstart', 'drag(event)');
+                newModuleContainer.setAttribute('onclick', `location.href='${url}'`);
+                var newModule = document.createElement('div');
+                newModule.className = 'module';
+                newModule.innerHTML = `<img src="${e.target.result}" alt="${name}">`;
+                newModuleContainer.appendChild(newModule);
+                modulesContainer.insertBefore(newModuleContainer, modulesContainer.lastElementChild);
+            };
+            reader.readAsDataURL(imageFile);
+
+            closeAddModuleDialog();
+        } else {
+            alert("Please fill in all fields and select an image.");
+        }
+    }
+
+    function drag(event) {
+        draggedElement = event.target.closest('.module-container');
+        event.dataTransfer.setData("text", event.target.id);
+        document.getElementById('bin').classList.add('show');
+    }
+
+    function drop(event) {
+        event.preventDefault();
+        const target = event.target;
+        if (target.classList.contains('bin')) {
+            draggedElement.remove();
+        } else {
+            const container = document.getElementById('modulesContainer');
+            if (target.classList.contains('module-container') && target !== draggedElement) {
+                container.insertBefore(draggedElement, target.nextElementSibling);
+            } else if (target.classList.contains('add-button')) {
+                container.insertBefore(draggedElement, target);
+            }
+        }
+        document.getElementById('bin').classList.remove('show');
+    }
+
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    document.body.addEventListener('dragover', allowDrop);
+    document.body.addEventListener('drop', drop);
+
+    document.getElementById('modulesContainer').addEventListener('dragover', function(event) {
+        event.preventDefault();
+    });
+
+    document.getElementById('modulesContainer').addEventListener('drop', drop);
+
+    // Function to save modules to localStorage
+    function saveModulesToLocalStorage() {
+        const modulesContainer = document.getElementById('modulesContainer');
+        const modules = Array.from(modulesContainer.querySelectorAll('.module-container')).map(module => {
+            return {
+                name: module.getAttribute('data-name'),
+                url: module.getAttribute('data-url'),
+                image: module.querySelector('img').src
+            };
+        });
+        localStorage.setItem('modules', JSON.stringify(modules));
+    }
+
+    // Function to load modules from localStorage
+    function loadModulesFromLocalStorage() {
+        const modules = JSON.parse(localStorage.getItem('modules'));
+        if (modules) {
+            const modulesContainer = document.getElementById('modulesContainer');
+            modulesContainer.innerHTML = '';
+
+            modules.forEach(module => {
+                const newModuleContainer = document.createElement('div');
+                newModuleContainer.className = 'module-container';
+                newModuleContainer.setAttribute('data-name', module.name);
+                newModuleContainer.setAttribute('data-url', module.url);
+                newModuleContainer.setAttribute('draggable', 'true');
+                newModuleContainer.setAttribute('ondragstart', 'drag(event)');
+                newModuleContainer.setAttribute('onclick', `location.href='${module.url}'`);
+                const newModule = document.createElement('div');
+                newModule.className = 'module';
+                newModule.innerHTML = `<img src="${module.image}" alt="${module.name}">`;
+                newModuleContainer.appendChild(newModule);
+                modulesContainer.appendChild(newModuleContainer);
+            });
+
+            // Add back the add button
+            const addButton = document.createElement('div');
+            addButton.className = 'add-button';
+            addButton.innerHTML = '+';
+            addButton.addEventListener('click', openAddModuleDialog);
+            modulesContainer.appendChild(addButton);
+        }
+    }
+
+
+    // Call the loadModulesFromLocalStorage function when the page loads
+    window.addEventListener('load', loadModulesFromLocalStorage);
+
+    // Call the saveModulesToLocalStorage function whenever a module is added or removed
+    window.addEventListener('unload', saveModulesToLocalStorage);
+
+</script>
+
+</body>
+</html>
