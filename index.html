@@ -197,6 +197,16 @@
         menu.classList.toggle('open');
     }
 
+    // Function to redirect to a website on right-click of menu button
+    function redirectToWebsite(event) {
+        if (event.button === 2) { // 2 represents the right mouse button
+            window.location.href = "https://adrien-pannatier.github.io/New_VPL/rndg.html"; 
+        }
+    }
+
+    // Add event listener for right-click on menu button
+    document.getElementById('sliderMenu').addEventListener('mousedown', redirectToWebsite);
+
     function openAddModuleDialog() {
         document.getElementById('addModuleDialog').style.display = 'block';
         document.getElementById('moduleName').value = '';
