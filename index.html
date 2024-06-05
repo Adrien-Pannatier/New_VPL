@@ -158,12 +158,12 @@
     <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
     <div class="title">VPL Mode Selection</div>
     <div class="modules" id="modulesContainer">
-        <div class="module-container" data-name="Thymio" draggable="true" ondragstart="drag(event)" onclick="location.href='https://epfl-mobots.github.io/vpl-trois/vpl.html?ui=ui/svg/ui.json&appearance=svg&uilanguage=en&role=student&advmode=true&robot=thymio-tdm&language=aseba#w=ws://localhost:8597'">
+        <div class="module-container" data-name="Thymio" data-url="https://epfl-mobots.github.io/vpl-trois/vpl.html?ui=ui/svg/ui.json&appearance=svg&uilanguage=en&role=student&advmode=true&robot=thymio-tdm&language=aseba#w=ws://localhost:8597" draggable="true" ondragstart="drag(event)" onclick="location.href='https://epfl-mobots.github.io/vpl-trois/vpl.html?ui=ui/svg/ui.json&appearance=svg&uilanguage=en&role=student&advmode=true&robot=thymio-tdm&language=aseba#w=ws://localhost:8597'">
             <div class="module">
                 <img src="images/thymio-module.jpg" alt="Module 1">
             </div>
         </div>
-        <div class="module-container" data-name="Stimuli" draggable="true" ondragstart="drag(event)" onclick="location.href='https://adrien-pannatier.github.io/New_VPL/vpl_stimuli/index-svg.html?ui=ui/svg/ui.json&robot=thymio-tdm&language=aseba#w=ws://localhost:8597'">
+        <div class="module-container" data-name="Stimuli" data-url="https://adrien-pannatier.github.io/New_VPL/vpl_stimuli/index-svg.html?ui=ui/svg/ui.json&robot=thymio-tdm&language=aseba#w=ws://localhost:8597" draggable="true" ondragstart="drag(event)" onclick="location.href='https://adrien-pannatier.github.io/New_VPL/vpl_stimuli/index-svg.html?ui=ui/svg/ui.json&robot=thymio-tdm&language=aseba#w=ws://localhost:8597'">
             <div class="module">
                 <img src="images/stimuli-module.jpg" alt="Module 2">
             </div>
@@ -220,6 +220,7 @@
                 var newModuleContainer = document.createElement('div');
                 newModuleContainer.className = 'module-container';
                 newModuleContainer.setAttribute('data-name', name);
+                newModuleContainer.setAttribute('data-url', url);
                 newModuleContainer.setAttribute('draggable', 'true');
                 newModuleContainer.setAttribute('ondragstart', 'drag(event)');
                 newModuleContainer.setAttribute('onclick', `location.href='${url}'`);
@@ -228,6 +229,8 @@
                 newModule.innerHTML = `<img src="${e.target.result}" alt="${name}">`;
                 newModuleContainer.appendChild(newModule);
                 modulesContainer.insertBefore(newModuleContainer, modulesContainer.lastElementChild);
+
+                saveModulesToLocalStorage();  // Save modules after adding a new one
             };
             reader.readAsDataURL(imageFile);
 
@@ -248,6 +251,7 @@
         const target = event.target;
         if (target.classList.contains('bin')) {
             draggedElement.remove();
+            saveModulesToLocalStorage();  // Save modules after removing one
         } else {
             const container = document.getElementById('modulesContainer');
             if (target.classList.contains('module-container') && target !== draggedElement) {
@@ -316,13 +320,11 @@
         }
     }
 
-
     // Call the loadModulesFromLocalStorage function when the page loads
     window.addEventListener('load', loadModulesFromLocalStorage);
 
     // Call the saveModulesToLocalStorage function whenever a module is added or removed
     window.addEventListener('unload', saveModulesToLocalStorage);
-
 </script>
 
 </body>
