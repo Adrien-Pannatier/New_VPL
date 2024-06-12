@@ -2130,16 +2130,19 @@
             "defaultParameters": [
                 0
             ],
+            "typicalParameters": [
+                0.5
+            ],
             "sliders": [
                 {
                     "id": "value_threshold_back_octo",
                     "thumbId": "Cursor_octo",
-                    "min": 0,
-                    "max": 1,
+                    "min": 1,
+                    "max": 0,
                     "discrete": [
-                        0,
+                        1,
                         0.5,
-                        1
+                        0
                     ]
                 }
             ],
@@ -2170,6 +2173,7 @@
                 }
             ],
             "defaultParameters": [0],
+            "typicalParameters": [6],
             "rotating": [
 				{
 					"id": "Mrot",
@@ -2177,7 +2181,13 @@
 					"thumbId": "Rot_speed_Handle",
 					"numSteps": 21
 				}
-			]
+			],
+            "styles": [
+                {
+                    "id": "motor_rot_arrows",
+                    "st": "visibility:`$[0]>=8 || $[0]<=-8?'hidden':'visible'`"
+                }                    
+            ]
         }
     ],
     "widgets": [
