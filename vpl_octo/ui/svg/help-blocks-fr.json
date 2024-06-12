@@ -1,0 +1,262 @@
+{
+    "help": {
+        "fr": {
+            "blocks": {
+                "button 1": [
+                    "# Bouton unique",
+                    "![Ic\u00f4ne de bouton unique](vpl:block:button-1)",
+                    "**Capteur(s) utilis\u00e9(s):** les cinq touches capacitives sur Thymio.",
+                    "**Conditions de d\u00e9clenchement :** cet \u00e9v\u00e9nement est d\u00e9clench\u00e9 lorsqu'on touche un des boutons.",
+                    "**Param\u00e8tres :** le bouton orange est celui qui d\u00e9clenche l'\u00e9v\u00e9nement. Les boutons gris\u00e9s sont ignor\u00e9s.",
+                    "**Exemple :** lorsqu'on touche le bouton avant, alors \u2026 (une action du robot, par exemple rouler vers l'avant)."
+                ],
+                "button": [
+                    "# Boutons multiples",
+                    "![Ic\u00f4ne de boutons multiples](vpl:block:button)",
+                    "**Capteur(s) utilis\u00e9(s):** les cinq touches capacitives sur Thymio.",
+                    "**Conditions de d\u00e9clenchement :** cet \u00e9v\u00e9nement est d\u00e9clench\u00e9 lorsqu'on touche ou plusieurs boutons.",
+                    "**Param\u00e8tres :** les boutons oranges sont ceux qui d\u00e9clenchent l'\u00e9v\u00e9nement. Si plusieurs boutons sont s\u00e9lectionn\u00e9s, l'\u00e9v\u00e9nement est d\u00e9clench\u00e9 quand tous ces boutons sont touch\u00e9s en m\u00eame temps.Les boutons gris\u00e9s sont ignor\u00e9s.",
+                    "**Exemple :** lorsqu'on touche simultan\u00e9ment les boutons avant et droit, alors \u2026 (une action du robot, par exemple avancer tout en tournant \u00e0 droite)."
+                ],
+                "horiz prox": [
+                    "# Capteurs de proximit\u00e9",
+                    "![Ic\u00f4ne de capteurs de proximit\u00e9](vpl:block:horiz-prox)",
+                    "**Capteur(s) utilis\u00e9(s):** Les cinq capteurs de proximit\u00e9 \u00e0 l'avant de Thymio et les deux \u00e0 l'arri\u00e8re.",
+                    "**Conditions de d\u00e9clenchement :** les capteurs de proximit\u00e9 infrarouge mesurent la lumi\u00e8re IR r\u00e9fl\u00e9chie sur les objets plac\u00e9s devant eux. Si un objet est proche ou tr\u00e8s r\u00e9fl\u00e9chissant, le capteur d\u00e9tectera un r\u00e9flexion de lumi\u00e8re. Si il n'y a pas de r\u00e9flexion d\u00e9tect\u00e9e, cela peut signifier qu'il n'y a rien devant le capteur, ou qu'il y a un objet qui absorbe l'IR (un objet noir). L'\u00e9v\u00e9nement est d\u00e9clench\u00e9 par la d\u00e9tection d'objets autour de Thymio, dans sept directions, par sept capteurs diff\u00e9rents.",
+                    "**Param\u00e8tres :** un capteur blanc avec un bord rouge montre que le d\u00e9clenchement de l'\u00e9v\u00e9nement se fait quand il y a r\u00e9flexion de lumi\u00e8re IR, donc quand un objet est d\u00e9tect\u00e9 devant le capteur. Un capteur noir montre que l'\u00e9v\u00e9nement est d\u00e9clench\u00e9 quand il n'y a pas de r\u00e9flection (obstacle retir\u00e9, objet noir ou transparent). Un capteur gris\u00e9 est ignor\u00e9 et ne participe pas au d\u00e9clenchement de l'\u00e9v\u00e9nement.",
+                    "Lorsque plusieurs capteurs sont s\u00e9lectionn\u00e9s conjointement pour d\u00e9clencher l'\u00e9v\u00e9nement, le d\u00e9clenchement si fait si toutes les conditions sont r\u00e9unies simultan\u00e9ment. Si le capteur avant et le capteur gauche sont r\u00e9gl\u00e9s sur la d\u00e9tection d'un objet, l'\u00e9v\u00e9nement a lieu seulement si le capteur avant **ET** le capteur gauche voient un objet.",
+                    "**Exemple :** Quand le capteur de gauche d\u00e9tecte un obstacle, alors ... (action du robot, par exemple tourner \u00e0 droite pour \u00e9viter l'obstacle)."
+                ],
+                "ground": [
+                    "# Capteurs au sol",
+                    "![Ic\u00f4ne de capteurs au sol](vpl:block:ground)",
+                    "**Capteur(s) utilis\u00e9(s):** les deux capteurs de proximit\u00e9 au sol.",
+                    "**Conditions de d\u00e9clenchement :** cet \u00e9v\u00e9nement est d\u00e9clench\u00e9 par la d\u00e9tection de la r\u00e9flection de lumi\u00e8re IR sous Thymio, donc par la pr\u00e9sence ou l'absence d'une surface r\u00e9fl\u00e9chissante sous le robot. Une surface noire matte, non r\u00e9fl\u00e9chissante, ou une surface transparente provoqueront une r\u00e9ponse du capteur similaire \u00e0 une absence de surface. De m\u00eame, une surface noire brillante peut r\u00e9fl\u00e9chir beaucoup de lumi\u00e8re et donner une r\u00e9ponse similaire \u00e0 du papier blanc.",
+                    "Cet \u00e9v\u00e9nement permet \u00e0 l'utilisateur de d\u00e9finir s\u00e9par\u00e9ment ce que les capteurs gauche et droit doivent d\u00e9tecter pour d\u00e9clencher l'\u00e9v\u00e9nement. Ceci permet de d\u00e9tecter facilement des lignes noires sur du papier blanc, par exemple pour cr\u00e9er un comportement de suivi de piste.",
+                    "**Param\u00e8tres :** un capteur blanc avec un bord rouge montre que le d\u00e9clenchement de l'\u00e9v\u00e9nement se fait quand le robot est sur une surface r\u00e9fl\u00e9chissante, par exemple blanche. Un capteur noir montre que l'\u00e9v\u00e9nement est d\u00e9clench\u00e9 quand la surface n'est pas d\u00e9tect\u00e9e (robot soulev\u00e9, ou pos\u00e9 sur une surface noire ou transparente). Un capteur gris\u00e9 est ignor\u00e9 et ne participe pas au d\u00e9clenchement de l'\u00e9v\u00e9nement.",
+                    "**Exemple :**  Quand le capteur de gauche d\u00e9tecte une surface blanche, alors ... (action du robot, par exemple tourner \u00e0 droite pour retourner sur une piste noire)."
+                ],
+                "accelerometer": [
+                    "# Acc\u00e9l\u00e9rom\u00e8tre",
+                    "![Ic\u00f4ne de acc\u00e9l\u00e9rom\u00e8tre](vpl:block:accelerometer)",
+                    "Type: event or condition block",
+                    "..."
+                ],
+                "clap": [
+                    "# D\u00e9tection de clap (bruit)",
+                    "![Ic\u00f4ne de d\u00e9tection de clap](vpl:block:clap)",
+                    "**Capteur(s) utilis\u00e9(s):** microphone.",
+                    "**Conditions de d\u00e9clenchement :** Cet \u00e9v\u00e9nement est d\u00e9clench\u00e9 lorsqu'un bruit fort est per\u00e7u par le robot. Taper sur Thymio peut d\u00e9clencher cet \u00e9v\u00e9nement puisque cela g\u00e9n\u00e8re un bruit proche du micro. En environnement bruyant peut mener \u00e0 des d\u00e9clenchements intempestifs de cet \u00e9v\u00e9nement.",
+                    "**Exemple :** Quand je tape dans les mains, alors... (action du robot, par exemple avancer)."
+                ],
+                "init": [
+                    "# D\u00e9marrage du programme",
+                    "![Ic\u00f4ne de d\u00e9marrage du programme](vpl:block:init)",
+                    "**Cet \u00e9v\u00e9nement n'utilise pas de capteur de Thymio.**",
+                    "**Conditions de d\u00e9clenchement :** cet \u00e9v\u00e9nement est d\u00e9clench\u00e9 au d\u00e9marrage du programme sur le robot, lorsqu'on appuie sur le bouton DEMARRER ou RECOMMENCER dans VPL. Il peut \u00eatre utilis\u00e9 pour d\u00e9terminer des actions qui seront ex\u00e9cut\u00e9es au d\u00e9but du programme.",
+                    "**Exemple :** au d\u00e9but du programme, commencer par (action du robot, par exemple s'allumer en rouge)."
+                ],
+                "timer": [
+                    "# Minuteur \u00e9coul\u00e9",
+                    "![Ic\u00f4ne de minuteur \u00e9coul\u00e9](vpl:block:timer)",
+                    "**Cet \u00e9v\u00e9nement n'utilise pas de capteur de Thymio.** Il r\u00e9agit \u00e0 la valeur interne d'un timer de Thymio.",
+                    "**Conditions de d\u00e9clenchement :** cet \u00e9v\u00e9nement est d\u00e9clench\u00e9 lorsque le minuteur (d\u00e9fini dans les actions) arrive \u00e0 0.",
+                    "**Exemple :** Quand deux secondes (sp\u00e9cifi\u00e9 via l'action correspondante) sont \u00e9coul\u00e9es, alors... (action du robot, par exemple avancer)."
+                ],
+                "clock": [
+                    "# Ev\u00e9nement r\u00e9gulier",
+                    "![Ic\u00f4ne d'\u00e9v\u00e9nement r\u00e9gulier](vpl:block:clock)",
+                    "**Cet \u00e9v\u00e9nement n'utilise pas de capteur de Thymio.**  Il r\u00e9agit \u00e0 la valeur interne d'un timer de Thymio.",
+                    "**Conditions de d\u00e9clenchement :** ce bloc g\u00e9n\u00e8re des \u00e9v\u00e9nements \u00e0 intervalles r\u00e9guliers.",
+                    "**Param\u00e8tres :** la fr\u00e9quence de l'\u00e9v\u00e9nement peut \u00eatre sp\u00e9cifi\u00e9e par l'utilisateur, parmi certaines fr\u00e9quences existantes: \u00e0 10Hz il a lieu 10 fois pas seconde, \u00e0 20Hz il a lieu 20 fois par seconde.",
+                    "**Exemple :** 10 fois par seconde, incr\u00e9menter la variable interne, qui comptera ainsi les dixi\u00e8mes de secondes \u00e9coul\u00e9s."
+                ],
+                "remote control arrows": [
+                    "# Fl\u00e8ches de la t\u00e9l\u00e9commande",
+                    "![Ic\u00f4ne des fl\u00e8ches de la t\u00e9l\u00e9commande](vpl:block:remote-control-arrows)",
+                    "**Capteur(s) utilis\u00e9(s):** r\u00e9cepteur de t\u00e9l\u00e9commande infrarouge.",
+                    "**Conditions de d\u00e9clenchement :** cet \u00e9v\u00e9nement est d\u00e9clench\u00e9 quand le bouton sp\u00e9cifi\u00e9 est appuy\u00e9 sur la t\u00e9l\u00e9commande. Les boutons repr\u00e9sentent les fl\u00e8ches de la t\u00e9l\u00e9commande.",
+                    "**Param\u00e8tres :** le bouton orange est celui qui d\u00e9clenche l'\u00e9v\u00e9nement. Les boutons gris\u00e9s sont ignor\u00e9s.",
+                    "**Exemple :** Lorsqu'on appuie sur le bouton avant de la t\u00e9l\u00e9commande, alors \u2026 (une action du robot, par exemple rouler vers l'avant)."
+                ],
+                "remote control keypad": [
+                    "# Touches num\u00e9riques de la t\u00e9l\u00e9commande",
+                    "![Ic\u00f4ne de touches num\u00e9riques de la t\u00e9l\u00e9commande](vpl:block:remote-control-keypad)",
+                    "**Capteur(s) utilis\u00e9(s):**  r\u00e9cepteur de t\u00e9l\u00e9commande infrarouge.",
+                    "**Conditions de d\u00e9clenchement :**  cet \u00e9v\u00e9nement est d\u00e9clench\u00e9 quand le bouton sp\u00e9cifi\u00e9 est appuy\u00e9 sur la t\u00e9l\u00e9commande. Les boutons repr\u00e9sentent le pav\u00e9 num\u00e9rique de la t\u00e9l\u00e9commande.",
+                    "**Param\u00e8tres :** le bouton orange est celui qui d\u00e9clenche l'\u00e9v\u00e9nement. Les boutons gris\u00e9s sont ignor\u00e9s.",
+                    "**Exemple :** Lorsqu'on appuie sur le bouton *2* de la t\u00e9l\u00e9commande, alors \u2026 (une action du robot, par exemple rouler vers l'avant)."
+                ],
+                "state": [
+                    "# Etats (4 bits)",
+                    "![state](vpl:block:state)",
+                    "Type: condition block",
+                    "..."
+                ],
+                "state 8": [
+                    "# Etats (8 valeurs)",
+                    "![state 8](vpl:block:state-8)",
+                    "Type: condition block",
+                    "..."
+                ],
+                "counter comparison": [
+                    "# Comparaison arithm\u00e9tique de l'\u00e9tat des 8 LED",
+                    "![Ic\u00f4ne de comparaison arithm\u00e9tique](vpl:block:counter-comparison)",
+                    "**Cette condition n'utilise pas de capteur de Thymio.** Elle lit l'\u00e9tat d'une valeur interne de Thymio, une variable de 8 bits. Ce bloc ne peut \u00eatre utilis\u00e9 que comme condition, pas comme \u00e9v\u00e9nement principal.",
+                    "**Conditions de d\u00e9clenchement :** cette condition est vraie lorsque la variable interne, repr\u00e9sent\u00e9e sur le cercle de LED de Thymio, satisfait la comparaison choisie avec la valeur fix\u00e9e.",
+                    "**Param\u00e8tres :** \u00e0 gauche, l'utilisateur peut choisir la comparaison \u00e0 effectuer :",
+                    "= \u00e9gal \u00e0",
+                    " plus grand que ou \u00e9gal \u00e0",
+                    "> strictement plus grand que",
+                    "  plus petit que ou \u00e9gal \u00e0",
+                    "< strictement plus petit que",
+                    "A droite, l'utilisateur peut fixer une valeur constante de 0 \u00e0 255. Cette valeur est repr\u00e9sent\u00e9e de mani\u00e8re binaire sur les segments circulaires du bloc, avec le bit 0 en haut, le bit 1 en haut \u00e0 droite, le bit 2 \u00e0 droite et ainsi de suite le long du cercle. ",
+                    "**Exemple :** Si le cercle de LED repr\u00e9sente la valeur *6* (les bits 1 et 2 sont allum\u00e9s) alors... (action du robot, par exemple s'allumer en rouge)."
+                ],
+                "state 256": [
+                    "# Etat des 8 LED",
+                    "![Ic\u00f4ne d'\u00e9tat des 8 LED](vpl:block:state-256)",
+                    "**Cette condition n'utilise pas de capteur de Thymio.** Elle lit l'\u00e9tat des 8 LEDs en cercle autour des boutons de Thymio. Ce bloc ne peut \u00eatre utilis\u00e9 que comme condition, pas comme \u00e9v\u00e9nement principal.",
+                    "**Conditions de d\u00e9clenchement :** cette condition est vraie si les LED du cercle de Thymio montrent la m\u00eame configuration de LED allum\u00e9es et \u00e9teintes que celle sp\u00e9cifi\u00e9e sur le bloc. Comme chaque LED peut \u00eatre allum\u00e9e ou \u00e9teinte, il y a 256 combinaisons possibles.",
+                    "**Param\u00e8tres :** chaque LED peut \u00eatre r\u00e9gl\u00e9e sur allum\u00e9e (jaune) ou \u00e9teinte (gris fonc\u00e9). Aucune LED n'est ignor\u00e9e.",
+                    "**Exemple :** Si uniquement la LED avant est allum\u00e9e, alors... (action du robot, par exemple avancer)."
+                ],
+                "state 256 with mask": [
+                    "# Etat partiel des 8 LED",
+                    "![Ic\u00f4ne d'\u00e9tat partiel des 8 LED](vpl:block:state-256-with-mask)",
+                    "**Cette condition n'utilise pas de capteur de Thymio.** Elle lit l'\u00e9tat des 8 LEDs en cercle autour des boutons de Thymio. Ce bloc ne peut \u00eatre utilis\u00e9 que comme condition, pas comme \u00e9v\u00e9nement principal.",
+                    "**Conditions de d\u00e9clenchement :** cette condition est vraie si les LED du cercle de Thymio montrent la m\u00eame configuration de LED allum\u00e9es et \u00e9teintes que celle sp\u00e9cifi\u00e9e sur le bloc. Il est possible de ne prendre en compte que certaines LED.",
+                    "**Param\u00e8tres :** chaque LED peut \u00eatre r\u00e9gl\u00e9e sur allum\u00e9e (jaune), \u00e9teinte (gris fonc\u00e9), ou ignor\u00e9e (gris clair). Ceci permet de d\u00e9tect\u00e9 des combinaisons partielles de LED, pour reconnaitre plusieurs configurations en parall\u00e8le ou pour faire des sous groupes de LED.",
+                    "**Exemple :** Si les trois LED de gauche du cercle sont allum\u00e9es et que les LED arri\u00e8re, arri\u00e8re-droite et droite sont \u00e9teintes, alors... (action du robot, par exemple tourner \u00e0 gauche)."
+                ],
+                "motor state": [
+                    "# Motor state",
+                    "![motor state](vpl:block:motor-state)",
+                    "Type: condition block",
+                    "..."
+                ],
+                "nn obstacles": [
+                    "# Neural net for obstacle avoidance",
+                    "![nn obstacles](vpl:block:nn-obstacles)",
+                    "Type: action block",
+                    "..."
+                ],
+                "bottom-left color": [
+                    "# Set bottom-left color (RGB components)",
+                    "![bottom-left color](vpl:block:bottom-left-color)",
+                    "Type: action block",
+                    "..."
+                ],
+                "bottom-right color": [
+                    "# Set bottom-right color (RGB components)",
+                    "![bottom-right color](vpl:block:bottom-right-color)",
+                    "Type: action block",
+                    "..."
+                ],
+                "bottom-left color 8": [
+                    "# Set bottom-left color",
+                    "![bottom-left color 8](vpl:block:bottom-left-color-8)",
+                    "Type: action block",
+                    "..."
+                ],
+                "bottom-right color 8": [
+                    "# Set bottom-right color",
+                    "![bottom-right color 8](vpl:block:bottom-right-color-8)",
+                    "Type: action block",
+                    "..."
+                ],
+                "notes": [
+                    "# Jouer une m\u00e9lodie",
+                    "![Ic\u00f4ne pour jouer une m\u00e9lodie](vpl:block:notes)",
+                    "**Actuateur:** haut-parleur",
+                    "**Action:** cette action fait jouer une m\u00e9lodie \u00e0 Thymio.",
+                    "**Param\u00e8tres :** chaque ligne bleue correspond \u00e0 un ton. Jusqu'\u00e0 6 notes peuvent \u00eatre plac\u00e9es sur ces lignes. Des clics cons\u00e9cutifs permettent de passer d'une noire (1 unit\u00e9 de temps), \u00e0 une blanche (deux unit\u00e9s de temps), \u00e0 une pause (4 unit\u00e9s de temps).",
+                    "**Exemple :** lorsque... (\u00e9v\u00e9nement, par exemple si le bouton avant a \u00e9t\u00e9 touch\u00e9), alors jouer la m\u00e9lodie de d\u00e9but."
+                ],
+                "notes with speed": [
+                    "# Jouer une m\u00e9lodie avec rythme",
+                    "![Ic\u00f4ne pour jouer une m\u00e9lodie avec rythme](vpl:block:notes-with-speed)",
+                    "**Actuateur:** haut-parleur",
+                    "**Action:** cette action fait jouer une m\u00e9lodie \u00e0 Thymio.",
+                    "**Param\u00e8tres :** chaque ligne bleue correspond \u00e0 un ton. Jusqu'\u00e0 6 notes peuvent \u00eatre plac\u00e9es sur ces lignes. Des clics cons\u00e9cutifs permettent de passer d'une noire (1 unit\u00e9 de temps), \u00e0 une blanche (deux unit\u00e9s de temps), \u00e0 une pause (4 unit\u00e9s de temps).",
+                    "Le curseur du haut r\u00e8gle le tempo de la m\u00e9lodie, donc la vitesse \u00e0 laquelle la m\u00e9lodie sera jou\u00e9e",
+                    "**Exemple :** lorsque... (\u00e9v\u00e9nement, par exemple si le bouton avant a \u00e9t\u00e9 touch\u00e9), alors jouer rapidement la m\u00e9lodie de d\u00e9but."
+                ],
+                "play": [
+                    "# Jouer un fichier .wav depuis la carte SD",
+                    "![Ic\u00f4ne pour jouer un fichier wav depuis la carte SD](vpl:block:play)",
+                    "**Actuateur:** haut-parleur",
+                    "**Action:** cette action fait jouer \u00e0 Thymio un fichier son stock\u00e9 sur une carte SD ins\u00e9r\u00e9e dans Thymio.",
+                    "**Param\u00e8tres :** Le fichier son stock\u00e9 sur la carte SD doit \u00eatre nomm\u00e9 *Px.wav*, o\u00f9 x est le nombre choisi dans ce bloc. Ce bloc, par exemple, jouera le fichier *P1.wav*.",
+                    "Les sons sur la carte micro-SD doivent \u00eatre enregistr\u00e9s avec ces caract\u00e9ristiques: 8000Hz, mono, non compress\u00e9, unsigned 8-bit PCM, format wav. La carte micro-SD doit \u00eatre format\u00e9e en Fat32.",
+                    "**Exemple :** lorsque... (\u00e9v\u00e9nement, par exemple si le bouton avant a \u00e9t\u00e9 touch\u00e9), alors jouer le fichier son de d\u00e9but."
+                ],
+                "play stop": [
+                    "# Arr\u00eater de jouer un fichier .wav depuis la carte SD",
+                    "![Ic\u00f4ne pour arr\u00eater de jouer un fichier wav depuis la carte SD](vpl:block:play-stop)",
+                    "**Actuateur: haut-parleur",
+                    "**Action:** cette action interrompt la lecture du fichier son depuis la carte SD.",
+                    "**Exemple :** lorsque... (\u00e9v\u00e9nement, par exemple le minuteur est \u00e9coul\u00e9), alors arr\u00eater de jouer le fichier son d'attente du robot."
+                ],
+                "set state 256": [
+                    "# Sp\u00e9cifier l'\u00e9tat des 8 LED",
+                    "![Ic\u00f4ne pour sp\u00e9cifier l'\u00e9tat des 8 LED](vpl:block:set-state-256)",
+                    "**Actuateurs:** Les 8 LED du cercle autour des boutons de Thymio.",
+                    "**Action:** cette action allume ou \u00e9teint chacune des LED du cercle.",
+                    "**Param\u00e8tres :** chaque led peut \u00eatre allum\u00e9e (jaune) ou \u00e9teinte (gris fonc\u00e9).",
+                    "**Exemple :** lorsque... (\u00e9v\u00e9nement, par exemple si le bouton avant a \u00e9t\u00e9 touch\u00e9), alors allumer la LED avant et \u00e9teindre toutes les autres."
+                ],
+                "set state 256 with mask": [
+                    "# Sp\u00e9cifier partiellement l'\u00e9tat des 8 LED",
+                    "![Ic\u00f4ne pour sp\u00e9cifier partiellement l'\u00e9tat des 8 LED](vpl:block:set-state-256-with-mask)",
+                    "**Actuateurs:** Les 8 LED du cercle autour des boutons de Thymio.",
+                    "**Action:** cette action allume ou \u00e9teint certaines LED du cercle.",
+                    "**Param\u00e8tres :** chaque led peut \u00eatre allum\u00e9e (jaune), \u00e9teinte (gris fonc\u00e9), ou laiss\u00e9e telle quelle (gris clair).",
+                    "**Exemple :** lorsque... (\u00e9v\u00e9nement, par exemple si le bouton gauche a \u00e9t\u00e9 touch\u00e9), alors allumer quelques LED \u00e0 gauche et \u00e9teindre les trois LED arri\u00e8re, et laisser les leds avant droite comme elles sont."
+                ],
+                "set timer": [
+                    "# D\u00e9marrer un minuteur",
+                    "![Ic\u00f4ne pour d\u00e9marrer un minuteur](vpl:block:set-timer)",
+                    "**Cette action n'utilise pas de capteur de Thymio.** Elle configure un timer interne de Thymio.",
+                    "**Action:** cette action configure un minuteur. Une fois la dur\u00e9e choisie \u00e9coul\u00e9e, un \u00e9v\u00e9nement est d\u00e9clench\u00e9.",
+                    "**Param\u00e8tres :** le nombre de gauche permet de sp\u00e9cifier les secondes et celui de droite les dixi\u00e8mes de secondes.",
+                    "**Exemple :** lorsque... (\u00e9v\u00e9nement, par exemple si le bouton avant a \u00e9t\u00e9 touch\u00e9), alors d\u00e9marrer un minuteur de 2 secondes 0 dixi\u00e8mes. Deux secondes apr\u00e8s, un \u00e9v\u00e9nement *minuteur \u00e9coul\u00e9* a lieu."
+                ],
+                "set timer log": [
+                    "# Set timer (0.1-10 sec)",
+                    "![set timer log](vpl:block:set-timer-log)",
+                    "Type: action block",
+                    "..."
+                ],
+                "picture comment": [
+                    "# Picture comment",
+                    "![picture comment](vpl:block:picture-comment)",
+                    "Type: comment block",
+                    "..."
+                ],
+                "arithmetic": [
+                    "# Calculer",
+                    "![Ic\u00f4ne pour calculer](vpl:block:arithmetic)",
+                    "**Cette action n'utilise pas de capteur de Thymio.** Elle assigne une valeur \u00e0 une variable interne de Thymio.",
+                    "**Action:** cette action effectue des op\u00e9rations math\u00e9matiques sur la variable repr\u00e9sent\u00e9e par le cercle de 8 LED autour des boutons de Thymio.",
+                    "**Param\u00e8tres :** \u00e0 gauche, l'utilisateur peut choisir dans une liste d'op\u00e9rateurs:",
+                    "= Assigner la valeur",
+                    "+ Ajouter",
+                    "- Soustraire",
+                    "x Multiplier",
+                    "\u00f7 Diviser",
+                    "A droite l'utilisateur peut choisir une valeur constante de 8 bits, de 0 \u00e0 255. Cette valeur est repr\u00e9sent\u00e9e de mani\u00e8re binaire sur les segments circulaires du bloc, avec le bit 0 en haut, le bit 1 en haut \u00e0 droite, le bit 2 \u00e0 droite et ainsi de suite le long du cercle; le bleu fonc\u00e9 repr\u00e9sente la valeur 1 et le bleu clair la valeur 0.",
+                    "L'op\u00e9ration effectu\u00e9e consiste \u00e0 appliquer l'op\u00e9rateur choisi sur la variable interne, avec la constante sp\u00e9cifi\u00e9e comme second argument. Par exemple \u201cx 4\u201d multipliera par 4 la valeur interne affich\u00e9e sur les LED du cercle.",
+                    "Selon les caulculs effectu\u00e9s, le r\u00e9sultat peut \u00eatre plus grand que 255 ou plus petit que 0. Dans ce cas le r\u00e9sultat peut soit \u00eatre satur\u00e9 \u00e0 255 et 0, soit d\u00e9passer la limite et se comporter de mani\u00e8re circulaire. Dans le cas non satur\u00e9, 254+4 donnera 2, car apr\u00e8s la valeur 255 la variable reprend depuis 0.",
+                    "Le bouton en haut \u00e0 gauche du cercle de LED permet d'activer ou de d\u00e9sactiver la saturation du nombre binaire. Quand le levier est entre les deux LED, la saturation est activ\u00e9e(254+4=255). Quand le levier est en dehors du cercle, la saturation est d\u00e9sactiv\u00e9e(254+4=2)."
+                ],
+                "motor_octo": [
+                    "ADD DESCRIPTION HERE in fr"
+                ],
+                "motor_rot": [
+                    "ADD DESCRIPTION HERE in fr"
+                ]
+            }
+        }
+    }
+}

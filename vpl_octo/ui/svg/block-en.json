@@ -1,0 +1,32 @@
+{
+    "i18n": {
+        "en": {
+            "button 1": "Single button",
+            "button": "Multiple buttons",
+            "init": "Start of the program",
+            "clap": "Clap (sound) detection",
+            "ground": "Ground sensors",
+            "horiz prox": "Proximity sensors",
+            "remote control arrows": "Remote control arrow keys",
+            "remote control keypad": "Remote control keypad keys",
+            "timer": "Timer elapsed",
+            "counter comparison": "8-LED state arithmetic comparison",
+            "state 256": "8-LED state check",
+            "state 256 with mask": "State bit partial comparison",
+            "set timer": "Start timer",
+            "notes": "Play melody",
+            "notes with speed": "Play melody with tempo",
+            "play": "Play a .wav file from SD card",
+            "play stop": "Stop playing a .wav file",
+            "set state 256": "Set 8-LEDs state",
+            "set state 256 with mask": "Set some of the 8 LEDs",
+            "arithmetic": "Compute",
+            "horiz prox 1 adv": "Proximity sensor 1 with thresholds",
+            "horiz prox 2 adv": "Proximity sensor 2 with thresholds",
+            "horiz prox 3 adv": "Proximity sensor 3 with thresholds",
+            "horiz prox 4 adv": "Proximity sensor 4 with thresholds",
+            "motor_octo": "ADD DESCRIPTION HERE in en",
+            "motor_rot": "ADD DESCRIPTION HERE in en"
+        }
+    }
+}

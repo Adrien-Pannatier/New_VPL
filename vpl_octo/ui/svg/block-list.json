@@ -1,0 +1,18 @@
+{
+    "blockList": [
+        "init",
+        "button 1",
+        "tap",
+        "horiz prox 4 adv",
+        "horiz prox 3 adv",
+        "clap",
+        "ground",
+        "horiz prox",
+        "horiz prox 1 adv",
+        "horiz prox 2 adv",
+        "notes",
+        "motor_octo",
+        "motor_rot",
+        "color all"
+    ]
+}

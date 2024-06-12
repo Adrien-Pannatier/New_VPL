@@ -1,0 +1,271 @@
+{
+    "help": {
+        "en": {
+            "blocks": {
+                "button 1": [
+                    "# Single button",
+                    "![single button](vpl:block:button-1)",
+                    "**Sensor(s) used:** five capacitive touch buttons on top of Stimuli.",
+                    "**Triggering conditions:** this event is triggered when a button is pressed.",
+                    "**Parameters:** the button highlighted in orange is the button triggering the event. The grey buttons are ignored.",
+                    "**Example:** when the forward button is pressed, then ... (robot action, for instance start moving forward)."
+                ],
+                "button": [
+                    "# Multiple buttons",
+                    "![button](vpl:block:button)",
+                    "**Sensor(s) used:** five capacitive touch buttons on top of Stimuli.",
+                    "**Triggering conditions:** this event is triggered when one or more buttons are pressed.",
+                    "**Parameters:** the buttons highlighted in orange are the buttons triggering the event. When several buttons are pressed, the event is triggered when all buttons are pressed at the same time. The grey buttons are ignored.",
+                    "**Example:** when the forward and right buttons are pressed, then ... (robot action, for instance start moving forward right)."
+                ],
+                "horiz prox": [
+                    "# Proximity sensors",
+                    "![Proximity sensors](vpl:block:horiz-prox)",
+                    "**Sensor(s) used:** four proximity sensors around the robot.",
+                    "**Triggering conditions:** proximity infrared sensors measure the reflection of objects placed in front of them. If there is reflection, there is a close or reflective obstacle in front of them. No reflection means either a black obstacle or no obstacle at all. This event is triggered by detection of obstacles around Stimuli, in 4 different direction, by 4 different sensors.",
+                    "**Parameters:** when a sensor is set in white with a red border, the sensor triggers an event when detecting a reflective obstacle.  Setting it in black makes the sensor trigger the event if there is no obstacle anymore (or a black obstacle, or a transparent surface). When a sensor is set to grey it is ignored.",
+                    "When several sensors have been selected to trigger the event, the event is triggered by the combination of the conditions. If the front and the left sensors have been set to detect an obstacle, the event will be triggered when the front **AND** the left sensors detect an obstacle.",
+                    "**Example:** When the left sensor detects an obstacle, then ... (robot action, for instance turn right to avoid it)."
+                ],
+                "ground": [
+                    "# Ground sensors",
+                    "![ground](vpl:block:ground)",
+                    "**Sensor(s) used:** two ground proximity sensors.",
+                    "**Triggering conditions:** this event is triggered by the detection of presence or absence of a reflecting ground below Stimuli. Note that a transparent or a black (matte, non reflecting) surface will be detected as absence of ground. This event allows the programmer to separately define what the left and right ground sensors should detect to trigger the event. This can be very useful to detect black lines on white paper, for instance to create line following behaviors.",
+                    "**Parameters:** when the sensor is set in white with a red border, the sensor detects a reflective surface, for instance white. Setting it in black allows the sensor to detect no ground (or a black or a transparent ground). When a sensor is set to grey it is ignored.",
+                    "**Example:** When the left sensor detects a white surface and the right one a black line, then ... (robot action, for instance turn right toward the black line)."
+                ],
+                "accelerometer": [
+                    "# Accelerometer",
+                    "![accelerometer](vpl:block:accelerometer)",
+                    "Type: event or condition block",
+                    "..."
+                ],
+                "clap": [
+                    "# Clap (sound) detection",
+                    "![clap](vpl:block:clap)",
+                    "**Sensor used:** microphone.",
+                    "**Triggering conditions:** This event is triggered when a loud sound is detected by Stimuli. A tap of the robot can also trigger this event, as it generates a loud sound on the microphone. A noisy environment can trigger this event in an uncontrolled way.",
+                    "**Example:** When I clap my hand, then... (robot action, for instance start moving forward)."
+                ],
+                "init": [
+                    "# Start of the program",
+                    "![init](vpl:block:init)",
+                    "**This event does not use a specific sensor of the Stimuli.**",
+                    "**Triggering conditions:** this event is triggered at the start of the program on the robot, as you hit the PLAY or START AGAIN button in VPL. You can use it to set actions Stimuli will perform at the start of the program.",
+                    "**Example:** At the beginning of the program start by (robot action, for instance setting the robot color to red)"
+                ],
+                "timer": [
+                    "# Timer elapsed",
+                    "![timer](vpl:block:timer)",
+                    "**This event does not use a specific sensor of the Stimuli. It reacts to a timer inside Stimuli.**",
+                    "**Triggering conditions:** this event is triggered when the timer (set in the actions) is over.",
+                    "**Example:** When two seconds (set in the action) have passed, then .... (robot action, for instance start to move)."
+                ],
+                "clock": [
+                    "# Repetitive event",
+                    "![clock](vpl:block:clock)",
+                    "**This event block does not use a specific sensor of the Stimuli.** It uses the internal timers of the robot.",
+                    "**Triggering conditions:** this block generates events at regular intervals.",
+                    "**Parameters:** the frequency of event can be set by the user, among a choice of frequencies: at 10Hz this event is generated 10 times per second, at 20Hz this event is generated 20 times per second.",
+                    "**Example:** Ten times per second increment the internal variable, which then will count the tenths of second."
+                ],
+                "remote control arrows": [
+                    "# Remote control arrows",
+                    "![remote control arrows](vpl:block:remote-control-arrows)",
+                    "**Sensor(s) used:** infrared remote control receiver.",
+                    "**Triggering conditions:** this event is triggered when the specified button is pressed on the remote control. The buttons represent the arrows of the remote control.",
+                    "**Parameters:** the button highlighted in orange is the button triggering the event.",
+                    "**Example:** When the forward button of the remote control is pressed, then ... (robot action, for instance start moving forward)"
+                ],
+                "remote control keypad": [
+                    "# Remote control keypad",
+                    "![remote control keypad](vpl:block:remote-control-keypad)",
+                    "**Sensor(s) used:** infrared remote control receiver.",
+                    "**Triggering conditions:** this event is triggered when the specified button is pressed on the remote control. The buttons represent the keypad of the remote control.",
+                    "**Parameters:** the button highlighted in orange is the button triggering the event.",
+                    "**Example:** When the button **2** of the remote control is pressed, then ... (robot action, for instance start moving forward)"
+                ],
+                "state": [
+                    "# State (4 bits)",
+                    "![state](vpl:block:state)",
+                    "Type: condition block",
+                    "..."
+                ],
+                "state 8": [
+                    "# State (8 values)",
+                    "![state 8](vpl:block:state-8)",
+                    "Type: condition block",
+                    "..."
+                ],
+                "counter comparison": [
+                    "# 8-LED state arithmetic comparison",
+                    "![counter comparison](vpl:block:counter-comparison)",
+                    "**This condition block does not use a specific sensor of the Stimuli.** It reads an internal state, an 8-bit variable inside Stimuli. It can be used only as a condition, not as a main event.",
+                    "**Triggering conditions:** this condition is true when the internal variable, represented on the led circle on Stimuli, satisfies the comparison with a fixed value.",
+                    "**Parameters:** on the left the programmer can choose which comparison to do:",
+                    "= Equal to",
+                    " Greater than or equal to",
+                    "> Strictly greater than",
+                    " Less than or equal to",
+                    "< Strictly less than",
+                    "On the right the programmer can choose an 8-bit constant value from 0 to 255. This constant value is displayed on the circular LEDs using a binary representation with the bit 0 on the top, the bit 1 on the top right, the bit 2 on the right and so on around the circle. ",
+                    "**Example:** If the LEDs represent the value 6 (bit 1 and 2 are set), then .... (robot action, for instance become red)."
+                ],
+                "state 256": [
+                    "# 8-LED state check",
+                    "![state 256](vpl:block:state-256)",
+                    "**This condition block does not use a specific sensor of the Stimuli.** It reads the status of the 8 LEDs around Stimuli\u2019s buttons. It can be used only as a condition, not as a main event.",
+                    "**Triggering conditions:** this condition is true when the LEDs on Stimuli display the same pattern (LEDS on and off) as defined on the block. Since each LED can be either on or off there are 256 possible combinations.",
+                    "**Parameters:** every led can be set on (yellow) or off (dark grey). None of the LEDs are ignored.",
+                    "**Example:** If only the top LED is on, then .... (robot action, for instance start moving forward)."
+                ],
+                "state 256 with mask": [
+                    "# Selective 8-LEDs check",
+                    "![state 256 with mask](vpl:block:state-256-with-mask)",
+                    "**This condition block does not use a specific sensor of the Stimuli.** It reads the status of the 8 LEDs around Stimuli\u2019s buttons. It can be used only as a condition, not as a main event.",
+                    "**Triggering conditions:** this condition is true when the LEDs on Stimuli display the same pattern (LEDS on and off) as defined on the block. You can choose to consider only some LEDs, ignoring others.",
+                    "**Parameters:** every led can be set on (yellow), off (dark grey) or can be ignored (light grey). This allows to detect partial configurations of LEDs, distinguishing various patterns at the same time or making subgroups of LEDs.",
+                    "**Example:** If the three left LEDs are on and the bottom, bottom-right, and right LEDs are off, then .... (robot action, for instance start moving left)."
+                ],
+                "motor state": [
+                    "# Motor state",
+                    "![motor state](vpl:block:motor-state)",
+                    "Type: condition block",
+                    "..."
+                ],
+                "nn obstacles": [
+                    "# Neural net for obstacle avoidance",
+                    "![nn obstacles](vpl:block:nn-obstacles)",
+                    "Type: action block",
+                    "..."
+                ],
+                "bottom-left color": [
+                    "# Set bottom-left color (RGB components)",
+                    "![bottom-left color](vpl:block:bottom-left-color)",
+                    "Type: action block",
+                    "..."
+                ],
+                "bottom-right color": [
+                    "# Set bottom-right color (RGB components)",
+                    "![bottom-right color](vpl:block:bottom-right-color)",
+                    "Type: action block",
+                    "..."
+                ],
+                "bottom-left color 8": [
+                    "# Set bottom-left color",
+                    "![bottom-left color 8](vpl:block:bottom-left-color-8)",
+                    "Type: action block",
+                    "..."
+                ],
+                "bottom-right color 8": [
+                    "# Set bottom-right color",
+                    "![bottom-right color 8](vpl:block:bottom-right-color-8)",
+                    "Type: action block",
+                    "..."
+                ],
+                "notes": [
+                    "# Play melody",
+                    "![notes](vpl:block:notes)",
+                    "**Actuator:** speaker",
+                    "**Action:** this action starts playing a melody with Stimuli.",
+                    "**Parameters:** each blue line corresponds to a tone. Up to six notes can be placed. Each click switches between black (one time unit), white (two time units), or pause (four time units).",
+                    "**Example:** when (event, for instance pressing the forward button), then play a melody illustrating the start."
+                ],
+                "notes with speed": [
+                    "# Play melody with tempo",
+                    "![notes with speed](vpl:block:notes-with-speed)",
+                    "**Actuator:** speaker",
+                    "**Action:** this action starts playing a melody with Stimuli.",
+                    "**Parameters:** each blue line corresponds to a tone and the programmer can choose the position of a note by clicking below or above it. The duration of the note can also be changed by clicking on it. The duration is as following: a black note has a duration of one unit, a white of two units, and an empty place is a silence during 4 units of time.",
+                    "The top slider allows to set the tempo of the melody, which is the speed at which it will be played.",
+                    "**Example:** when (event, for instance pressing the forward button), then play a fast melody illustrating the start."
+                ],
+                "play": [
+                    "# Play a .wav file from SD card",
+                    "![play](vpl:block:play)",
+                    "**Actuator:** speaker",
+                    "**Action:** this action starts playing a sound which is saved on a micro-SD card inserted in Stimuli.",
+                    "**Parameters:** Sounds on the micro-SD card need to be named *Px.wav* where x is the number entered in this icon. For instance this icon will play *P1.wav*.",
+                    "Sounds on the micro-SD card need to be recorded at 8000Hz, mono, non compressed, unsigned 8-bit PCM, wav format. The micro-SD card needs to be formatted in Fat32.",
+                    "**Example:** when (event, for instance pressing the forward button), then play a sound illustrating the start."
+                ],
+                "play stop": [
+                    "# Stop playing a .wav file",
+                    "![play stop](vpl:block:play-stop)",
+                    "**Actuator: speaker",
+                    "**Action:** this action stops a sound playing from the micro-SD card inserted in Stimuli.",
+                    "**Example:** when (event, for instance the timer is over), then stop playing the sound illustrating the robot waiting."
+                ],
+                "set state 256": [
+                    "# Set 8-LEDs state",
+                    "![set state 256](vpl:block:set-state-256)",
+                    "**Actuators:** 8 circular LEDs around Stimuli buttons.",
+                    "**Action:** this action sets on or off each LED.",
+                    "**Parameters:**  every LED is set on (yellow) or off (dark grey).",
+                    "**Example:** when (event, for instance forward button pushed), then switch on the front LED and switch off all others."
+                ],
+                "set state 256 with mask": [
+                    "# Set some of the 8 LEDs",
+                    "![set state 256 with mask](vpl:block:set-state-256-with-mask)",
+                    "**Actuators:** 8 circular LEDs around Stimuli buttons.",
+                    "**Action:** this action sets on or off some of the LEDs which are placed in circle around the Stimuli buttons.",
+                    "**Parameters:** every led can be set on (yellow), off (dark grey), or left unchanged (light grey).",
+                    "**Example:** when (event, for instance left button pushed), then switch on some LEDs on the left and switch off three back-right LED, and ignore the front-right LEDs."
+                ],
+                "set timer": [
+                    "# Start timer",
+                    "![set timer](vpl:block:set-timer)",
+                    "**This action does not use a specific actuator of the Stimuli.** It sets a timer inside Stimuli.",
+                    "**Action:** this action sets a timer. Once the time set on the timer has elapsed, an event is triggered.",
+                    "**Parameters:** the left digit allows to set the seconds and the right one to set the tenths of second.",
+                    "**Example:** when (event, for instance front button pushed), then set the timer to 2 seconds and 0 tenths. Two seconds later, a *Timer Up* event occurs."
+                ],
+                "set timer log": [
+                    "# Set timer (0.1-10 sec)",
+                    "![set timer log](vpl:block:set-timer-log)",
+                    "Type: action block",
+                    "..."
+                ],
+                "picture comment": [
+                    "# Picture comment",
+                    "![picture comment](vpl:block:picture-comment)",
+                    "Type: comment block",
+                    "..."
+                ],
+                "arithmetic": [
+                    "# Compute",
+                    "![arithmetic](vpl:block:arithmetic)",
+                    "**This action does not use a specific actuator of the Stimuli.** It sets a variable inside Stimuli.",
+                    "**Action:** this action performs mathematical operations on the velue represented by the 8 circular yellow LEDs.",
+                    "**Parameters:** on the left the programmer can choose among a list of operators:",
+                    "= Set to",
+                    "+ Add",
+                    "- Subtract",
+                    "x Multiply",
+                    "\u00f7 Divide",
+                    "On the right the programmer can choose an 8-bit constant value from 0 to 255. This value is represented on the circular segments using a binary representation with the bit 0 on the top, the bit 1 on the top right, the bit 2 on the right and so on around the circle; the value stored being 1 as dark blue and 0 as light blue.",
+                    "The final operation consist in applying the chosen operator with the constant value as second argument. For instance \u201cx 4\u201d will multiply by four the value displayed with the yellow LEDs.",
+                    "Depending on the operation, the result can be greater than 255 or less than 0. In this case the result can be saturated to 0 or 255, or can go through this limit and behave in a circular way. If not saturated, the operation 254 + 4 would result in 2, as when passing 255, the variable continues from 0.",
+                    "The switch on the top left of the circle of LEDs allows enabling and disabling the saturation of the binary number. When the lever is placed between the two LEDs, the saturation is enabled (254+4=255). When the lever is outside the circle, the saturation is disabled (254+4=2)."
+                ],
+                "horiz prox 1 adv": [
+                    "# Front proximity sensors with threshold",
+                    "![horiz prox 1 adv](vpl:block:horiz-prox-1-adv)",
+                    "**Sensor(s) used:** five proximity sensors at the front of Stimuli.",
+                    "**Triggering conditions:** proximity infrared sensors measure the reflection of objects placed in front of them. If there is reflection, there is a close or reflective obstacle in front of them. No reflection means either a black obstacle or no obstacle at all.  This event  is triggered by detection of obstacles in front of Stimuli, in five different directions. The level of detection can be adjusted.",
+                    "**Parameters:** when a sensor is set in white with a red border, the sensor triggers an event when detecting a reflective obstacle. Setting it in black allows the sensor to trigger the event if there is no obstacle anymore (or a black obstacle, or a transparent surface). When a sensor is set to grey it is ignored.",
+                    "When several sensors have been selected to trigger the event, the event is triggered by the combination of the conditions. If the front and the left sensors have been set to detect an obstacle, the event will be triggered when the front AND the left sensors detect an obstacle.",
+                    "The programmer can tune the level of detection. This will indirectly specify if the obstacle will be detected close or far. The higher the threshold the closer to the sensor the detection is being done.",
+                    "**Example:** When the left sensor detects an obstacle, then ... (robot action, for instance turn right to avoid it)."
+                ],
+                "motor_octo": [
+                    "ADD DESCRIPTION HERE in en"
+                ],
+                "motor_rot": [
+                    "ADD DESCRIPTION HERE in en"
+                ]
+            }
+        }
+    }
+}

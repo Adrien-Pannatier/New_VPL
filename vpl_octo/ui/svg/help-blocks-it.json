@@ -1,0 +1,262 @@
+{
+    "help": {
+        "it": {
+            "blocks": {
+                "button 1": [
+                    "# Pulsante singolo",
+                    "![Icona del pulsante singolo](vpl:block:button-1)",
+                    "**Sensore(i) utilizzato(i):** i cinque pulsanti capacitivi sul dorso di Thymio.",
+                    "**Condizioni di attivazione :** questo evento viene attivato quando si preme uno dei pulsanti.",
+                    "**Parametri :** il pulsante arancione \u00e8 quello che attiva l'evento. I pulsanti grigi vengono ignorati. ",
+                    "**Esempio :** quando si preme il pulsante avanti, allora \u2026 (azione del robot, per Esempio inizia a muoversi in avanti)."
+                ],
+                "button": [
+                    "# Pulsanti multipli",
+                    "![Icona dei pulsanti multipli](vpl:block:button)",
+                    "**Sensore(i) utilizzato(i):** i cinque pulsanti capacitivi sul dorso di Thymio.",
+                    "**Condizioni di attivazione :**questo evento viene attivato quando si toccano uno o pi\u00f9 pulsanti.",
+                    "**Parametri :** i pulsanti arancioni sono quelli che attivano l'evento. Se viene selezionato pi\u00f9 di un pulsante, l'evento viene attivato quando tutti questi pulsanti vengono toccati contemporaneamente. I pulsanti grigi vengono ignorati.",
+                    "**Esempio :** quando si premono contemporaneamente i pulsanti avanti e destra, allora \u2026 (azione del robot, per Esempio inizia a muoversi in avanti, svoltando a destra )."
+                ],
+                "horiz prox": [
+                    "# Sensori di prossimit\u00e0",
+                    "![Icona dei sensori di prossimit\u00e0](vpl:block:horiz-prox)",
+                    "**Sensore(i) utilizzato(i):** I cinque sensori di prossimit\u00e0 nella parte anteriore di Thymio e i due nella parte posteriore.",
+                    "**Condizioni di attivazione :** i sensori di prossimit\u00e0 a infrarossi misurano la luce IR riflessa dagli oggetti posti di fronte ad essi. Se un oggetto \u00e8 vicino o altamente riflettente, il sensore rilever\u00e0 un riflesso di luce. Se non viene rilevato alcun riflesso, ci\u00f2 pu\u00f2 indicare che non c'\u00e8 nulla davanti al sensore o che c'\u00e8 un oggetto che assorbe IR (un oggetto nero). L'evento \u00e8 attivato dal rilevamento di oggetti intorno a Thymio, in sette direzioni, da sette diversi sensori.",
+                    "**Parametri :** un sensore bianco con un bordo rosso indica che l'evento viene attivato quando c'\u00e8 un riflesso di luce IR, quindi quando viene rilevato un oggetto davanti al sensore. Un sensore nero indica che l'evento viene attivato quando non c'\u00e8 riflesso (ostacolo rimosso, oggetto nero o trasparente). Un sensore grigio viene ignorato e non partecipa all'attivazione dell'evento.",
+                    "Quando pi\u00f9 sensori vengono selezionati congiuntamente per attivare un'evento, l'attivazione avviene se tutte le condizioni vengono soddisfatte contemporaneamente. Se il sensore frontale e il sensore sinistro sono impostati per rilevare un oggetto, l'evento si verifica solo se il sensore frontale ** E ** il sensore sinistro vedono un oggetto.",
+                    "**Esempio :** Quando il sensore sinistro rileva un ostacolo, allora ... (azione del robot, per Esempio gira a destra per evitare l'ostacolo)."
+                ],
+                "ground": [
+                    "# Sensori di suolo",
+                    "![Icona dei sensori di suolo](vpl:block:ground)",
+                    "**Sensore(i) utilizzato(i):** i due sensori di prossimit\u00e0 a infrarossi rivolti verso il suolo.",
+                    "**Condizioni di attivazione :** questo evento si attiva dal rilevamento del riflesso di luce IR sotto a Thymio, quindi dalla presenza o assenza di una superficie riflettente sotto il robot. Una superficie nera opaca, non riflettente o trasparente provocher\u00e0 una risposta del sensore simile a nessuna superficie. Allo stesso modo, una superficie nera lucida pu\u00f2 riflettere molta luce e dare una risposta simile alla carta bianca.",
+                    "Questo evento consente al programmatore di definire separatamente ci\u00f2 che i sensori sinistro e destro devono rilevare per attivare l'evento. Ci\u00f2 permette di rilevare facilmente linee nere su carta bianca, per Esempio per creare un comportamento di segui linea.",
+                    "**Parametri :** un sensore bianco con un bordo rosso indica che l'evento viene attivato quando il robot \u00e8 su una superficie riflettente, per Esempio di colore bianco. Un sensore nero indica che l'evento viene attivato quando la superficie non viene rilevata (robot sollevato dal suolo o posizionato su una superficie nera o trasparente). Un sensore grigio viene ignorato e non partecipa all'attivazione dell'evento.",
+                    "**Esempio :**  Quando il sensore sinistro rileva una superficie bianca, allora ... (azione del robot, per Esempio gira a destra per ritornare su una traccia nera)."
+                ],
+                "accelerometer": [
+                    "# Accelerometro",
+                    "![Icona dell'accelerometro](vpl:block:accelerometer)",
+                    "Tipo: evento o blocco condizione",
+                    "..."
+                ],
+                "clap": [
+                    "# Rileva il battito delle mani (suono)",
+                    "![Icona del rilevamento del battito delle mani](vpl:block:clap)",
+                    "**Sensore(i) utilizzato(i):** microfono.",
+                    "**Condizioni di attivazione :** Questo evento si attiva quando il robot percepisce un forte rumore. Toccare Thymio pu\u00f2 attivare questo evento poich\u00e9 si genera un rumore vicino al microfono. Un ambiente rumoroso pu\u00f2 causare un attivazione indesiderata di questo evento.",
+                    "**Esempio :** Quando batto le mani, allora... (azione del robot, per Esempio va avanti)."
+                ],
+                "init": [
+                    "# Avvia il programma",
+                    "![Icona dell'avvio del programma](vpl:block:init)",
+                    "**Questo evento non utilizza alcun sensore di Thymio.**",
+                    "**Condizioni di attivazione :** questo evento viene attivato all'avvio del programma sul robot, quando si preme il pulsante ESEGUI o ESEGUI ANCORA in VPL. Pu\u00f2 essere utilizzato per impostare le azioni che Thymio eseguir\u00e0 all'inizio del programma.",
+                    "**Esempio :** all'avvio del programma inizia con (azione del robot, per Esempio s'illumina di rosso)."
+                ],
+                "timer": [
+                    "# Timer scaduto",
+                    "![Icona del timer scaduto](vpl:block:timer)",
+                    "**Questo evento non utilizza alcun sensore di Thymio.** Reagisce al valore di un timer interno di Thymio.",
+                    "**Condizioni di attivazione :** questo evento viene attivato quando il timer (definito nelle azioni) raggiunge 0.",
+                    "**Esempio :** Quando sono trascorsi due secondi (specificati tramite l'azione corrispondente), allora... (azione del robot, per Esempio va avanti)."
+                ],
+                "clock": [
+                    "# Evento ripetuto",
+                    "![Icona dell'evento ripetuto](vpl:block:clock)",
+                    "**Questo evento non utilizza alcun sensore di Thymio.**  Reagisce al valore di un timer interno di Thymio.",
+                    "**Condizioni di attivazione :** questo blocco genera eventi a intervalli regolari.",
+                    "**Parametri :** la frequenza dell'evento pu\u00f2 essere specificata dal programmatore, scegliendo tra alcune frequenze disponibili: a 10Hz l'evento viene generato 10 volte al secondo, a 20Hz si genera 20 volte al secondo.",
+                    "**Esempio :** 10 volte al secondo, incrementa la variabile interna, che conter\u00e0 i decimi di secondo trascorsi."
+                ],
+                "remote control arrows": [
+                    "# Frecce del telecomando",
+                    "![Icona delle frecce del telecomando](vpl:block:remote-control-arrows)",
+                    "**Sensore(i) utilizzato(i):** ricevitore del telecomando a infrarossi.",
+                    "**Condizioni di attivazione :** questo evento si attiva quando il pulsante specificato viene premuto sul telecomando. I pulsanti rappresentano le frecce del telecomando.",
+                    "**Parametri :** Il pulsante arancione \u00e8 quello che avvia l'evento. I pulsanti grigi sono ignorati.",
+                    "**Esempio :** Quando si preme il pulsante avanti del telecomando, allora \u2026 (azione del robot, per Esempio inizia a muoversi in avanti)."
+                ],
+                "remote control keypad": [
+                    "# Tasti numerici del telecomando",
+                    "![Icona dei tasti numerici del telecomando](vpl:block:remote-control-keypad)",
+                    "**Sensore(i) utilizzato(i):**  ricevitore del telecomando a infrarossi.",
+                    "**Condizioni di attivazione :**  questo evento si attiva quando il pulsante specificato viene premuto sul telecomando. I pulsanti rappresentano la tastiera del telecomando.",
+                    "**Parametri :** Il pulsante arancione \u00e8 quello che avvia l'evento. I pulsanti grigi sono ignorati.",
+                    "**Esempio :** Quando si preme il pulsante *2* del telecomando, allora \u2026 (azione del robot, per Esempio inizia a muoversi in avanti)."
+                ],
+                "state": [
+                    "# Stati (4 bit)",
+                    "![state](vpl:block:state)",
+                    "Tipo: blocco condizione",
+                    "..."
+                ],
+                "state 8": [
+                    "# Stati (8 valori)",
+                    "![state 8](vpl:block:state-8)",
+                    "Tipo: blocco condizione",
+                    "..."
+                ],
+                "counter comparison": [
+                    "# Confronto aritmetico dello stato degli 8 LED",
+                    "![Icona del confronto aritmetico dello stato degli 8 LED](vpl:block:counter-comparison)",
+                    "**Questo evento non utilizza alcun sensore di Thymio.** Legge lo stato di un valore interno di Thymio, una variabile a 8 bit. Questo blocco pu\u00f2 essere utilizzato solo come condizione, non come evento principale.",
+                    "**Condizioni di attivazione :** questa condizione \u00e8 vera quando la variabile interna, rappresentata sul cerchio formato dai LED di Thymio, soddisfa il confronto con il valore fisso scelto.",
+                    "**Parametri :** a sinistra l'utente pu\u00f2 scegliere il confronto da effettuare :",
+                    "= uguale a",
+                    " maggiore di o uguale a",
+                    "> maggiore di",
+                    "  minore di o uguale a",
+                    "< minore di",
+                    "A destra, il programmatore pu\u00f2 impostare un valore costante da 0 a 255. Questo valore \u00e8 rappresentato in modalit\u00e0 binaria sui segmenti circolari del blocco, con il bit 0 in alto, il bit 1 in alto a destra, il bit 2 a destra e cos\u00ec via lungo il cerchio. ",
+                    "**Esempio :** Se il cerchio formato dai LED rappresenta il valore *6* (i bit 1 e 2 sono illuminati) allora... (azione del robot, per Esempio s'illumina di rosso)."
+                ],
+                "state 256": [
+                    "# Stato degli 8 LED",
+                    "![Icona dello stato degli 8 LED](vpl:block:state-256)",
+                    "**Questo evento non utilizza alcun sensore di Thymio.** Legge lo stato degli 8 LED a forma di cerchio attorno ai pulsanti di Thymio. Questo blocco pu\u00f2 essere utilizzato solo come condizione, non come evento principale.",
+                    "**Condizioni di attivazione :** questa condizione \u00e8 vera se i LED a forma di cerchio di Thymio mostrano la stessa configurazione di LED accesi e spenti specificata sul blocco. Poich\u00e9 ogni LED pu\u00f2 essere acceso o spento, ci sono 256 combinazioni possibili.",
+                    "**Parametri :** ogni LED pu\u00f2 essere impostato per essere acceso (giallo) o spento (grigio scuro). Nessun LED viene ignorato.",
+                    "**Esempio :** Se \u00e8 acceso solo il LED anteriore, allora... (azione del robot, per Esempio inizia a muoversi in avanti)."
+                ],
+                "state 256 with mask": [
+                    "# Stato parziale degli 8 LED",
+                    "![Icona dello stato parziale degli 8 LED](vpl:block:state-256-with-mask)",
+                    "**Questo evento non utilizza alcun sensore di Thymio.** Legge lo stato degli 8 LED a forma di cerchio attorno ai pulsanti di Thymio. Questo blocco pu\u00f2 essere utilizzato solo come condizione, non come evento principale.",
+                    "**Condizioni di attivazione :** questa condizione \u00e8 vera se i LED a forma di cerchio di Thymio mostrano la stessa configurazione di LED accesi e spenti specificata sul blocco. \u00c8 possibile prendere in considerazione solo determinati LED.",
+                    "**Parametri :** ogni LED pu\u00f2 essere impostato per essere acceso (giallo) o spento (grigio scuro). Ci\u00f2 consente di rilevare combinazioni parziali di LED, di riconoscere pi\u00f9 configurazioni in parallelo o di realizzare sottogruppi di LED..",
+                    "**Esempio :** Se i tre LED di sinistra del cerchio sono accesi e i LED posteriore, posteriore destro e destro sono spenti, allora... (azione del robot, per Esempio gira a sinistra)."
+                ],
+                "motor state": [
+                    "# Stato motore",
+                    "![motor state](vpl:block:motor-state)",
+                    "Tipo: blocco condizione",
+                    "..."
+                ],
+                "nn obstacles": [
+                    "# Rete neurale per evitare gli ostacoli",
+                    "![nn obstacles](vpl:block:nn-obstacles)",
+                    "Tipo: blocco azione",
+                    "..."
+                ],
+                "bottom-left color": [
+                    "# Imposta il colore in basso a sinistra (componenti RGB)",
+                    "![colore in basso a sinistra](vpl:block:bottom-left-color)",
+                    "Tipo: blocco azione",
+                    "..."
+                ],
+                "bottom-right color": [
+                    "# Set bottom-right color (componenti RGB)",
+                    "![colore in basso a sinistra](vpl:block:bottom-right-color)",
+                    "Tipo: blocco azione",
+                    "..."
+                ],
+                "bottom-left color 8": [
+                    "# Imposta il colore in basso a sinistra",
+                    "![colore in basso a sinistra 8](vpl:block:bottom-left-color-8)",
+                    "Tipo: blocco azione",
+                    "..."
+                ],
+                "bottom-right color 8": [
+                    "# Imposta il colore in basso a destra",
+                    "![colore in basso a destra 8](vpl:block:bottom-right-color-8)",
+                    "Tipo: blocco azione",
+                    "..."
+                ],
+                "notes": [
+                    "# Riproduce una melodia",
+                    "![Icona per riprodurre una melodia](vpl:block:notes)",
+                    "**Attuatore:** altoparlante",
+                    "**Azione:** questa azione fa suonare a Thymio una melodia.",
+                    "**Parametri :** ogni linea blu corrisponde a un tono. \u00c8 possibile inserire fino a 6 note su queste righe. Pi\u00f9 clic consequtivi permettono di passare da una nota nera (1 unit\u00e0 di tempo), a una bianca (2 unit\u00e0 di tempo), a una pausa (4 unit\u00e0 di tempo).",
+                    "**Esempio :** quando... (evento, per Esempio se \u00e8 stato premuto il pulsante anteriore), allora suona la melodia iniziale."
+                ],
+                "notes with speed": [
+                    "# Riproduce una melodia con un tempo",
+                    "![Icona pour jouer une m\u00e9lodie avec rythme](vpl:block:notes-with-speed)",
+                    "**Attuatore:** altoparlante",
+                    "**Azione:** questa azione fa suonare a Thymio una melodia.",
+                    "**Parametri :** ogni linea blu corrisponde a un tono. \u00c8 possibile inserire fino a 6 note su queste righe. Pi\u00f9 clic consequtivi permettono di passare da una nota nera (1 unit\u00e0 di tempo), a una bianca (2 unit\u00e0 di tempo), a una pausa (4 unit\u00e0 di tempo).",
+                    "Il cursore superiore regola il tempo della melodia, quindi la velocit\u00e0 con cui la melodia verr\u00e0 riprodotta",
+                    "**Esempio :** quando... (evento, per Esempio se \u00e8 stato premuto il pulsante anteriore), allora suona velocemente la melodia iniziale."
+                ],
+                "play": [
+                    "# Riproduce un file .wav dalla scheda SD",
+                    "![Icona per riprodurre un file .wav dalla scheda SD](vpl:block:play)",
+                    "**Attuatore:** altoparlante",
+                    "**Azione:** questa azione fa s\u00ec che Thymio riproduca un file audio memorizzato su una scheda SD inserita in Thymio.",
+                    "**Parametri :** Il file audio memorizzato sulla scheda SD deve essere denominato * Px.wav *, dove x \u00e8 il numero scelto in questo blocco. Questo blocco, per Esempio, riprodurr\u00e0 il file * P1.wav *.",
+                    "I suoni sulla scheda micro-SD devono essere registrati con queste caratteristiche: 8000Hz, mono, non compresso, unsigned 8-bit PCM, formato wav. La scheda micro-SD deve essere formattata in Fat32.",
+                    "**Esempio :** quando... (evento, per Esempio se \u00e8 stato premuto il pulsante anteriore), allora riproduce il file audio iniziale."
+                ],
+                "play stop": [
+                    "# Interrompe la riproduzione di un file .wav",
+                    "![Icona per interrompere la riproduzione di un file .wav dalla scheda SD](vpl:block:play-stop)",
+                    "**Attuatore: altoparlante",
+                    "**Azione:**questa azione interrompe la riproduzione del file audio dalla scheda SD.",
+                    "**Esempio :** quando... (evento, per Esempio il timer \u00e8 scaduto), allora interrompe la riproduzione del file audio usato per indicare che il robot \u00e8 in attesa."
+                ],
+                "set state 256": [
+                    "# Imposta lo stato degli 8 LED",
+                    "![Icona per impostare lo stato degli 8 LED](vpl:block:set-state-256)",
+                    "**Attuatori:** Gli 8 LED che formano un cerchio attorno ai pulsanti di Thymio.",
+                    "**Azione:** questa azione accende o spegne ciascuno dei LED che formano il cerchio.",
+                    "**Parametri :** ogni led pu\u00f2 essere acceso (giallo) o spento (grigio scuro).",
+                    "**Esempio :** quando... (evento, per Esempio se \u00e8 stato premuto il pulsante anteriore), allora accende il LED anteriore e spegne tutti gli altri."
+                ],
+                "set state 256 with mask": [
+                    "# Imposta lo stato parziale degli 8 LED",
+                    "![Icona per impostare lo stato parziale degli 8 LED](vpl:block:set-state-256-with-mask)",
+                    "**Attuatori:** Gli 8 LED che formano un cerchio attorno ai pulsanti di Thymio.",
+                    "**Azione:** questa azione accende o spegne ciascuno dei LED che formano il cerchio.",
+                    "**Parametri :** ogni led pu\u00f2 essere acceso (giallo), spento (grigio scuro) o lasciato cos\u00ec com'\u00e8 (grigio chiaro).",
+                    "**Esempio :** quando... (evento, per Esempio se \u00e8 stato premuto il pulsante anteriore), allora accendere alcuni LED a sinistra e spegnere i tre LED posteriori e lasciare i LED anteriori destro cos\u00ec come sono."
+                ],
+                "set timer": [
+                    "# Avvia il timer",
+                    "![Icona per avviare un timer](vpl:block:set-timer)",
+                    "**Questa azione non utilizza alcun sensore di Thymio.** Configura un timer interno di Thymio.",
+                    "**Azione:** questa azione configura un timer. Una volta trascorso il tempo impostato sul timer, viene attivato un evento.",
+                    "**Parametri :** il numero a sinistra specifica i secondi e il numero a destra specifica i decimi di secondo.",
+                    "**Esempio :** quando... (evento, per Esempio se \u00e8 stato premuto il pulsante anteriore), allora avvia un timer di 2 secondi e 0 decimi. Due secondi dopo, un evento *timer scaduto* avr\u00e0 luogo."
+                ],
+                "set timer log": [
+                    "# Imposta timer (0.1-10 sec)",
+                    "![imposta timer log](vpl:block:set-timer-log)",
+                    "Tipo: blocco azione",
+                    "..."
+                ],
+                "picture comment": [
+                    "# Picture comment",
+                    "![commento immagine](vpl:block:picture-comment)",
+                    "Tipo: blocco commento",
+                    "..."
+                ],
+                "arithmetic": [
+                    "# Calcola",
+                    "![Icona per calcolare](vpl:block:arithmetic)",
+                    "**Questa azione non utilizza alcun sensore di Thymio.** Elle assigne une valeur \u00e0 une variable interne de Thymio.",
+                    "**Azione:** questa azione esegue operazioni matematiche sulla variabile rappresentata dal cerchio formato dagli 8 LED attorno ai pulsanti Thymio.",
+                    "**Parametri :** a sinistra il programmatore pu\u00f2 scegliere da un elenco di operatori:",
+                    "= Assegnare il valore",
+                    "+ Aggiungere",
+                    "- Sottrarre",
+                    "x Moltiplicare",
+                    "\u00f7 Dividere",
+                    "A destra il programmatore pu\u00f2 scegliere un valore costante di 8 bit, da 0 a 255. Tale valore \u00e8 rappresentato in modo binario sui segmenti circolari del blocco, con bit 0 in alto, bit 1 in alto a destra, bit 2 a destra e cos\u00ec via lungo il cerchio; il blu scuro rappresenta il valore 1 e l'azzurro rappresenta il valore 0. ",
+                    "L'operazione eseguita consiste nell'applicare l'operatore scelto alla variabile interna, con la costante specificata come secondo argomento. Per Esempio\u201c x 4 \u201dmoltiplicher\u00e0 per 4 il valore interno visualizzato sul cerchio foramto dai LED.",
+                    "A seconda dei calcoli eseguiti, il risultato pu\u00f2 essere maggiore di 255 o minore di 0. In questo caso il risultato pu\u00f2 essere saturato a 255 e 0 oppure superare il limite e comportarsi in modo circolare. Nel caso insaturo , 254 + 4 dar\u00e0 2, perch\u00e9 dopo il valore 255 la variabile inizia da 0. ",
+                    "Il pulsante in alto a sinistra del cerchio formato dai LED permette di attivare o disattivare la saturazione del numero binario. Quando la levetta \u00e8 tra i due LED, si attiva la saturazione (254 + 4 = 255). Quando la leva \u00e8 in fuori dal cerchio, la saturazione \u00e8 disattivata (254 + 4 = 2)."
+                ],
+                "motor_octo": [
+                    "ADD DESCRIPTION HERE in it"
+                ],
+                "motor_rot": [
+                    "ADD DESCRIPTION HERE in it"
+                ]
+            }
+        }
+    }
+}

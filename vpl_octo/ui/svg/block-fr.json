@@ -1,0 +1,29 @@
+{
+    "i18n": {
+        "fr": {
+            "button 1": "Bouton unique",
+            "button": "Boutons multiples",
+            "init": "D\u00e9marrage du programme",
+            "clap": "D\u00e9tection de clap (bruit)",
+            "ground": " Capteurs au sol",
+            "horiz prox": "Capteurs de proximit\u00e9",
+            "remote control arrows": "Fl\u00e8ches de la t\u00e9l\u00e9commande",
+            "remote control keypad": "Touches num\u00e9riques de la t\u00e9l\u00e9commande",
+            "timer": "Minuteur \u00e9coul\u00e9",
+            "clock": "Ev\u00e9nement r\u00e9gulier",
+            "counter comparison": "Comparaison arithm\u00e9tique de l'\u00e9tat des 8 LED",
+            "state 256": "Etat des 8 LED",
+            "state 256 with mask": "Etat partiel des 8 LED",
+            "set timer": "D\u00e9marrer un minuteur",
+            "notes": "Jouer une m\u00e9lodie",
+            "notes with speed": "Jouer une m\u00e9lodie avec rythme",
+            "play": "Jouer un fichier .wav depuis la carte SD",
+            "play stop": "Arr\u00eater de jouer un fichier .wav",
+            "set state 256": "Sp\u00e9cifier l'\u00e9tat des 8 LED",
+            "set state 256 with mask": "Sp\u00e9cifier partiellement l'\u00e9tat des 8 LED",
+            "arithmetic": "Calculer",
+            "motor_octo": "ADD DESCRIPTION HERE in fr",
+            "motor_rot": "ADD DESCRIPTION HERE in fr"
+        }
+    }
+}

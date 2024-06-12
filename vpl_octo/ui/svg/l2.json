@@ -1,0 +1,350 @@
+{
+    "blocks": [
+        {
+            "name": "!stop",
+            "l2": {
+                "statement": [
+                    "motor.left.target = 0;\n",
+                    "motor.right.target = 0;\n",
+                    "sound.system(-1);\n",
+                    "leds.circle(32,32,32,32,32,32,32,32);\n",
+                    "timer.period[0] = 100;\n",
+                    "onevent timer0 {\n",
+                    "leds.circle(0,0,0,0,0,0,0,0);\n",
+                    "}\n"
+                ]
+            }
+        },
+        {
+            "name": "!init",
+            "l2": {
+                "initCodeExec": [
+                    "sound.system(-1);\n"
+                ]
+            }
+        },
+        {
+            "name": "!volume",
+            "l2": {
+                "statement": [
+                    "// set volume\n",
+                    "_system.settings.write(0, `$[0] > 8 ? 0 : 8 - $[0]`);\n"
+                ]
+            }
+        },
+        {
+            "name": "button 1",
+            "l2": {
+                "sectionBegin": "onevent buttons {\n",
+                "sectionEnd": "}\n",
+                "clause": "button.`['center', 'forward', 'backward', 'right', 'left'][$[0]]`"
+            }
+        },
+        {
+            "name": "init",
+            "l2": {
+                "sectionBegin": "// initialization\n"
+            }
+        },
+        {
+            "name": "state 256",
+            "l2": {
+                "initVarDecl": [
+                    "int state;\n"
+                ],
+                "initCodeExec": [
+                    "state = 0;\n"
+                ],
+                "clause": "state == `$.reduce(function (a, b, i) { return b ? a | (1 << i) : a; }, 0)`"
+            }
+        },
+        {
+            "name": "state 256 with mask",
+            "l2": {
+                "initVarDecl": [
+                    "int state;\n"
+                ],
+                "initCodeExec": [
+                    "state = 0;\n"
+                ],
+                "clause": "(state & `$.reduce(function (a, b, i) { return b !== 0 ? a | (1 << i) : a; }, 0)`) == `$.reduce(function (a, b, i) { return b === 1 ? a | (1 << i) : a; }, 0)`"
+            }
+        },
+        {
+            "name": "clap",
+            "l2": {
+                "initCodeExec": [
+                    [
+                        "// setup threshold for detecting claps\n",
+                        "mic.threshold = 250;\n"
+                    ]
+                ],
+                "sectionBegin": "onevent buttons {\n",
+                "sectionEnd": "}\n",
+                "clause": "mic.intensity > mic.threshold"
+            }
+        },
+        {
+            "name": "horiz prox",
+            "l2": {
+                "sectionBegin": "onevent prox {\n",
+                "sectionEnd": "}\n",
+                "clause": "`[2, 1, 3, 0, 4, 5, 6].map(function (ix, i) { return $[i] ? 'prox.horizontal[' + ix + '] ' + ($[i] > 0 ? '>= 2000' : '<= 1000') : ''; }).filter(function (s) { return s; }).join(' && ') || [2, 1, 3, 0, 4, 5, 6].map(function (ix) { return 'prox.horizontal[' + ix + '] >= 2000'; }).join(' || ')`"
+            }
+        },
+        {
+            "name": "ground",
+            "l2": {
+                "sectionBegin": "onevent prox {\n",
+                "sectionEnd": "}\n",
+                "clauseAnd": "`$[i] ? 'prox.ground.delta[' + i + '] ' + ($[i] > 0 ? '>= 450' : '<= 400') : ''`"
+            }
+        },
+        {
+            "name": "remote control arrows",
+            "l2": {
+                "sectionBegin": "onevent rc5 {\n",
+                "sectionEnd": "}\n",
+                "clause": "`[[85, 17], [80, 32], [81, 33], [86, 16, 78], [87, 13]][$[0]].map(function (c) { return 'rc5.command == ' + c; }).join(' or ')`",
+                "clauseAlwaysEval": true
+            }
+        },
+        {
+            "name": "remote control keypad",
+            "l2": {
+                "sectionBegin": "onevent rc5 {\n",
+                "sectionEnd": "}\n",
+                "clause": "rc5.command == `$[0]`",
+                "clauseAlwaysEval": true
+            }
+        },
+        {
+            "name": "timer",
+            "l2": {
+                "initVarDecl": [
+                    "bool timerElapsed;\n"
+                ],
+                "initCodeExec": [
+                    [
+                        "// stop timer 0\n",
+                        "timer.period[0] = 0;\n"
+                    ],
+                    "timerElapsed = false;\n"
+                ],
+                "sectionBegin": "onevent timer0 {\n",
+                "sectionEnd": "}\n",
+                "sectionPreamble": [
+                    "timerElapsed = true;\n",
+                    "timer.period[0] = 0;\n"
+                ],
+                "clauseAsCondition": "timerElapsed"
+            }
+        },
+        {
+            "name": "clock",
+            "l2": {
+                "sectionBegin": "onevent `$[0] === 10 ? 'prox' : 'buttons'` {\n",
+                "sectionEnd": "}\n"
+            }
+        },
+        {
+            "name": "counter comparison",
+            "l2": {
+                "initVarDecl": [
+                    "int state;\n"
+                ],
+                "initCodeExec": [
+                    "state = 0;\n"
+                ],
+                "clause": "state `['<=','<','==','>','>='][$[0] + 2]` `$[1]`"
+            }
+        },
+        {
+            "name": "set state 256",
+            "l2": {
+                "initVarDecl": [
+                    "int state;\n"
+                ],
+                "initCodeExec": [
+                    "state = 0;\n"
+                ],
+                "initCodeDecl": [
+                    [
+                        "void display_state() {\n",
+                        "leds.circle((state&1)*32,(state&2)*16,(state&4)*8,(state&8)*4,(state&16)*2,state&32,(state&64)/2,(state&128)/4);\n",
+                        "}\n"
+                    ]
+                ],
+                "statement": "state = `$.reduce(function (a, b, i) { return b ? a | (1 << i) : a; }, 0)`;\ndisplay_state();\n"
+            }
+        },
+        {
+            "name": "set state 256 with mask",
+            "l2": {
+                "initVarDecl": [
+                    "int state;\n"
+                ],
+                "initCodeExec": [
+                    "state = 0;\n"
+                ],
+                "initCodeDecl": [
+                    [
+                        "void display_state() {\n",
+                        "leds.circle((state&1)*32,(state&2)*16,(state&4)*8,(state&8)*4,(state&16)*2,state&32,(state&64)/2,(state&128)/4);\n",
+                        "}\n"
+                    ]
+                ],
+                "statement": "state = state & `$.reduce(function (a, b, i) { return b === 0 ? a | (1 << i) : a; }, 0)` | `$.reduce(function (a, b, i) { return b === 1 ? a | (1 << i) : a; }, 0)`;\ndisplay_state();\n"
+            }
+        },
+        {
+            "name": "set timer",
+            "l2": {
+                "initVarDecl": [
+                    "bool timerElapsed;\n"
+                ],
+                "initCodeExec": [
+                    [
+                        "// stop timer 0\n",
+                        "timer.period[0] = 0;\n"
+                    ],
+                    "timerElapsed = false;\n"
+                ],
+                "statement": "timer.period[0] = `Math.round(1000 * $[0] / slowdown)`;\n"
+            }
+        },
+        {
+            "name": "notes",
+            "l2": {
+                "initVarDecl": [
+                    "const pi = 3.14;\n",
+                    [
+                        "// variables for notes\n",
+                        "int notes[6];\n",
+                        "int durations[6];\n",
+                        "int note_index;\n",
+                        "int wave[142];\n"
+                    ]
+                ],
+                "initCodeExec": [
+                    [
+                        "// init notes\n",
+                        "for (int i = 0; i < size(wave); i++) {\n",
+                        "wave[i] = 128 * sin(fixed(i) / size(wave) * 2 * pi);\n",
+                        "}\n",
+                        "sound.wave(wave);\n",
+                        "note_index = 6;\n"
+                    ],
+                    [
+                        "sound.system(-1);\n"
+                    ]
+                ],
+                "initCodeDecl": [
+                    [
+                        "// when a note is finished, play the next one\n",
+                        "onevent sound.finished {\n",
+                        "if (note_index < size(notes)) {\n",
+                        "sound.freq(notes[note_index], durations[note_index]);\n",
+                        "note_index++;\n",
+                        "}\n",
+                        "}\n"
+                    ]
+                ],
+                "statement": "notes = [`$.filter(function (a, i) { return i % 2 == 0; }).map(function (h, i) { return $[2 * i + 1] ? [262, 311, 370, 440, 524, 370][h] : 0; }).join(', ')`];\ndurations = [`$.filter(function (a, i) { return i % 2 == 1; }).map(function (d) { return d ? 7 * d : 28; }).join(', ')`];\nnote_index = 1;\nnote_count = 6;\nsound.freq(notes[0], durations[0]);\n"
+            }
+        },
+        {
+            "name": "notes with speed",
+            "l2": {
+                "initVarDecl": [
+                    "const pi = 3.14;\n",
+                    [
+                        "// variables for notes\n",
+                        "int notes[6];\n",
+                        "int durations[6];\n",
+                        "int note_index;\n",
+                        "int wave[142];\n"
+                    ]
+                ],
+                "initCodeExec": [
+                    [
+                        "// init notes\n",
+                        "for (int i = 0; i < size(wave); i++) {\n",
+                        "wave[i] = 128 * sin(fixed(i) / size(wave) * 2 * pi);\n",
+                        "}\n",
+                        "sound.wave(wave);\n",
+                        "note_index = 6;\n"
+                    ],
+                    [
+                        "sound.system(-1);\n"
+                    ]
+                ],
+                "initCodeDecl": [
+                    [
+                        "// when a note is finished, play the next one\n",
+                        "onevent sound.finished {\n",
+                        "if (note_index < size(notes)) {\n",
+                        "sound.freq(notes[note_index], durations[note_index]);\n",
+                        "note_index++;\n",
+                        "}\n",
+                        "}\n"
+                    ]
+                ],
+                "statement": "notes = [`$.filter(function (a, i) { return i % 2 == 1; }).map(function (h, i) { return $[2 * i + 2] ? [262, 311, 370, 440, 524, 370][h] : 0; }).join(', ')`];\ndurations = [`$.slice(1).filter(function (a, i) { return i % 2 == 1; }).map(function (d) { return Math.round(Math.pow(2, $[0]) * 7) * (d ? d : 4); }).join(', ')`];\nnote_index = 1;\nnote_count = 6;\nsound.freq(notes[0], durations[0]);\n"
+            }
+        },
+        {
+            "name": "play",
+            "l2": {
+                "initCodeExec": [
+                    "sound.system(-1);\n"
+                ],
+                "statement": "sound.play(`$[0].toString(10)`);\n"
+            }
+        },
+        {
+            "name": "play stop",
+            "l2": {
+                "initCodeExec": [
+                    "sound.system(-1);\n"
+                ],
+                "statement": "sound.play(-1);\n"
+            }
+        },
+        {
+            "name": "arithmetic",
+            "l2": {
+                "initVarDecl": [
+                    "int state;\n"
+                ],
+                "initCodeExec": [
+                    "state = 0;\n"
+                ],
+                "initCodeDecl": [
+                    [
+                        "void display_state() {\n",
+                        "leds.circle((state&1)*32,(state&2)*16,(state&4)*8,(state&8)*4,(state&16)*2,state&32,(state&64)/2,(state&128)/4);\n",
+                        "}\n"
+                    ]
+                ],
+                "statement": "`$[2] && $[0] != 0 && $[0] != 4 && $[1] != 0 ? 'if (state ' + ($[0] == 2 ? '< ' + $[1] + ') {\\nstate = 0\\n' : '> ' + [null,255-$[1],null,Math.floor(255/$[1])][$[0]] + ') {\\nstate = 255\\n') + '} else {\\nstate ' + ['','+','-','*','/'][$[0]] + '= ' + $[1] + '\\n}\\n' : 'state ' + ['','+','-','*','/'][$[0]] + '= ' + $[1] + ';\\n'`display_state();\n"
+            }
+        },
+        {
+            "name": "button",
+            "l2": {
+                "sectionBegin": "onevent buttons {\n",
+                "sectionEnd": "}\n",
+                "clause": "`['center', 'forward', 'backward', 'right', 'left'].map(function (s, i) { return $[i] ? 'button.' + s : ''; }).filter(function (s) { return s; }).join(' && ') || ['center', 'forward', 'backward', 'right', 'left'].map(function (s) { return 'button.' + s; }).join(' || ')`"
+            }
+        },
+        {
+            "name": "motor_octo",
+            "l2": {}
+        },
+        {
+            "name": "motor_rot",
+            "l2": {}
+        }
+    ]
+}

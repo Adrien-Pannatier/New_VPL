@@ -1,0 +1,261 @@
+{
+    "help": {
+        "de": {
+            "blocks": {
+                "button 1": [
+                    "# Einzelne Taste",
+                    "![Symbol f\u00fcr einzelne Taste](vpl:block:button-1)",
+                    "**Verwendete Sensoren:** f\u00fcnf kapazitive Ber\u00fchrungstasten auf der Oberseite des Thymios.",
+                    "**Ausl\u00f6sebedingungen:** Dieses Ereignis wird ausgel\u00f6st, wenn eine Taste bet\u00e4tigt wird.",
+                    "**Parameter:** Die orange hervorgehobene Taste ist die Taste, die das Ereignis ausl\u00f6st. Die grau eingef\u00e4rbten Tasten werden ignoriert.",
+                    "**Beispiel:** Wenn die Vorw\u00e4rtstaste gedr\u00fcckt wird, dann \u2026 (Aktion des Roboters, z.B. sich vorw\u00e4rts bewegen)."
+                ],
+                "button": [
+                    "# Mehrere Tasten ",
+                    "![Symbol f\u00fcr mehrere Tasten](vpl:block:button)",
+                    "**Verwendete Sensoren:** f\u00fcnf kapazitive Ber\u00fchrungstasten auf der Oberseite des Thymios.",
+                    "**Ausl\u00f6sebedingungen:** Dieses Ereignis wird ausgel\u00f6st, wenn eine oder mehrere Tasten bet\u00e4tigt werden.",
+                    "**Parameter:** Die orange hervorgehobenen Tasten sind die Schaltfl\u00e4chen, die das Ereignis ausl\u00f6sen. Wenn mehrere Tasten gedr\u00fcckt werden, wird das Ereignis ausgel\u00f6st, wenn alle ausgew\u00e4hlten Tasten gleichzeitig gedr\u00fcckt werden. Die grau eingef\u00e4rbten Tasten werden ignoriert.",
+                    "**Beispiel:** Wenn die Vorw\u00e4rts- und die Rechts-Taste gedr\u00fcckt werden, dann \u2026 (Aktion des Roboters, z.B. Beginn einer Vorw\u00e4rtsbewegung nach rechts)."
+                ],
+                "remote control arrows": [
+                    "# Pfeiltasten der Fernbedienung ",
+                    "![Symbol f\u00fcr Pfeile auf der Fernbedienung](vpl:block:remote-control-arrows)",
+                    "**Verwendete Sensoren:** Infrarot-Fernbedienungsempf\u00e4nger.",
+                    "**Ausl\u00f6sebedingungen:** Dieses Ereignis wird ausgel\u00f6st, wenn die festgelegte Taste auf der Fernbedienung gedr\u00fcckt wird. Die Tasten stellen die Pfeiltasten auf der Fernbedienung dar.",
+                    "**Parameter:** Die orange hervorgehobene Taste ist die Taste, die das Ereignis ausl\u00f6st.",
+                    "**Beispiel:** Wenn die Vorw\u00e4rtstaste der Fernbedienung gedr\u00fcckt wird, dann \u2026 (Aktion des Roboters, z.B. sich vorw\u00e4rts bewegen)"
+                ],
+                "remote control keypad": [
+                    "# Eingabetasten der Fernbedienung ",
+                    "![Symbol der Fernbedienungstastatur](vpl:block:remote-control-keypad)",
+                    "**Verwendete Sensoren:** Infrarot-Fernbedienungsempf\u00e4nger.",
+                    "**Ausl\u00f6sebedingungen:** Dieses Ereignis wird ausgel\u00f6st, wenn die festgelegte Taste auf der Fernbedienung gedr\u00fcckt wird. Die Tasten stellen das Tastenfeld der Fernbedienung dar.",
+                    "**Parameter:** Die orange hervorgehobene Taste ist die Taste, die das Ereignis ausl\u00f6st.",
+                    "**Beispiel:** Wenn die Taste **2** der Fernbedienung gedr\u00fcckt wird, dann \u2026 (Aktion des Roboters, z.B. sich vorw\u00e4rts bewegen)"
+                ],
+                "init": [
+                    "# Programm-Startereignis",
+                    "![Symbol f\u00fcr den Programmstart](vpl:block:init)",
+                    "** Dieses Ereignis verwendet keinen spezifischen Sensor des Thymios.**",
+                    "**Ausl\u00f6sebedingungen:** Dieses Ereignis wird beim Start des Programms auf dem Roboter ausgel\u00f6st, sobald Sie die START- oder NEUSTART-Schaltfl\u00e4che in der VPL3-Programmierumgebung anklicken. Sie k\u00f6nnen es benutzen, um Aktionen festzulegen, die Thymio beim Start des Programms ausf\u00fchren soll.",
+                    "**Beispiel:** Am Anfang des Programms starte mit  (Aktion des Roboters, z.B., die Farbe des Roboters auf Rot setzen.)"
+                ],
+                "clap": [
+                    "# Klatsch-(Ton-)Erkennung",
+                    "![Symbol f\u00fcr Klatsch-(Ton-)Erkennung](vpl:block:clap)",
+                    "** Verwendeter Sensor:** Mikrofon.",
+                    "**Ausl\u00f6sebedingungen:** Dieses Ereignis wird ausgel\u00f6st, wenn von Thymio ein lautes Ger\u00e4usch erkannt wird. Auch ein Schlag auf den Roboter kann dieses Ereignis ausl\u00f6sen, da dieser ein lautes Ger\u00e4usch auf dem Mikrofon erzeugt. Vorsicht: Laute Umgebungsger\u00e4usche k\u00f6nnen dieses Ereignis auf nicht kontrollierbare Weise ausl\u00f6sen.",
+                    "**Beispiel:** Wenn ich in die H\u00e4nde klatsche, dann \u2026 (Aktion des Roboters, z.B. anfangen sich vorw\u00e4rts zu bewegen)."
+                ],
+                "ground": [
+                    "# Bodensensoren",
+                    "![Symbol f\u00fcr Bodensensoren](vpl:block:ground)",
+                    "**Verwendete Sensoren:** zwei Bodenn\u00e4herungssensoren.",
+                    "**Ausl\u00f6sebedingungen:** Dieses Ereignis wird ausgel\u00f6st durch die Erkennung der An- oder Abwesenheit eines reflektierenden Bodens unter Thymio. Beachten Sie, dass eine transparente oder schwarze (matte, nicht reflektierende) Oberfl\u00e4che als fehlender Boden erkannt wird. Dieses Ereignis erm\u00f6glicht es dem Programmierer, getrennt zu definieren, was der linke und rechte Bodensensor erkennen soll, um das Ereignis auszul\u00f6sen. Dies kann sehr n\u00fctzlich sein, um einen schwarzen Streifen auf weissem Papier zu erkennen, z.B. um ein Verhalten zu definieren, bei dem der Roboter einem schwarzen Streifen auf dem Untergrund folgt.",
+                    "**Parameter:** Wenn beim jeweiligen Sensor das weisse Feld mit dem roten Rand angew\u00e4hlt ist, erkennt der Sensor eine helle, reflektierende Oberfl\u00e4che, z.B. weiss. Wenn das schwarze Feld angew\u00e4hlt ist, wird ein Ereignis ausgel\u00f6st, wenn der Sensor keinen Boden mehr erkennt (bzw. wenn er einen schwarzen oder transparenten Boden erkennt). Wird f\u00fcr den Sensor das graue Feld angew\u00e4hlt, so wird dieser ignoriert.",
+                    "**Beispiel:** Wenn der linke Sensor eine weisse Fl\u00e4che und der rechte einen schwarzen Streifen erkennt, dann ... (Aktion des Roboters, z.B., nach rechts zum schwarzen Streifen abdrehen)."
+                ],
+                "horiz prox": [
+                    "# N\u00e4herungssensoren",
+                    "![Symbol f\u00fcr N\u00e4herungssensoren](vpl:block:horiz-prox)",
+                    "**Verwendete Sensoren:** f\u00fcnf N\u00e4herungssensoren auf der Vorderseite und zwei auf der R\u00fcckseite.",
+                    "**Ausl\u00f6sebedingungen:** Infrarot-N\u00e4herungssensoren messen die Reflexion von Objekten, die sich vor ihnen befinden. Wenn ein Sensor eine Reflexion erkennt, steht ein nahes oder reflektierendes Hindernis vor ihm. Keine Reflexion bedeutet entweder ein schwarzes Hindernis oder \u00fcberhaupt kein Hindernis. Dieses Ereignis wird durch die Erkennung von Hindernissen um Thymio herum ausgel\u00f6st, mit sieben verschiedenen Sensoren, von denen jeder einen anderen Bereich abdeckt. ",
+                    "**Parameter:** Wenn bei einem Sensor das weisse Feld mit dem roten Rand angew\u00e4hlt ist, erkennt dieser eine helle, reflektierende Oberfl\u00e4che. Wenn das schwarze Feld angew\u00e4hlt ist, wird ein Ereignis ausgel\u00f6st, wenn der Sensor eine schwarze Oberfl\u00e4che erkennt (bzw. ein schwarzes Hindernis oder eine transparente Oberfl\u00e4che). Wird f\u00fcr einen Sensor das graue Feld angew\u00e4hlt, so wird dieser ignoriert.",
+                    "Wenn mehrere Sensoren zur Ausl\u00f6sung des Ereignisses ausgew\u00e4hlt wurden, wird das Ereignis durch die Kombination der Bedingungen ausgel\u00f6st. Wenn z.B. der vordere und die linken Sensoren so eingestellt wurden, dass sie ein Hindernis erkennen, wird das Ereignis ausgel\u00f6st, wenn der vordere **UND** die linken Sensoren ein Hindernis erkennen.",
+                    "**Beispiel:** Wenn der linke Sensor ein Hindernis erkennt, dann \u2026 (Aktion des Roboters, z.B. rechts abbiegen, um dem Hindernis auszuweichen)."
+                ],
+                "state 256": [
+                    "# 8-LED-Zustandspr\u00fcfung ",
+                    "![Symbol f\u00fcr 8-LED-Zustandspr\u00fcfung](vpl:block:state-256)",
+                    "**Dieser Bedingungsblock verwendet keinen spezifischen Sensor des Thymios.** Er liest den Zustand der 8 LEDs, die um die Ber\u00fchrungstasten herum angeordnet sind. Dieser Block kann nur als Bedingung und nicht als Hauptereignis verwendet werden.",
+                    "**Ausl\u00f6sebedingungen:** Diese Bedingung ist wahr, wenn die 8 LEDs auf der Oberseite des Thymios das gleiche Muster (LEDs ein und aus), wie auf dem Bedingungsblock definiert, anzeigen. Da jede LED entweder ein oder ausgeschaltet sein kann, ergeben sich 256 m\u00f6gliche Kombinationen.",
+                    "**Parameter:** Jede LED kann auf eingeschaltet (gelb) oder ausgeschaltet (dunkelgrau) gesetzt werden. Es werden immer alle 8 LEDs f\u00fcr die Auswertung der Bedingung ber\u00fccksichtigt.",
+                    "**Beispiel:** Falls nur die vorderste LED leuchtet, dann \u2026. (Aktion des Roboters, z.B. sich vorw\u00e4rtsbewegen)."
+                ],
+                "state 256 with mask": [
+                    "# Selektive 8-LED-Zustandspr\u00fcfung",
+                    "![Symbol f\u00fcr selektive 8-LED-Zustandspr\u00fcfung](vpl:block:state-256-with-mask)",
+                    "** Dieser Bedingungsblock verwendet keinen spezifischen Sensor des Thymios.** Er liest den Zustand der 8 LEDs, die um die Ber\u00fchrungstasten herum angeordnet sind. Dieser Block kann nur als Bedingung und nicht als Hauptereignis verwendet werden.",
+                    "**Ausl\u00f6sebedingungen:** Diese Bedingung ist wahr, wenn die 8 LEDs auf der Oberseite des Thymios das gleiche Muster (LEDs ein und aus), wie auf dem Bedingungsblock definiert, anzeigen. Dabei kann aber ausgew\u00e4hlt werden, welche LEDs f\u00fcr die Auswertung der Bedingung ber\u00fccksichtigt und welche ignoriert werden sollen.",
+                    "**Parameter:** Jede LED kann auf eingeschaltet (gelb) oder ausgeschaltet (dunkelgrau) gesetzt werden, oder sie kann ignoriert (hellgrau) werden. Dies erm\u00f6glicht es, Teilkonfigurationen von LEDs als Muster zu erkennen, verschiedene Muster gleichzeitig zu unterscheiden oder Untergruppen von LEDs zu bilden.",
+                    "**Beispiel:**  Falls alle drei LEDs auf der linken Seite eingeschaltet sind und die drei LEDs hinten, hinten rechts und rechts ausgeschaltet sind, dann \u2026. (Aktion des Roboters, z.B. anfangen sich nach links abzudrehen)."
+                ],
+                "counter comparison": [
+                    "# 8-LED-Z\u00e4hlervergleich",
+                    "![Symbol f\u00fcr 8-LED-Z\u00e4hlervergleich](vpl:block:counter-comparison)",
+                    "**Dieser Bedingungsblock verwendet keinen spezifischen Sensor des Thymios.** Er liest einen internen Zustand, eine interne 8-Bit-Variable. Dieser Block kann nur als Bedingung und nicht als Hauptereignis verwendet werden.",
+                    "**Ausl\u00f6sebedingungen:** Diese Bedingung ist wahr, wenn die interne Variable, welche mit den 8 LEDs um die Ber\u00fchrungstasten herum dargestellt ist, den Vergleich mit einem festen Wert erf\u00fcllt.",
+                    "**Parameter:** Auf der linken Seite kann der Programmierer w\u00e4hlen, welchen Vergleich er durchf\u00fchren m\u00f6chte:",
+                    "= gleich",
+                    "? gr\u00f6sser oder gleich ",
+                    "> gr\u00f6sser als",
+                    "? kleiner oder gleich ",
+                    "< kleiner als ",
+                    " Auf der rechten Seite kann der Programmierer einen konstanten 8-Bit-Wert von 0 bis 255 einstellen. Dieser konstante Wert wird mit Hilfe der 8 kreisf\u00f6rmig angeordneten Segmente in bin\u00e4rer Form angezeigt, wobei das Bit 0 ganz vorne und die Bits 1 bis 7 im Uhrzeigersinn (der kreisf\u00f6rmigen Anordnung folgend) angeordnet sind.",
+                    "**Beispiel:** Falls die LEDs den Wert 6 darstellen (Bit 1 und 2 gesetzt), \u2026. (Aktion des Roboters, z.B. seine Farbe auf Rot wechseln)."
+                ],
+                "set state 256": [
+                    "# 8-LED-Zustand festlegen",
+                    "![Symbol f\u00fcr 8-LED-Zustand festlegen](vpl:block:set-state-256)",
+                    "**Aktoren:** 8 LEDs, die um die Ber\u00fchrungstasten herum angeordnet sind.",
+                    "**Aktion:** Diese Aktion schaltet jede der 8 LEDs ein oder aus.",
+                    "**Parameter:**  jede LED wird eingeschaltet (gelb) oder ausgeschaltet (dunkelgrau).",
+                    "**Beispiel:** wenn (Ereignis, z.B. Vorw\u00e4rtstaste gedr\u00fcckt), dann schalte die vorderste LED ein und alle anderen aus."
+                ],
+                "set state 256 with mask": [
+                    "# Selektives Setzen des 8-LED-Zustands",
+                    "![Symbol f\u00fcr Selektives Setzen des 8-LED-Zustands](vpl:block:set-state-256-with-mask)",
+                    "**Aktoren:** 8 LEDs, die um die Ber\u00fchrungstasten herum angeordnet sind.",
+                    "**Aktion:** Diese Aktion schaltet bestimmte, ausgew\u00e4hlte LEDs ein oder aus.",
+                    "**Parameter:** jede LED kann eingeschaltet (gelb) oder ausgeschaltet (dunkelgrau) werden oder ihr Zustand kann unver\u00e4ndert bleiben (hellgrau).",
+                    "**Beispiel:** wenn (Ereignis, z.B. linke Taste gedr\u00fcckt), dann schalte die drei LEDs auf der linken Seite ein, schalte die drei LEDs auf der rechten Seite aus und behalte den Zustand der vordersten und der hintersten LED bei."
+                ],
+                "timer": [
+                    "# Zeitgeber abgelaufen",
+                    "![Symbol f\u00fcr Zeitgeber abgelaufen](vpl:block:timer)",
+                    "**Bei diesem Ereignis handelt es sich um ein internes Ereignis, das nicht durch einen Sensor, sondern durch den internen Zeitgeber ausgel\u00f6st wird.**",
+                    "**Ausl\u00f6sebedingungen:** Dieses Ereignis wird ausgel\u00f6st, sobald der (durch die entsprechende Aktion eingestellte) Zeitgeber abgelaufen ist.",
+                    "**Beispiel:** Wenn zwei (durch die entsprechende Aktion eingestellte) Sekunden verstrichen sind, dann .... (Aktion des Roboters, z.B. sich zu bewegen beginnen)."
+                ],
+                "set timer": [
+                    "# Zeitgeber starten",
+                    "![Symbol f\u00fcr Zeitgeber starten](vpl:block:set-timer)",
+                    "**Diese Aktion greift nicht auf einen sichtbaren Aktor zu.** Sie startet den internen Zeitgeber.",
+                    "**Aktion:** Diese Aktion setzt den internen Zeitgeber. Sobald die am Zeitgeber eingestellte Zeit abgelaufen ist, wird ein Ereignis ausgel\u00f6st.",
+                    "**Parameter:** Mit der linken Ziffer wird die Anzahl Sekunden eingestellt und mit der rechten die Zehntelsekunden.",
+                    "**Beispiel:** wenn (Ereignis, z.B. Vorw\u00e4rtstaste bet\u00e4tigt), dann setze den Zeitgeber auf 2 Sekunden und 0 Zehntelsekunden. Zwei Sekunden sp\u00e4ter wird dann, durch den Ablauf des Zeitgebers, das entsprechende Ereignis ausgel\u00f6st."
+                ],
+                "clock": [
+                    "# Wiederholtes Ereignis",
+                    "![Symbol f\u00fcr Wiederholtes Ereignis](vpl:block:clock)",
+                    "**Bei diesem Ereignis handelt es sich um ein internes Ereignis, das nicht durch einen Sensor, sondern durch den internen Taktgeber ausgel\u00f6st wird.** ",
+                    "**Ausl\u00f6sebedingungen:**Dieser Ereignisblock erzeugt Ereignisse in regelm\u00e4ssigen zeitlichen Abst\u00e4nden.",
+                    "**Parameter:**Die H\u00e4ufigkeit des Ereignisses kann vom Benutzer mit der gegebenen Auswahl eingestellt werden: bei 10 Hz wird dieses Ereignis 10 Mal pro Sekunde ausgel\u00f6st, bei 20 Hz wird dieses Ereignis 20 Mal pro Sekunde ausgel\u00f6st.",
+                    "**Beispiel:**Inkrementiere zehn Mal pro Sekunde die interne Variable, die dann Zehntelsekunden z\u00e4hlt."
+                ],
+                "notes": [
+                    "# Melodie spielen",
+                    "![Symbol f\u00fcr Melodie spielen](vpl:block:notes)",
+                    "**Aktor:** Lautsprecher",
+                    "**Aktion:** Diese Aktion startet das Abspielen einer Melodie.",
+                    "**Parameter:** Jeder blaue Streifen entspricht einem bestimmten Ton, und der Programmierer kann die Position einer Note durch Klicken, unter- oder oberhalb der aktuellen Notenposition, ver\u00e4ndern. Bis zu sechs Noten k\u00f6nnen platziert werden. Die Tondauer einer Note kann durch einen direkten Klick auf das runde Notensymbol ver\u00e4ndert werden. Jeder Klick auf das Notensymbol wechselt zwischen schwarz (eine Zeiteinheit), weiss (zwei Zeiteinheiten) oder Pause (vier Zeiteinheiten).",
+                    "**Beispiel:** wenn (Ereignis, z.B. Vorw\u00e4rtstaste bet\u00e4tigt), dann spiele eine Startmelodie."
+                ],
+                "notes with speed": [
+                    "# Melodie spielen mit Geschwindigkeit",
+                    "![Symbol f\u00fcr Melodie spielen mit Geschwindigkeit](vpl:block:notes-with-speed)",
+                    "**Aktor:** Lautsprecher",
+                    "**Aktion:** Diese Aktion startet das Abspielen einer Melodie.",
+                    "**Parameter:** Jeder blaue Streifen entspricht einem bestimmten Ton, und der Programmierer kann die Position einer Note durch Klicken, unter- oder oberhalb der aktuellen Notenposition, ver\u00e4ndern. Bis zu sechs Noten k\u00f6nnen platziert werden. Die Tondauer einer Note kann durch einen direkten Klick auf das runde Notensymbol ver\u00e4ndert werden. Jeder Klick auf das Notensymbol wechselt zwischen schwarz (eine Zeiteinheit), weiss (zwei Zeiteinheiten) oder Pause (vier Zeiteinheiten).",
+                    "Mit dem Schieberegler oberhalb der Noten kann die Abspielgeschwindigkeit der Melodie ver\u00e4ndert werden.",
+                    "**Beispiel:** wenn (Ereignis, z.B. Vorw\u00e4rtstaste bet\u00e4tigt), dann spiele eine schnelle Startmelodie."
+                ],
+                "play": [
+                    "# Wiedergabe einer .wav-Datei von SD-Karte",
+                    "![Symbol f\u00fcr Wiedergabe einer .wav-Datei](vpl:block:play)",
+                    "**Aktor:** Lautsprecher",
+                    "**Aktion:** Diese Aktion startet die Wiedergabe einer Audiodatei von einer Mikro-SD-Karte, die in Thymio eingef\u00fcgt wurde.",
+                    "**Parameter:** Audiodateien auf der Micro-SD-Karte m\u00fcssen mit *Px.wav* bezeichnet werden, wobei x der in diesem Aktionsblock eingestellten Zahl entspricht. Dies bedeutet, wenn z.B. die Zahl 1 eingestellt ist, die Datei *P1.wav* abgespielt wird.",
+                    " Audiosequenzen auf der Mikro-SD-Karte m\u00fcssen mit 8\u2019000 Hz, Mono, nicht komprimiert, mit unsigned 8-Bit-PCM im wav-Format aufgezeichnet werden. Die Micro-SD-Karte muss in Fat32 formatiert sein.",
+                    "**Beispiel:** wenn (Ereignis, z.B. Vorw\u00e4rtstaste bet\u00e4tigt), dann spiele eine Tonsequenz von der Mikro-SD-Karte."
+                ],
+                "play stop": [
+                    "# Wiedergabe einer .wav-Datei beenden",
+                    "![Symbol f\u00fcr Wiedergabe einer .wav-Datei beenden](vpl:block:play-stop)",
+                    "**Aktor: Lautsprecher",
+                    "**Aktion:** Diese Aktion stoppt die Wiedergabe einer Audiodatei von einer Mikro-SD-Karte, die in Thymio eingef\u00fcgt wurde.",
+                    "**Beispiel:** wenn (Ereignis, z.B. Zeitgeber abgelaufen), dann beende die Wiedergabe der aktuellen Audiodatei."
+                ],
+                "arithmetic": [
+                    "# Berechnen",
+                    "![Symbol f\u00fcr Berechnen](vpl:block:arithmetic)",
+                    "** Diese Aktion greift nicht auf einen sichtbaren Aktor zu.** Sie setzt eine interne Variable.",
+                    "**Aktion:** Diese Aktion f\u00fchrt mathematische Operationen aus mit dem Wert, der durch die 8 gelben LEDs, die um die Ber\u00fchrungstasten herum angeordnet sind, in bin\u00e4rer Form dargestellt ist.",
+                    "**Parameter:** Auf der linken Seite kann der Programmierer aus einer Liste von Operatoren w\u00e4hlen:",
+                    "= zuweisen",
+                    "+ addieren",
+                    "- subtrahieren",
+                    "x multiplizieren",
+                    "\u00f7 dividieren",
+                    " Auf der rechten Seite kann der Programmierer einen konstanten 8-Bit-Wert von 0 bis 255 einstellen. Dieser konstante Wert wird mit Hilfe der 8 kreisf\u00f6rmig angeordneten Segmente in bin\u00e4rer Form angezeigt, wobei Bit 0 ganz vorne und die Bits 1 bis 7 im Uhrzeigersinn (der kreisf\u00f6rmigen Anordnung folgend) angeordnet sind; die Bin\u00e4rstellen des gespeicherten Wertes werden mit dunkelblau als 1 und hellblau als 0 dargestellt.",
+                    " Die auszuf\u00fchrende Operation besteht aus dem gew\u00e4hlten Operator und dem konstanten Wert. Als Beispiel multipliziert die Einstellung \u201cx 4\u201d den mit den 8 gelben LEDs angezeigten Wert mit vier.",
+                    " Abh\u00e4ngig von der Operation kann das Ergebnis gr\u00f6sser als 255 oder kleiner als 0 sein. In diesem Fall kann das Ergebnis auf 0 oder den Maximalwert von 255 begrenzt werden, oder es kann diese Grenzen \u00fcberschreiten und sich zirkul\u00e4r verhalten, wenn man den \u00dcberlauf zul\u00e4sst. Ohne Begrenzung w\u00fcrde z.B. die Operation 254 + 4 als Resultat 2 ergeben, weil der Wert der Variablen beim \u00dcberlauf nach 255 wieder auf null springt (254, 255, 0, 1, 2, \u2026).",
+                    " Mit dem Schalter, oben links im Kreis mit den LED-Segmenten, kann die Begrenzung der Bin\u00e4rzahl ein- oder ausgeschaltet werden. Wenn, durch Klicken auf das Schaltersymbol, der Hebel so platziert wird, dass er zwischen den beiden LED-Segmenten oben links liegt (Bit 7 und Bit 0), ist die Begrenzung eingeschaltet, d.h. die Operation 254 + 4 ergibt dann 255. Liegt hingegen der Hebel des Schalters ausserhalb des Kreises mit den LED-Segmenten, ist die Begrenzung ausgeschaltet, d.h. die Operation 254 + 4 ergibt in diesem Fall 2 (nach dem \u00dcberlauf)."
+                ],
+                "picture comment": [
+                    "# Bildkommentar",
+                    "![Symbol f\u00fcr Bildkommentar](vpl:block:picture-comment)",
+                    "Typ: Kommentarblock",
+                    "..."
+                ],
+                "set timer log": [
+                    "# Setze Zeitgeber (0.1-10 sec)",
+                    "![Symbol f\u00fcr Setze Zeitgeber](vpl:block:set-timer-log)",
+                    "Typ: Aktionsblock",
+                    "..."
+                ],
+                "bottom-left color 8": [
+                    "# Untere Farbe links festlegen",
+                    "![Symbol f\u00fcr Untere Farbe links festlegen](vpl:block:bottom-left-color-8)",
+                    "Type: Aktionsblock",
+                    "..."
+                ],
+                "bottom-right color 8": [
+                    "# Untere Farbe rechts festlegen",
+                    "![Symbol f\u00fcr Untere Farbe rechts festlegen](vpl:block:bottom-right-color-8)",
+                    "Typ: Aktionsblock",
+                    "..."
+                ],
+                "bottom-left color": [
+                    "# Untere Farbe links festlegen (RGB-Komponenten)",
+                    "![Symbol f\u00fcr Untere Farbe links festlegen (RGB-Komponenten)](vpl:block:bottom-left-color)",
+                    "Typ: Aktionsblock",
+                    "..."
+                ],
+                "bottom-right color": [
+                    "# Untere Farbe rechts festlegen (RGB-Komponenten)",
+                    "![Symbol f\u00fcr Untere Farbe rechts festlegen (RGB-Komponenten)](vpl:block:bottom-right-color)",
+                    "Typ: Aktionsblock",
+                    "..."
+                ],
+                "nn obstacles": [
+                    "# Neuronales Netz zur Vermeidung von Hindernissen",
+                    "![Symbol f\u00fcr Neuronales Netz zur Vermeidung von Hindernissen](vpl:block:nn-obstacles)",
+                    "Typ: Aktionsblock",
+                    "..."
+                ],
+                "state": [
+                    "# Zustand (4 Bits)",
+                    "![Symbol Zustand (4 Bits)](vpl:block:state)",
+                    "Typ: Bedingungsblock",
+                    "..."
+                ],
+                "state 8": [
+                    "# Zustand (8 Werte)",
+                    "![Symbol Zustand (8 Werte)](vpl:block:state-8)",
+                    "Typ: Bedingungsblock",
+                    "..."
+                ],
+                "motor state": [
+                    "# Motor-Zustand",
+                    "![Symbol Motor-Zustand](vpl:block:motor-state)",
+                    "Typ: Bedingungsblock",
+                    "..."
+                ],
+                "accelerometer": [
+                    "# Beschleunigungssensor",
+                    "![Symbol f\u00fcr Beschleunigungssensor](vpl:block:accelerometer)",
+                    "Typ: Ereignis- oder Bedingungsblock ",
+                    "..."
+                ],
+                "motor_octo": [
+                    "ADD DESCRIPTION HERE in de"
+                ],
+                "motor_rot": [
+                    "ADD DESCRIPTION HERE in de"
+                ]
+            }
+        }
+    }
+}
