@@ -2187,19 +2187,23 @@
                 }
             ],
             "defaultParameters": [0],
-            "typicalParameters": [6],
+            "typicalParameters": [21],
             "rotating": [
 				{
 					"id": "Mrot",
 					"centerId": "RotationCenter2",
 					"thumbId": "Rot_speed_Handle",
-					"numSteps": 21
+					"numSteps": 41
 				}
 			],
             "styles": [
                 {
-                    "id": "motor_rot_arrows",
-                    "st": "visibility:`$[0]>=8 || $[0]<=-8?'hidden':'visible'`"
+                    "id": "headneg",
+                    "st": "visibility:`$[0]>0?'hidden':'visible'`"
+                },
+                {
+                    "id": "headpos",
+                    "st": "visibility:`$[0]<0?'hidden':'visible'`"
                 }                    
             ]
         }
@@ -7403,8 +7407,8 @@ sim-playground {
 	.st46{fill:#425660;}
 	.st47{fill:#FFFFFF;stroke:#425660;stroke-miterlimit:10;}
 	.st48{fill:none;stroke:#455A64;stroke-miterlimit:10;}
-	.st49{fill:#B0BEC5;stroke:#78909C;stroke-width:1.9969;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.9938;}
-	.st50{fill:#B0BEC5;stroke:#78909C;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0031;}
+	.st49{fill:#B0BEC5;stroke:#78909C;stroke-width:1.9968;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3.9936;}
+	.st50{fill:#B0BEC5;stroke:#78909C;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0032;}
 	.st51{fill:#B0BEC5;stroke:#78909C;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;}
 	.st52{fill:#BEFAEA;stroke:#263238;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 	.st53{display:inline;fill:#90A4AE;stroke:#607D8B;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
@@ -7417,7 +7421,7 @@ sim-playground {
 	.st60{fill:url(#Gradient_proxGd_1_1_);}
 	.st61{fill:none;stroke:#90A4AE;stroke-width:1.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2.08,3.12;}
 	.st62{fill:none;stroke:#455A64;stroke-width:1.5;stroke-miterlimit:10;}
-	.st63{display:inline;fill:#90A4AE;stroke:#607D8B;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:3.9969;}
+	.st63{display:inline;fill:#90A4AE;stroke:#607D8B;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:3.9968;}
 	.st64{display:inline;fill:none;stroke:#FF6040;stroke-linecap:round;stroke-linejoin:round;}
 	.st65{fill:#6215E6;}
 	.st66{fill:none;stroke:#B0BEC5;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
@@ -7900,14 +7904,14 @@ sim-playground {
 				<g>
 					<g>
 						<path class="st33" d="M59.5,54.7c-1.9,4.6-6.4,7.9-11.7,7.9"/>
-						<g>
+						<g id="headneg">
 							<path d="M59.3,55.2c1.1,1.7,3.7,2.9,5.5,3.4c-2.1-2.4-3.8-5.4-4.4-8.6c-1.8,2.7-4.7,4.5-7.6,6C54.9,56.2,57.5,56.3,59.3,55.2
 								z"/>
 						</g>
 					</g>
 					<g>
 						<path class="st33" d="M36.2,54.7c1.9,4.6,6.4,7.9,11.7,7.9"/>
-						<g>
+						<g id="headpos">
 							<path d="M36.4,55.2c1.7,1.1,4.5,1.1,6.5,0.8c-3-1.3-5.7-3.3-7.6-6c-0.5,3.2-2.4,6.1-4.4,8.6C32.8,58,35.2,56.9,36.4,55.2z"/>
 						</g>
 					</g>
@@ -7920,7 +7924,9 @@ sim-playground {
 		</g>
 		<g>
 			<g>
-				<path class="st36" d="M70.7,46.7c0,12.5-10.1,22.7-22.7,22.7S25.3,59.2,25.3,46.7H70.7z"/>
+				<path id="maskneg" class="st34" d="M47.8,24c-12.5,0-22.7,10.1-22.7,22.7s10.2,22.7,22.7,22.7V24z"/>
+				<path id="bot" class="st36" d="M70.6,46.7c0,12.5-10.1,22.7-22.7,22.7S25.2,59.2,25.2,46.7H70.6z"/>
+				<path id="maskpos_2_" class="st34" d="M47.8,24c12.5,0,22.7,10.1,22.7,22.7S60.3,69.4,47.8,69.4V24z"/>
 				<path class="st34" d="M70.7,46.7H25.3C25.3,34.2,35.5,24,48,24S70.7,34.2,70.7,46.7z"/>
 				<circle class="st37" cx="47.8" cy="46.7" r="22.7"/>
 			</g>
@@ -8547,13 +8553,13 @@ sim-playground {
 			
 				<rect id="Btn3_Prox4_adv" x="43.8" y="80.1" transform="matrix(0.9925 -0.1219 0.1219 0.9925 -10.0898 6.6739)" class="st49" width="11.4" height="11.4"/>
 			
-				<rect id="Btn3_Prox3_adv" x="39.7" y="66.4" transform="matrix(0.8988 -0.4384 0.4384 0.8988 -27.0471 27.2551)" class="st50" width="11.6" height="11.6"/>
+				<rect id="Btn3_Prox3_adv" x="39.7" y="66.4" transform="matrix(0.8988 -0.4384 0.4384 0.8988 -27.047 27.2551)" class="st50" width="11.6" height="11.6"/>
 			
-				<rect id="Btn3_Prox2_adv" x="30.6" y="53.6" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -31.4234 43.3368)" class="st51" width="12" height="12"/>
+				<rect id="Btn3_Prox2_adv" x="30.6" y="53.6" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -31.4239 43.3363)" class="st51" width="12" height="12"/>
 			
-				<rect id="Btn3_Prox1_adv" x="18.4" y="44.8" transform="matrix(0.4384 -0.8988 0.8988 0.4384 -31.8385 50.1525)" class="st50" width="11.6" height="11.6"/>
+				<rect id="Btn3_Prox1_adv" x="18.4" y="44.8" transform="matrix(0.4384 -0.8988 0.8988 0.4384 -31.8456 50.2043)" class="st50" width="11.6" height="11.6"/>
 			
-				<rect id="Btn3_Prox0_adv" x="4.3" y="41.1" transform="matrix(0.1219 -0.9925 0.9925 0.1219 -37.6527 51.0738)" class="st49" width="11.4" height="11.4"/>
+				<rect id="Btn3_Prox0_adv" x="4.3" y="41.2" transform="matrix(0.1219 -0.9925 0.9925 0.1219 -37.7099 51.0826)" class="st49" width="11.4" height="11.4"/>
 		</g>
 		<g id="Slid_threshold" class="st3">
 			<line id="value_threshold_off" class="st41" x1="84.1" y1="8.1" x2="16.1" y2="8.1"/>
@@ -8632,7 +8638,7 @@ sim-playground {
 			c0.6,0,1-0.4,1-1v-44C69,3.6,68.6,3.1,68,3.1z"/>
 		<g class="st3">
 			
-				<linearGradient id="Gradient_proxGd_0_1_" gradientUnits="userSpaceOnUse" x1="20.1083" y1="-14884.6572" x2="19.8983" y2="-14841.6377" gradientTransform="matrix(1 0 0 -1 0 -14836.1797)">
+				<linearGradient id="Gradient_proxGd_0_1_" gradientUnits="userSpaceOnUse" x1="20.1083" y1="15184.6572" x2="19.8983" y2="15141.6377" gradientTransform="matrix(1 0 0 1 0 -15136.1797)">
 				<stop  offset="0" style="stop-color:#000000"/>
 				<stop  offset="6.000000e-02" style="stop-color:#252525"/>
 				<stop  offset="0.16" style="stop-color:#585858"/>
@@ -8646,7 +8652,7 @@ sim-playground {
 			</linearGradient>
 			<rect id="Gradient_proxGd_0" x="4" y="4.2" class="st59" width="32" height="44.2"/>
 			
-				<linearGradient id="Gradient_proxGd_1_1_" gradientUnits="userSpaceOnUse" x1="52.1083" y1="-14884.6572" x2="51.8983" y2="-14841.6377" gradientTransform="matrix(1 0 0 -1 0 -14836.1797)">
+				<linearGradient id="Gradient_proxGd_1_1_" gradientUnits="userSpaceOnUse" x1="52.1083" y1="15184.6572" x2="51.8983" y2="15141.6377" gradientTransform="matrix(1 0 0 1 0 -15136.1797)">
 				<stop  offset="0" style="stop-color:#000000"/>
 				<stop  offset="6.000000e-02" style="stop-color:#252525"/>
 				<stop  offset="0.16" style="stop-color:#585858"/>
@@ -8689,7 +8695,7 @@ sim-playground {
 			</g>
 		</g>
 		
-			<rect id="Btn3_ProxGd1_adv" x="40.6" y="32.9" transform="matrix(0.1736 -0.9848 0.9848 0.1736 0.2286 78.0854)" class="st63" width="12" height="12"/>
+			<rect id="Btn3_ProxGd1_adv" x="40.6" y="32.9" transform="matrix(0.1736 -0.9848 0.9848 0.1736 0.1771 78.1046)" class="st63" width="12" height="12"/>
 		
 			<rect id="Btn3_ProxGd0_adv" x="19" y="33.1" transform="matrix(0.9848 -0.1736 0.1736 0.9848 -6.4082 4.9337)" class="st63" width="12" height="12"/>
 	</g>
@@ -8899,7 +8905,7 @@ sim-playground {
 			</g>
 		</g>
 		
-			<radialGradient id="Gradient_top_1_" cx="39667.2148" cy="-36388.8828" r="95.84" gradientTransform="matrix(0.41 0 0 -0.41 -16215.3945 -14853.7295)" gradientUnits="userSpaceOnUse">
+			<radialGradient id="Gradient_top_1_" cx="39812.5547" cy="36834.2227" r="95.84" gradientTransform="matrix(0.41 0 0 0.41 -16274.9844 -15036.3193)" gradientUnits="userSpaceOnUse">
 			<stop  offset="0" style="stop-color:#FFFFFF"/>
 			<stop  offset="9.000000e-02" style="stop-color:#FEFEFE;stop-opacity:0.97"/>
 			<stop  offset="0.22" style="stop-color:#FAFBFC;stop-opacity:0.9"/>
@@ -8951,7 +8957,7 @@ sim-playground {
 			</g>
 		</g>
 		
-			<radialGradient id="Gradient_bottom_1_" cx="-3333.0183" cy="-10302.4873" r="33.9927" gradientTransform="matrix(1.14 0 0 -1.44 3847.6907 -14811.5801)" gradientUnits="userSpaceOnUse">
+			<radialGradient id="Gradient_bottom_1_" cx="-3345.4216" cy="10571.626" r="33.9926" gradientTransform="matrix(1.14 0 0 1.44 3861.8306 -15199.1396)" gradientUnits="userSpaceOnUse">
 			<stop  offset="0" style="stop-color:#FFFFFF"/>
 			<stop  offset="9.000000e-02" style="stop-color:#FEFEFE;stop-opacity:0.97"/>
 			<stop  offset="0.22" style="stop-color:#FAFBFC;stop-opacity:0.9"/>
@@ -9383,7 +9389,7 @@ sim-playground {
 			</g>
 		</g>
 		
-			<radialGradient id="Gradient_bottomL_1_" cx="-3333.063" cy="-10302.4873" r="34.0388" gradientTransform="matrix(1.14 0 0 -1.44 3847.6907 -14811.5801)" gradientUnits="userSpaceOnUse">
+			<radialGradient id="Gradient_bottomL_1_" cx="-3345.4666" cy="10571.626" r="34.0388" gradientTransform="matrix(1.14 0 0 1.44 3861.8306 -15199.1396)" gradientUnits="userSpaceOnUse">
 			<stop  offset="0" style="stop-color:#FFFFFF"/>
 			<stop  offset="9.000000e-02" style="stop-color:#FEFEFE;stop-opacity:0.97"/>
 			<stop  offset="0.22" style="stop-color:#FAFBFC;stop-opacity:0.9"/>
@@ -9435,7 +9441,7 @@ sim-playground {
 			</g>
 		</g>
 		
-			<radialGradient id="Gradient_bottomR_1_" cx="-3333.063" cy="-10302.4873" r="33.9898" gradientTransform="matrix(1.14 0 0 -1.44 3847.6907 -14811.5801)" gradientUnits="userSpaceOnUse">
+			<radialGradient id="Gradient_bottomR_1_" cx="-3345.4666" cy="10571.626" r="33.9898" gradientTransform="matrix(1.14 0 0 1.44 3861.8306 -15199.1396)" gradientUnits="userSpaceOnUse">
 			<stop  offset="0" style="stop-color:#FFFFFF"/>
 			<stop  offset="9.000000e-02" style="stop-color:#FEFEFE;stop-opacity:0.97"/>
 			<stop  offset="0.22" style="stop-color:#FAFBFC;stop-opacity:0.9"/>

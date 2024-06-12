@@ -2173,19 +2173,23 @@
                 }
             ],
             "defaultParameters": [0],
-            "typicalParameters": [6],
+            "typicalParameters": [21],
             "rotating": [
 				{
 					"id": "Mrot",
 					"centerId": "RotationCenter2",
 					"thumbId": "Rot_speed_Handle",
-					"numSteps": 21
+					"numSteps": 41
 				}
 			],
             "styles": [
                 {
-                    "id": "motor_rot_arrows",
-                    "st": "visibility:`$[0]>=8 || $[0]<=-8?'hidden':'visible'`"
+                    "id": "headneg",
+                    "st": "visibility:`$[0]>0?'hidden':'visible'`"
+                },
+                {
+                    "id": "headpos",
+                    "st": "visibility:`$[0]<0?'hidden':'visible'`"
                 }                    
             ]
         }
