@@ -2,10 +2,10 @@
     "blockList": [
         "init",
         "button 1",
-        "tap",
+        "color all state",
         "horiz prox 4 adv",
         "horiz prox 3 adv",
-        "clap",
+        "tap",
         "ground",
         "horiz prox",
         "horiz prox 1 adv",
