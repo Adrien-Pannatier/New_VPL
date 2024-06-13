@@ -159,6 +159,43 @@
         .bin.show {
             bottom: 20px;
         }
+        .slider {
+            -webkit-appearance: none;
+            width: 30%;
+            height: 25px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            border-radius: 25px;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #3a91dd;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #ff6f00;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+
+
     </style>
 </head>
 <body>
@@ -188,7 +225,8 @@
 
 <div class="slider-menu" id="sliderMenu">
     <div class="close-button" onclick="toggleMenu()">✖</div>
-    <a href="#" onclick="location.href='https://adrien-pannatier.github.io/New_VPL/help.html'">Help</a>
+    <h3>Help</h3>
+    <a href="#" onclick="location.href='https://adrien-pannatier.github.io/New_VPL/help.html'">Help with website</a>
     <a href="#" onclick="location.href='https://adrien-pannatier.github.io/New_VPL/help/help_edit_vpl.html'">Help VPL Design</a>
     <h3>Mode Selection</h3>
     <label for="modeSlider">Select Mode:</label>
@@ -391,7 +429,16 @@
     }
 
     // Call the loadModulesFromLocalStorage function when the page loads
-    window.addEventListener('load', loadModulesFromLocalStorage);
+    // window.addEventListener('load', loadModulesFromLocalStorage);
+    window.addEventListener('load', function() {
+    // Reset slider to VPL mode
+    const modeSlider = document.getElementById('modeSlider');
+    modeSlider.value = 0;
+    switchMode(); // Ensure the initial mode setup is correct
+
+    // Load modules from localStorage
+    loadModulesFromLocalStorage();
+    });
 
     // Call the saveModulesToLocalStorage function whenever a module is added or removed
     window.addEventListener('unload', saveModulesToLocalStorage);
