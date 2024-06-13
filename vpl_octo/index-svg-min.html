@@ -3198,7 +3198,26 @@ sim-playground {
         },
         {
             "name": "motor_octo",
-            "aseba": {}
+            "aseba": {
+                "initVarDecl": [
+                    "var l_resistance_threshold = 40\n",
+                    "var left_diff  = 0\n",
+                    "var l_start = 1\n",
+                    "var l_done = 0\n"
+                ],
+                "statement": [  
+                                "if l_done == 0 then\n",
+                                "motor.left.target = `Math.round(500 * ($[0]) * slowdown)`\n",
+                                "end\n",
+                                "left_diff = abs(motor.left.target - motor.left.speed)\n",
+                                "if l_start == 1 and left_diff <= 10 then\n",
+                                "l_start = 0\n",
+                                "end\n",
+                                "if (left_diff > l_resistance_threshold and l_start == 0) or motor.left.target == 0 then\n",
+                                "motor.left.target = 0\n",
+                                "l_done = 1\n",
+                                "end\n"]
+            }
         },
         {
             "name": "motor_rot",
