@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPL Mode Selection</title>
+    <title>Mode Selection</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,6 +19,15 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        body.vpl-mode {
+            background: url('images/monnet.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        body.scratch-mode {
+            background: url('images/Saint-Georges_majeur_au_crépuscule.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
         .title {
             font-size: 2em;
@@ -156,7 +165,7 @@
 
 <div class="container">
     <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
-    <div class="title">VPL Mode Selection</div>
+    <div class="title" id="pageTitle">VPL Mode Selection</div>
     <div class="modules" id="modulesContainer">
         <div class="module-container" data-name="Thymio" data-url-vpl="https://epfl-mobots.github.io/vpl-trois/vpl.html?ui=ui/svg/ui.json&appearance=svg&uilanguage=en&role=student&advmode=true&robot=thymio-tdm&language=aseba#w=ws://localhost:8597" data-url-scratch="https://adrien-pannatier.github.io/New_VPL/scratch_basic/index.html" draggable="true" ondragstart="drag(event)" onclick="openModuleURL(this)">
             <div class="module">
@@ -208,7 +217,11 @@
         const slider = document.getElementById('modeSlider');
         currentMode = parseInt(slider.value);
         updateModeLabel();
-        // Add logic here to handle mode switching actions, if needed
+        // Update the title based on the mode
+        const title = document.getElementById('pageTitle');
+        title.textContent = currentMode === 0 ? 'VPL Mode Selection' : 'Scratch Mode Selection';
+        // Update the background based on the mode
+        document.body.className = currentMode === 0 ? 'vpl-mode' : 'scratch-mode';
     }
 
     function updateModeLabel() {
