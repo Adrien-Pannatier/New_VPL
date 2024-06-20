@@ -479,10 +479,13 @@
                     ],
                 "initCodeExec": [
                     [
+                        "timer.period[1] = 50\n",
                         "timer.period[0] = 50\n"
                     ],
                     [
-                        "onevent timer0\n",
+                        "onevent timer0\n"
+                    ],
+                    [
                         "if stop == 1 then\n",
                         "motor.left.target = 0\n",
                         "done = 1\n",
@@ -520,10 +523,13 @@
                     ],
                 "initCodeExec": [
                     [
+                        "timer.period[1] = 50\n",
                         "timer.period[0] = 50\n"
                     ],
                     [
-                        "onevent timer0\n",
+                        "onevent timer0\n"
+                    ],
+                    [
                         "if rot_counter >= rot_stop_threshold then\n",
                         "motor.right.target = 0\n",
                         "end\n",
