@@ -513,7 +513,31 @@
         },
         {
             "name": "motor_rot",
-            "aseba": {}
+            "aseba": {
+                "initVarDecl": [
+                    "var rot_counter = 0\n",
+                    "var rot_stop_threshold = 100\n"
+                    ],
+                "initCodeExec": [
+                    [
+                        "timer.period[0] = 50\n"
+                    ],
+                    [
+                        "onevent timer0\n",
+                        "if rot_counter >= rot_stop_threshold then\n",
+                        "motor.right.target = 0\n",
+                        "end\n",
+                        "rot_counter = rot_counter + 1\n"
+                    ]
+                ],
+                "statement": [
+                    "rot_counter = 0\n",
+                    "motor.right.target = `Math.round(500 * ($[0]/20) * slowdown)`\n",
+                    "if motor.left.target == 0 then\n",
+                    "rot_counter = rot_stop_threshold\n",
+                    "end\n"
+                ]
+            }
         }
     ]
 }
