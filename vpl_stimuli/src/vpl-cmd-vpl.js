@@ -142,6 +142,15 @@ A3a.vpl.Application.prototype.addVPLCommands = function () {
 		},
 		keyShortcut: "s"
 	});
+	this.commands.add("vpl:loadBasicTemplate", {
+		action: function (app, modifier) {
+			app.loadProgramFile("basic-template." + A3a.vpl.Program.suffix);
+			app.program.saveStateAfterChange();
+		},
+		isEnabled: function (app) {
+			return !app.program.noVPL && !app.program.readOnly;
+		}
+	});
 	this.commands.add("vpl:load", {
 		action: function (app, modifier) {
 			app.loadBox.show("Open program file",

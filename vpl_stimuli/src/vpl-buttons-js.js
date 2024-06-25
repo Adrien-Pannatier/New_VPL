@@ -351,6 +351,47 @@ A3a.vpl.Commands.drawButtonJS = function (app, id, ctx, dims, css, cssClasses, b
 			ctx.fillText("HTML", dims.controlSize * 0.5, dims.controlSize * 0.7);
 			ctx.stroke();
 		},
+		"vpl:loadBasicTemplate": function () {
+			ctx.fillStyle = isPressed && isEnabled
+				? col.bgPr
+				: col.bg;
+			ctx.fillRect(0, 0,
+				dims.controlSize, dims.controlSize);
+			ctx.beginPath();
+			ctx.moveTo(dims.controlSize * 0.25,
+				dims.controlSize * 0.2);
+			ctx.lineTo(dims.controlSize * 0.25,
+				dims.controlSize * 0.7);
+			ctx.lineTo(dims.controlSize * 0.67,
+				dims.controlSize * 0.7);
+			ctx.lineTo(dims.controlSize * 0.67,
+				dims.controlSize * 0.27);
+			ctx.lineTo(dims.controlSize * 0.6,
+				dims.controlSize * 0.2);
+			ctx.closePath();
+			ctx.moveTo(dims.controlSize * 0.6,
+				dims.controlSize * 0.2);
+			ctx.lineTo(dims.controlSize * 0.6,
+				dims.controlSize * 0.27);
+			ctx.lineTo(dims.controlSize * 0.67,
+				dims.controlSize * 0.27);
+			ctx.strokeStyle = isEnabled ? col.fg : col.fgDis;
+			ctx.lineWidth = dims.controlLineWidth;
+			ctx.stroke();
+			ctx.lineWidth = 1.5 * dims.controlLineWidth;
+			ctx.beginPath();
+			ctx.moveTo(dims.controlSize * 0.8,
+				dims.controlSize * 0.55);
+			ctx.lineTo(dims.controlSize * 0.8,
+				dims.controlSize * 0.85);
+			ctx.moveTo(dims.controlSize * 0.7,
+				dims.controlSize * 0.65);
+			ctx.lineTo(dims.controlSize * 0.8,
+				dims.controlSize * 0.55);
+			ctx.lineTo(dims.controlSize * 0.9,
+				dims.controlSize * 0.65);
+			ctx.stroke();
+		},
 		"vpl:load": function () {
 			ctx.fillStyle = isPressed && isEnabled
 				? col.bgPr
