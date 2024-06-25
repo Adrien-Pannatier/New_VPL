@@ -507,7 +507,7 @@
                                 "start = 1\n",
                                 "stop = 0\n",
                                 "left_diff = 0\n",
-                                "motor.left.target = `Math.round(500 * ($[0]-0.5) * slowdown)`\n",
+                                "motor.left.target = `Math.round(250 * ($[0]) * slowdown)`\n",
                                 "if motor.left.target == 0 then\n",
                                 "stop = 1\n",
                                 "end\n"

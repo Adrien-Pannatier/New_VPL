@@ -2128,21 +2128,23 @@
                 }
             ],
             "defaultParameters": [
-                0.5
+                1
             ],
             "typicalParameters": [
-                0.5
+                1
             ],
             "sliders": [
                 {
                     "id": "value_threshold_back_octo",
                     "thumbId": "Cursor_octo",
-                    "min": 1,
-                    "max": 0,
+                    "min": -2,
+                    "max": 2,
                     "discrete": [
+                        -2,
+                        -1,
+                        0,
                         1,
-                        0.5,
-                        0
+                        2
                     ]
                 }
             ],
@@ -2156,8 +2158,16 @@
                     "st": "visibility:`$[0]==1?'visible':'hidden'`"
                 },
                 {
-                    "id": "B05",
-                    "st": "visibility:`$[0]==0.5?'visible':'hidden'`"
+                    "id": "B2",
+                    "st": "visibility:`$[0]==2?'visible':'hidden'`"
+                },
+                {
+                    "id": "B-1",
+                    "st": "visibility:`$[0]==-1?'visible':'hidden'`"
+                },
+                {
+                    "id": "B-2",
+                    "st": "visibility:`$[0]==-2?'visible':'hidden'`"
                 }
             ]
         },
