@@ -12,7 +12,6 @@
 			"vpl:upload": "Upload program",
 			"vpl:nextProgram": "Next program",
 			"vpl:exportToHTML": "Export program view to HTML",
-			"vpl:loadBasicTemplate": "Load basic template",
 			"vpl:text": "Text source code panel",
 			"vpl:text-toggle": "Show or hide text source code panel",
 			"vpl:advanced": "Switch advanced mode on or off",

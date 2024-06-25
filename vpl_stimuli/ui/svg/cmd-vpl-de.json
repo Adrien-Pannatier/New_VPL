@@ -10,7 +10,6 @@
 			"vpl:load": "Programm laden",
 			"vpl:upload": "Programm hochladen",
 			"vpl:exportToHTML": "Programmansicht als HTML-Datei exportieren",
-			"vpl:loadBasicTemplate": "Beispielprogramm laden",
 			"vpl:text": "Text-Quellcode-Panel",
 			"vpl:text-toggle": "Text-Quellcode-Panel ein- oder ausblenden",
 			"vpl:advanced": "Erweiterten Modus ein- oder ausschalten",

@@ -362,36 +362,6 @@
 			]
 		},
 		{
-			"name": "vpl:loadBasicTemplate",
-			"state": ["pressed"],
-			"draw": [
-				{
-					"uri": "Icons.svg#Pressed_bg"
-				},
-				{
-					"uri": "Icons.svg#load_template_highlight"
-				}
-			]
-		},
-		{
-			"name": "vpl:loadBasicTemplate",
-			"state": ["disabled"],
-			"draw": [
-				{
-					"uri": "Icons.svg#load_template_default",
-					"alpha": 0.5
-				}
-			]
-		},
-		{
-			"name": "vpl:loadBasicTemplate",
-			"draw": [
-				{
-					"uri": "Icons.svg#load_template_default"
-				}
-			]
-		},
-		{
 			"name": "vpl:text",
 			"state": ["pressed"],
 			"draw": [
