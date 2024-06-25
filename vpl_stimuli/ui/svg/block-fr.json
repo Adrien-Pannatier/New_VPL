@@ -15,7 +15,6 @@
             "counter comparison": "Comparaison arithm\u00e9tique de l'\u00e9tat des 8 LED",
             "state 256": "Etat des 8 LED",
             "state 256 with mask": "Etat partiel des 8 LED",
-            "move": "Directions",
             "set timer": "D\u00e9marrer un minuteur",
             "notes": "Jouer une m\u00e9lodie",
             "notes with speed": "Jouer une m\u00e9lodie avec rythme",

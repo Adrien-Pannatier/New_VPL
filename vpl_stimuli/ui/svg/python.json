@@ -112,9 +112,6 @@
             "name": "state 256 with mask"
         },
         {
-            "name": "move"
-        },
-        {
             "name": "set timer",
             "python": {
                 "initCodeExec": [

@@ -118,14 +118,6 @@
                     "**Parameter:** jede LED kann eingeschaltet (gelb) oder ausgeschaltet (dunkelgrau) werden oder ihr Zustand kann unver\u00e4ndert bleiben (hellgrau).",
                     "**Beispiel:** wenn (Ereignis, z.B. linke Taste gedr\u00fcckt), dann schalte die drei LEDs auf der linken Seite ein, schalte die drei LEDs auf der rechten Seite aus und behalte den Zustand der vordersten und der hintersten LED bei."
                 ],
-                "move": [
-                    "# Fahrrichtung festlegen",
-                    "![Symbol f\u00fcr Fahrrichtung festlegen](vpl:block:move)",
-                    "**Aktoren:** zwei Antriebsmotoren.",
-                    "**Aktion:** Diese Aktion legt eine Bewegungsrichtung f\u00fcr Thymio fest, mit Hilfe von 9 vordefinierten Geschwindigkeitseinstellungen.",
-                    "**Parameter:** Durch die Wahl einer der 8 Pfeile kann Thymio mit der entsprechenden Richtung in Bewegung gesetzt werden. Mit der quadratischen Schaltfl\u00e4che in der Mitte kann die Bewegung gestoppt werden.",
-                    "**Beispiel:** wenn (Ereignis, z.B. Hindernis auf der linken Seite erkannt), dann leite eine Rechtskurve ein.."
-                ],
                 "timer": [
                     "# Zeitgeber abgelaufen",
                     "![Symbol f\u00fcr Zeitgeber abgelaufen](vpl:block:timer)",

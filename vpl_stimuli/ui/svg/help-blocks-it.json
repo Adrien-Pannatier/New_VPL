@@ -142,14 +142,6 @@
                     "Tipo: blocco condizione",
                     "..."
                 ],
-                "move": [
-                    "# Direzioni",
-                    "![Icona delle direzioni](vpl:block:move)",
-                    "**Attuatore:** i due motori delle ruote.",
-                    "**Azione:** questa azione specifica una direzione di movimento per Thymio, permettendo di scegliere tra 9 configurazioni predefinite.",
-                    "**Parametri :** Ogni freccia rappresenta un movimento di Thymio. Il pulsante centrale ferma Thymio.",
-                    "**Esempio :** quando... (evento, per Esempio rilevamento di un ostacolo a sinistra), allora avanza in direzione avanti verso destra."
-                ],
                 "nn obstacles": [
                     "# Rete neurale per evitare gli ostacoli",
                     "![nn obstacles](vpl:block:nn-obstacles)",

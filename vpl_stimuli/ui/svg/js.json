@@ -82,18 +82,6 @@
             "name": "state 256 with mask"
         },
         {
-            "name": "move",
-            "js": {
-                "initCodeExec": [
-                    "this.set(\"leds.top\", [0, 0, 0]);\n"
-                ],
-                "statement": [
-                    "this.set(\"motor.left\", `Math.round([0, 0.2, 0.25, 0.1, -1.5, -0.2, -0.25, -0.1, 0.15][$[0]] * slowdown).toFixed(2)`);\n",
-                    "this.set(\"motor.right\", `Math.round([0, 0.2, 0.15, -0.1, -0.25, -0.2, -0.15, 0.1, 0.25][$[0]] * slowdown).toFixed(2)`);\n"
-                ]
-            }
-        },
-        {
             "name": "set timer",
             "js": {
                 "initCodeExec": [

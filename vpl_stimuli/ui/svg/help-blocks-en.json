@@ -141,14 +141,6 @@
                     "Type: condition block",
                     "..."
                 ],
-                "move": [
-                    "# Directions",
-                    "![move](vpl:block:move)",
-                    "**Actuators:** two wheel motors.",
-                    "**Action:** this action sets a direction of movement for Stimuli using a set of 9 predefined speed settings.",
-                    "**Parameters:** Choose any arrow to make Stimuli move or choose the center button to make it stop.",
-                    "**Example:** when (event, for instance detection of obstacle on the left), then start moving forward right."
-                ],
                 "nn obstacles": [
                     "# Neural net for obstacle avoidance",
                     "![nn obstacles](vpl:block:nn-obstacles)",

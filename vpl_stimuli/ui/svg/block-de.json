@@ -15,7 +15,6 @@
             "counter comparison": "8-LED-Z\u00e4hlervergleich",
             "set state 256": "8-LEDs-Zustand festlegen",
             "set state 256 with mask": "Selektives Setzen des 8-LED-Zustands",
-            "move": "Fahrrichtung festlegen",
             "timer": "Zeitgeber abgelaufen",
             "set timer": "Zeitgeber starten",
             "clock": "Wiederholtes Ereignis",

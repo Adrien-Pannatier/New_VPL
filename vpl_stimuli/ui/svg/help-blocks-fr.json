@@ -142,14 +142,6 @@
                     "Type: condition block",
                     "..."
                 ],
-                "move": [
-                    "# Directions",
-                    "![Ic\u00f4ne de directions](vpl:block:move)",
-                    "**Actuateurs:** les deux moteurs des roues.",
-                    "**Action:** cette action sp\u00e9cifie une direction de mouvement pour Thymio, parmi un choix de 9 configurations pr\u00e9d\u00e9finies.",
-                    "**Param\u00e8tres :** Chaque fl\u00e8che repr\u00e9sente un d\u00e9placement de Thymio. Le bouton central arr\u00eate Thymio.",
-                    "**Exemple :** lorsque... (\u00e9v\u00e9nement, par exemple d\u00e9tection d'un obstacle \u00e0 gauche), alors avancer en direction avant droite."
-                ],
                 "nn obstacles": [
                     "# Neural net for obstacle avoidance",
                     "![nn obstacles](vpl:block:nn-obstacles)",

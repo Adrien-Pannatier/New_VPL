@@ -14,7 +14,6 @@
             "counter comparison": "8-LED state arithmetic comparison",
             "state 256": "8-LED state check",
             "state 256 with mask": "State bit partial comparison",
-            "move": "Directions",
             "set timer": "Start timer",
             "notes": "Play melody",
             "notes with speed": "Play melody with tempo",
