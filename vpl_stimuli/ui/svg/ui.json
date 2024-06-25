@@ -616,7 +616,7 @@
             "name": "remote control arrows",
             "type": "event",
             "modes": [
-                "advanced"
+                "basic"
             ],
             "draw": [
                 {
@@ -673,7 +673,7 @@
             "name": "remote control keypad",
             "type": "event",
             "modes": [
-                "advanced"
+                "basic"
             ],
             "draw": [
                 {
@@ -786,7 +786,7 @@
             "name": "timer",
             "type": "event",
             "modes": [
-                "advanced"
+                "basic"
             ],
             "draw": [
                 {
@@ -2004,7 +2004,7 @@
             "name": "set timer",
             "type": "action",
             "modes": [
-                "advanced"
+                "basic"
             ],
             "draw": [
                 {
