@@ -1,0 +1,417 @@
+{
+	"basicBlocks": [
+		"init",
+		"button 1",
+		"tap",
+		"horiz prox 4 adv",
+		"horiz prox 3 adv",
+		"color all state",
+		"ground",
+		"horiz prox",
+		"horiz prox 1 adv",
+		"horiz prox 2 adv",
+		"timer",
+		"set timer",
+		"remote control arrows",
+		"remote control keypad",
+		"notes",
+		"color all",
+		"motor directions"
+	],
+	"basicMultiEvent": true,
+	"disabledUI": [
+		"src:language"
+	],
+	"program": [
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 4 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						-0.8
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0,
+						0.3
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 4 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						-0.5
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0,
+						0.6
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 4 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						-0.2
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0,
+						0.9
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 1 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						0.8
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0.3,
+						0
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 1 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						0.5
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0.6,
+						0
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 1 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						0.2
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0.9,
+						0
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 3 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						-0.8
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						-0.3,
+						0
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 3 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						-0.5
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						-0.6,
+						0
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 3 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						-0.2
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						-0.9,
+						0
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 2 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						-0.8
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0,
+						-0.3
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 2 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						-0.5
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0,
+						-0.6
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 2 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						1,
+						-0.2
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0,
+						-0.9
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 4 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						-1,
+						-0.2
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0,
+						0
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 1 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						-1,
+						0.2
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0,
+						0
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 3 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						-1,
+						-0.2
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0,
+						0
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [
+				{
+					"name": "horiz prox 2 adv",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						-1,
+						-0.2
+					]
+				},
+				{
+					"name": "motor directions",
+					"disabled": false,
+					"locked": false,
+					"param": [
+						0,
+						0
+					]
+				}
+			],
+			"disabled": false,
+			"locked": false
+		},
+		{
+			"blocks": [],
+			"disabled": false,
+			"locked": false
+		}
+	],
+	"code": null
+}
